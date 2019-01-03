@@ -1,0 +1,158 @@
+apply plugin: 'com.android.application'
+//引入文件'version.gradle',通过配置ext{}统一版本信息
+apply from: 'version.gradle'
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "gradle.custom.com.customgradle"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode appVersionCode
+        versionName appVersionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+//    //配置签名文件
+//    signingConfigs {
+//        def appStoreFile = System.getenv("STORE_FILE")
+//        def appStorePassword = System.getenv("STORE_PASSWORD")
+//        def appKeyAlias = System.getenv("KEY_ALIAS")
+//        def appKeyPassword = System.getenv("KEY_PASSWORD")
+//
+//        //当不能从环境变量里获取到签名信息的时候，就使用模式的
+//        if(!appStoreFile||!appStorePassword||!appKeyAlias||!appKeyPassword){
+//            appStoreFile = "debug.keystore"
+//            appStorePassword = "android"
+//            appKeyAlias = "androiddebugkey"
+//            appKeyPassword = "android"
+//        }
+//        release {
+//            storeFile file(appStoreFile)
+//            storePassword appStorePassword
+//            keyAlias appKeyAlias
+//            keyPassword appKeyPassword
+//        }
+//    }
+
+    //adb 操作选项
+    adbOptions{
+        timeOutInMs = 5*1000//5秒； 设置执行adb命令的超时时间，包括安装，运行，调试
+        //'d' 允许进行降级安装；allow version code downgrade
+        //'r' 替换已经存在的应用程序； replace existing application
+        //'l' 锁定该应用程序  forward lock application
+        //'t' 允许测试包
+        //'s' 把应用程序安装到SD卡上
+        //'g' 为该应用授予所有运行时权限
+        installOptions 'd','r'
+    }
+    //java 编译选项
+    compileOptions{
+        encoding 'utf-8'
+        //配置java源代码的编译级别 ：指定编译.java文件的jdk版本
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        //配置生成的java字节码的级别 ：确保.class文件与targetCompatibility所指定版本或者更新版本的java虚拟机兼容
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    //包的类型
+    buildTypes {
+        //1.resValue 自定义资源:string,图片等，生成到generated.xml
+        //2.buildConfigField 添加常量到buildConfig.java
+        release {
+            resValue('string','channel_tips','google 渠道')
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
+        }
+    }
+
+    flavorDimensions 'resValue'//需要设置
+    productFlavors{
+        //所有的flavors都必须属于同一个风格,使用productFlavor必须使用flavorDimensions统一维度，Gradle3.0以后
+        // defaultConfig 实际上属于 ProductFlavor 类
+        // https://developer.android.com/studio/build/build-variants?utm_source=android-studio#product-flavors
+        //1.resValue 自定义资源:string,图片等，生成到generated.xml
+        //2.buildConfigField 添加常量到buildConfig.java
+        //3.manifestPlaceholders 添加站位符到AndroidManifest.xml
+        google {
+            applicationIdSuffix ".google"
+            resValue('string','channel_tips','google 渠道')
+            //注意第三个参数 url地址中的双引号不能省略
+            buildConfigField("string","url",'"https://www.google.com.hk/"')
+            //动态配AndroidManifest使用占位符 ManifestPlaceholders
+            manifestPlaceholders.put("channel_id","google_id")
+            manifestPlaceholders.put("channel_name","google_name")
+//            signingConfig signingConfigs.release
+        }
+        baidu{
+            applicationIdSuffix ".buidu"
+            resValue('string','channel_tips','baidu 渠道')
+            buildConfigField("String","url",'"https://www.baidu.com/"')
+            manifestPlaceholders.put("channel_id","buidu_id")
+            manifestPlaceholders.put("channel_name","buidu_name")
+        }
+    }
+
+    productFlavors.all {
+        flavor ->
+            String flavor_name = flavor.name
+            println "flavor_name =${flavor_name}"
+            String id = flavor.manifestPlaceholders["channel_id"]
+            println "channel_id =${id}"
+            String name = flavor.manifestPlaceholders["channel_name"]
+            println "channel_name =${name}"
+    }
+    //批量修改生成的app文件名
+    //1.点3.0+后的变化
+    //2.必须是用all
+//    applicationVariants.all { variant ->
+//        //3.0以后output.outputFile 是只读文件
+//        //官方地址https://developer.android.google.cn/studio/build/gradle-plugin-3-0-0-migration#variant_api
+//        variant.outputs.each { output ->
+//            if (output.outputFile != null && output.outputFile.name.endsWith('.apk')
+//                    &&'release'.equals(variant.buildType.name)) {
+//                def flavorName = variant.flavorName.startsWith("_") ? variant.flavorName.substring(1) : variant.flavorName
+//                def apkFile = new File(
+//                        output.outputFile.getParent(),
+//                        "Example92_${flavorName}_v${variant.versionName}_${buildTime()}.apk")
+//                output.outputFile = apkFile
+//            }
+//        }
+//    }
+    //3.0 +
+//    android.applicationVariants.all { variant ->
+//        variant.outputs.all {
+//            outputFileName = "driver_${variant.productFlavors[0].name}_v${variant.versionName}.apk"
+//        }
+//    }
+
+    applicationVariants.all { variant ->
+        //必须是用all
+//        variant.outputs.each { output ->
+        variant.outputs.all { output ->
+            if (output.outputFile != null && output.outputFile.name.endsWith('.apk')
+                    &&'debug'.equals(variant.buildType.name)) {
+                def flavorName = variant.flavorName.startsWith("_") ? variant.flavorName.substring(1) : variant.flavorName
+                def apkName = "Example92_${flavorName}_v${variant.versionName}_${buildTime()}.apk"
+                outputFileName = apkName
+
+            }
+        }
+    }
+
+}
+//时间方法
+def buildTime() {
+    def date = new Date()
+    def formattedDate = date.format('yyyyMMdd')
+    return formattedDate
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
