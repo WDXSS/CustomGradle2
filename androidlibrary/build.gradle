@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+    //默认提供给app的aar包是 release
+    //修改发布aar包的类型
+//    defaultPublishConfig "baidu"
+//    defaultPublishConfig "google"
+    //打多个aar
+    publishNonDefault true
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        baidu{
+            resValue "string","aar_tips","baidu_aar"
+        }
+        google{
+            resValue "string","aar_tips","google_aar"
+        }
+        debug{
+            resValue "string","aar_tips","debug_aar"
+        }
+        release {
+            minifyEnabled false
+            resValue "string","aar_tips","release_aar"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    flavorDimensions 'resValue'//需要设置
+    productFlavors{
+//        baidu{
+//            resValue "string","aar_tips","baidu_aar"
+//        }
+//        google{
+//            resValue "string","aar_tips","google_aar"
+//        }
+
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
