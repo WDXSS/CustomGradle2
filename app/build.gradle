@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 //引入文件'version.gradle',通过配置ext{}统一版本信息
 apply from: 'version.gradle'
 android {
+    description "learn gradle"//添加任务描述
     compileSdkVersion 28
     defaultConfig {
         applicationId "gradle.custom.com.customgradle"
@@ -102,6 +103,7 @@ android {
             String name = flavor.manifestPlaceholders["channel_name"]
             println "channel_name =${name}"
     }
+
     //批量修改生成的app文件名
     //1.点3.0+后的变化
     //2.必须是用all
@@ -156,8 +158,12 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     //引入androidLibrary
-    implementation project(':androidlibrary')
-    baiduimplementation project(path: ':androidlibrary', configuration: 'baidu')
+    debugImplementation project(':androidlibrary')
+//    baiduimplementation project(path: ':androidlibrary', configuration: 'baidu')3.0以后不再支持
     //引入不同目录下的lib
 //    implementation project(':outlibrary')
+
 }
+
+
+
