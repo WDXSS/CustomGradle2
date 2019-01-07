@@ -66,8 +66,12 @@ android {
 //            signingConfig signingConfigs.release
         }
     }
-
-    flavorDimensions 'resValue'//需要设置
+//flavorDimensions android{}中的方法，和 productFlavors{}平级，
+//1.可以理解为对 productFlavor 进行分组
+//2.有优先级，第一个参数优先级最高，第二个次之
+//3.在productFlavor 使用属性dimension分组
+//4.高优先级的flavor会替换掉低优先级的资源，代码，配置等
+    flavorDimensions 'resValue', "mode"//需要设置
     productFlavors{
         //所有的flavors都必须属于同一个风格,使用productFlavor必须使用flavorDimensions统一维度，Gradle3.0以后
         // defaultConfig 实际上属于 ProductFlavor 类
@@ -79,18 +83,22 @@ android {
             applicationIdSuffix ".google"
             resValue('string','channel_tips','google 渠道')
             //注意第三个参数 url地址中的双引号不能省略
-            buildConfigField("string","url",'"https://www.google.com.hk/"')
+            buildConfigField("String","url",'"https://www.google.com.hk/"')//先级高的flavor
             //动态配AndroidManifest使用占位符 ManifestPlaceholders
             manifestPlaceholders.put("channel_id","google_id")
             manifestPlaceholders.put("channel_name","google_name")
 //            signingConfig signingConfigs.release
+            dimension 'resValue'
         }
         baidu{
             applicationIdSuffix ".buidu"
             resValue('string','channel_tips','baidu 渠道')
-            buildConfigField("String","url",'"https://www.baidu.com/"')
+            buildConfigField("String","url",'"https://www.baidu.com/"')//优级低的flavor，会被替换掉
+            buildConfigField("String","url2",'"https://www.baidu.com/2"')
             manifestPlaceholders.put("channel_id","buidu_id")
             manifestPlaceholders.put("channel_name","buidu_name")
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "qh360"]
+            dimension 'mode'
         }
     }
 
@@ -156,13 +164,13 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
     //引入androidLibrary
-    debugImplementation project(':androidlibrary')
+    implementation project(':androidlibrary')
+    //    implementation project(path: ':androidlibrary', configuration: 'baidu')
+//  debugImplementation project(':androidlibrary')
 //    baiduimplementation project(path: ':androidlibrary', configuration: 'baidu')3.0以后不再支持
     //引入不同目录下的lib
 //    implementation project(':outlibrary')
-
 }
 
 
