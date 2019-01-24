@@ -1,7 +1,5 @@
 package com.design.patterns.prototype;
 
-import android.support.v4.widget.TextViewCompat;
-
 /**
  * 原型模式<br/>
  * 1.Project.clone(); 实现接口 Cloneable ，不会调用构造方法<br/>
