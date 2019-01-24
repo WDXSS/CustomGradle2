@@ -13,8 +13,12 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
-//    //配置签名文件
+////配置签名文件
+//有2种方法解决密码暴露这个问题
+//1.读取系统环境变量的方式
+//2. 创建一个不加入版本控制的.properties文件
 //    signingConfigs {
+//        方式一
 //        def appStoreFile = System.getenv("STORE_FILE")
 //        def appStorePassword = System.getenv("STORE_PASSWORD")
 //        def appKeyAlias = System.getenv("KEY_ALIAS")
