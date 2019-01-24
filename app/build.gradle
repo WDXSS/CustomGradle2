@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
-//引入文件'version.gradle',通过配置ext{}统一版本信息
-apply from: 'version.gradle'
+//引入文件'version.gradle',通过配置ext{}统一版本信息(lib 也要引入所以文件移动Project文件夹下)
+//apply from: 'version.gradle'
 android {
     description "learn gradle"//添加任务描述
-    compileSdkVersion 28
+    compileSdkVersion compileSdkVersionCode
     defaultConfig {
         applicationId "gradle.custom.com.customgradle"
-        minSdkVersion 21
-        targetSdkVersion 28
+        minSdkVersion minSdkVersionCode
+        targetSdkVersion targetSdkVersionCode
         versionCode appVersionCode
         versionName appVersionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
