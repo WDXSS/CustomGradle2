@@ -28,7 +28,7 @@ public class PatternMainActivity extends AppCompatActivity {
      * 3.原型模式  prototype
      * 4.工厂方法模式  factory method
      * 5.抽象工厂  abstract factory
-     * 6.策略模式  Policy
+     * 6.策略模式  Policy (Strategy Pattern)
      * 7.状态模式  state
      */
     private void studyPatterns() {

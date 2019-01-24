@@ -13,7 +13,7 @@ public class StrategyMain {
         strategyMain.calculatePrice(5);
         System.out.println("----------------------");
         strategyMain.setIStrategy(new SubwayStrategy());//SubwayStrategy 和 BusStrategy 可以相互替换
-        strategyMain.calculatePrice(5);
+        strategyMain.calculatePrice(6);
 
     }
 
