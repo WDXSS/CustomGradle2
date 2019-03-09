@@ -6,6 +6,7 @@ package com.example.customview.anim.view;
  *  ---逐帧动画 FrameAnimation
  */
 public class ViewAnimationMain {
-
+//补间动画
+//  ScannerDome
 
 }

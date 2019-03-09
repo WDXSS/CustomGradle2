@@ -9,7 +9,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
        >
-        <activity android:name=".CustomViewMain">
+        <!--<activity android:name=".CustomViewMain">-->
+        <!--<activity android:name=".anim.view.tween.ScannerDome">-->
+        <activity android:name=".anim.property.value.LoadingDemo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
