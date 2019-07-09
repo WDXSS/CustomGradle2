@@ -10,7 +10,7 @@ android {
         targetSdkVersion targetSdkVersionCode
         versionCode appVersionCode
         versionName appVersionName
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
 ////配置签名文件
@@ -141,15 +141,17 @@ android {
 //    }
 
     applicationVariants.all { variant ->
+        //https://objectville.github.io/2019/01/22/Android-%E8%A7%A3%E5%86%B3-API-variantOutput-getPackageApplication-is-obsolete-%E7%9A%84%E5%B0%8F%E9%97%AE%E9%A2%98/
         //必须是用all
 //        variant.outputs.each { output ->
         variant.outputs.all { output ->
-            if (output.outputFile != null && output.outputFile.name.endsWith('.apk')
-                    &&'debug'.equals(variant.buildType.name)) {
-                def flavorName = variant.flavorName.startsWith("_") ? variant.flavorName.substring(1) : variant.flavorName
-                def apkName = "Example92_${flavorName}_v${variant.versionName}_${buildTime()}.apk"
-                outputFileName = apkName
-            }
+//            if (output.outputFile != null && output.outputFile.name.endsWith('.apk')
+//                    &&'debug'.equals(variant.buildType.name)) {
+//                def flavorName = variant.flavorName.startsWith("_") ? variant.flavorName.substring(1) : variant.flavorName
+//                def apkName = "Example92_${flavorName}_v${variant.versionName}_${buildTime()}.apk"
+//                outputFileName = apkName
+//            }
+
         }
     }
 
@@ -163,11 +165,11 @@ def buildTime() {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
     //引入androidLibrary
     implementation project(':androidlibrary')
     //    implementation project(path: ':androidlibrary', configuration: 'baidu')

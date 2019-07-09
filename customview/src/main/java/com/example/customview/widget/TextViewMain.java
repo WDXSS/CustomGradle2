@@ -1,15 +1,15 @@
-package com.example.customview;
+package com.example.customview.widget;
 
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.customview.R;
 
-public class CustomViewMain extends AppCompatActivity {
+public class TextViewMain extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //蜘蛛网
-        setContentView(R.layout.layout_spider);
+        setContentView(R.layout.layout_textview_main);
     }
 }

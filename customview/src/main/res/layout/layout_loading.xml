@@ -10,26 +10,27 @@
         android:layout_height="wrap_content"
         android:text="start"
         android:textAllCaps="false"
-        />
+        android:background="@drawable/selectable_background"/>
+
     <Button
         android:id="@+id/btn_cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@+id/btn_start"
         android:text="cancel"
-        android:textAllCaps="false"
-        />
+        android:textAllCaps="false" />
+
     <com.example.customview.anim.property.value.widget.LoadingImageView
         android:id="@+id/img_loading"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_centerInParent="true"
-        />
+        android:layout_centerInParent="true" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/img_loading"
-        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:text="加载中...."/>
+        android:layout_marginTop="20dp"
+        android:text="加载中...." />
 </RelativeLayout>

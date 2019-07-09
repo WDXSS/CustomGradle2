@@ -1,6 +1,6 @@
 ext{
     compileSdkVersionCode =28
-    minSdkVersionCode =21
+    minSdkVersionCode =26
     targetSdkVersionCode =28
     appVersionCode = 1
     appVersionName = "1.0.0"
