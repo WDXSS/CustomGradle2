@@ -5,7 +5,19 @@
     android:background="#000000"
     android:orientation="vertical">
 
-    <com.example.customview.view.SpiderView
+<!--    <com.example.customview.view.SpiderView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent" />-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:onClick="startDrawMain"
+        android:text="draw自定义控件"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="startUISystem"
+        android:text="UI 与文本相关的控件"/>
 </LinearLayout>

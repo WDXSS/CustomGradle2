@@ -30,4 +30,5 @@ dependencies {
     implementation 'org.jetbrains:annotations-java5:15.0'
     implementation 'com.jakewharton:butterknife:10.1.0'
     annotationProcessor  'com.jakewharton:butterknife-compiler:10.1.0'
+    implementation project(path: ':ui_system')
 }
