@@ -20,4 +20,9 @@
         android:layout_height="wrap_content"
         android:onClick="startUISystem"
         android:text="UI 与文本相关的控件"/>
+    <Button
+        android:layout_width="match_parent"
+        android:onClick="startHuangShu"
+        android:layout_height="wrap_content"
+        android:text="进阶之光"/>
 </LinearLayout>

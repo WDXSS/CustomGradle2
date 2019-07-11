@@ -1,9 +1,9 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion compileSdkVersionCode
     defaultConfig {
-        applicationId "gradle.custom.com.customgradle"
+
         minSdkVersion minSdkVersionCode
         targetSdkVersion targetSdkVersionCode
         versionCode appVersionCode
@@ -23,13 +23,9 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
-    implementation 'org.jetbrains:annotations-java5:15.0'
-    implementation 'com.jakewharton:butterknife:10.1.0'
-    annotationProcessor  'com.jakewharton:butterknife-compiler:10.1.0'
-    implementation project(path: ':ui_system')
-    implementation project(path: ':android_hs_library')
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
 }

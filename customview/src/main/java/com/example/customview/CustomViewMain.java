@@ -8,6 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.codingending.uisystemdemo.MainActivity;
+import com.example.android_hs_library.HuangShuMainActivity;
 
 
 public class CustomViewMain extends AppCompatActivity {
@@ -24,5 +25,9 @@ public class CustomViewMain extends AppCompatActivity {
 
     public void startDrawMain(View view) {
         startActivity(new Intent(CustomViewMain.this, DrawViewMain.class));
+    }
+
+    public void startHuangShu(View view) {
+        startActivity(new Intent(CustomViewMain.this, HuangShuMainActivity.class));
     }
 }

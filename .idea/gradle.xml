@@ -3,19 +3,19 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <compositeConfiguration>
-          <compositeBuild compositeDefinitionSource="SCRIPT" />
-        </compositeConfiguration>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/android_hs_library" />
             <option value="$PROJECT_DIR$/androidlibrary" />
             <option value="$PROJECT_DIR$/androidorigin" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/customview" />
             <option value="$PROJECT_DIR$/designPatternsLib" />
             <option value="$PROJECT_DIR$/javalibrary" />
+            <option value="$PROJECT_DIR$/ui_system" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

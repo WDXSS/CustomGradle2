@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android_hs_library" >
+    <application>
+        <activity android:name=".HuangShuMainActivity"/>
+        <activity android:name=".cardview.CardViewActivity"/>
+    </application>
+</manifest>

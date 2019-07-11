@@ -13,6 +13,7 @@ import com.codingending.uisystemdemo.md.MDWidgetActivity;
 
 /**
  * demo入口界面
+ * Android UI 常用控件讲解
  * @author CodingEnding
  */
 

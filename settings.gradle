@@ -1,4 +1,4 @@
-include ':app', ':javalibrary', ':androidlibrary', ':androidorigin',
+include ':app', ':javalibrary', ':androidlibrary', ':androidorigin', ':android_hs_library',
         ':designPatternsLib', ':customview',":ui_system"
 //引入库的方式2
 //include ':outlibrary'
