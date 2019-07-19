@@ -12,6 +12,9 @@ import com.example.customview.anim.view.tween.ScannerDome;
 import com.example.customview.view.SpiderActivity;
 
 public class DrawViewMain extends AppCompatActivity {
+
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
