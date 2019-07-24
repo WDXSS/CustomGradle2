@@ -2,6 +2,7 @@ package com.example.customview;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.Nullable;
@@ -12,7 +13,7 @@ import com.example.customview.anim.view.tween.ScannerDome;
 import com.example.customview.view.SpiderActivity;
 
 public class DrawViewMain extends AppCompatActivity {
-
+    private static final String TAG = "DrawViewMain";
 
 
     @Override
@@ -20,6 +21,10 @@ public class DrawViewMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_draw_view_main);
+
+        Intent intent = new Intent();
+
+
     }
 
     public void startSpider(View view) {
@@ -34,5 +39,16 @@ public class DrawViewMain extends AppCompatActivity {
     public void startLoadingDemo(View view) {
 
         startActivity(new Intent(DrawViewMain.this, LoadingDemo.class));
+    }
+
+    public void threadBlock(View view) {
+//
+//        while (true){
+//            Log.d(TAG, "threadBlock: ");
+//        }
+
+        for (;;){
+            Log.d(TAG, "threadBlock: ");
+        }
     }
 }

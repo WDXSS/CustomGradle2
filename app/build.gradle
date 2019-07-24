@@ -1,8 +1,11 @@
 apply plugin: 'com.android.application'
 //引入文件'version.gradle',通过配置ext{}统一版本信息(lib 也要引入所以文件移动Project文件夹下)
 //apply from: 'version.gradle'
+
 android {
     description "learn gradle"//添加任务描述
+    //what is takeName?
+    def  taskName =  gradle.startParameter.taskNames
     compileSdkVersion compileSdkVersionCode
     defaultConfig {
         applicationId "gradle.custom.com.customgradle"
@@ -12,6 +15,7 @@ android {
         versionName appVersionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    println("taskeName is :"+ taskName)
 
 ////配置签名文件
 //有2种方法解决密码暴露这个问题
