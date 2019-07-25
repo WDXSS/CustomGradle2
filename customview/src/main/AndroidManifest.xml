@@ -21,6 +21,7 @@
         <activity android:name=".anim.property.value.LoadingDemo" />
         <activity android:name=".DrawViewMain" />
         <activity android:name=".view.SpiderActivity" />
+        <activity android:name=".notify.NotifyMain"/>
 
     </application>
 </manifest>

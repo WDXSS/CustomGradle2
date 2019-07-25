@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.codingending.uisystemdemo.MainActivity;
 import com.example.android_hs_library.HuangShuMainActivity;
+import com.example.customview.notify.NotifyMain;
 
 
 public class CustomViewMain extends AppCompatActivity {
@@ -29,5 +30,9 @@ public class CustomViewMain extends AppCompatActivity {
 
     public void startHuangShu(View view) {
         startActivity(new Intent(CustomViewMain.this, HuangShuMainActivity.class));
+    }
+
+    public void startNotify(View view) {
+        startActivity(new Intent(CustomViewMain.this, NotifyMain.class));
     }
 }

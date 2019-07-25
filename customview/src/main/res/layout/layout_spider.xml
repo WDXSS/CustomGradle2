@@ -25,4 +25,9 @@
         android:onClick="startHuangShu"
         android:layout_height="wrap_content"
         android:text="进阶之光"/>
+    <Button
+        android:layout_width="match_parent"
+        android:onClick="startNotify"
+        android:layout_height="wrap_content"
+        android:text="显示通知"/>
 </LinearLayout>
