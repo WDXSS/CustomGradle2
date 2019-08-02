@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "1013086850618",
+    "firebase_url": "https://wallet-4755b.firebaseio.com",
+    "project_id": "wallet-4755b",
+    "storage_bucket": "wallet-4755b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013086850618:android:30eb39365f20fe68",
+        "android_client_info": {
+          "package_name": "com.cjdfintech.wallet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013086850618-uavdrivb1oqsi3nj4f0goe97b579kbp8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyJNlsUe4lrSxJX_oMr77Wo0HDkmcdJlY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013086850618-uavdrivb1oqsi3nj4f0goe97b579kbp8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013086850618:android:3819962a1cb51663",
+        "android_client_info": {
+          "package_name": "gradle.custom.com.customgradle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013086850618-uavdrivb1oqsi3nj4f0goe97b579kbp8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyJNlsUe4lrSxJX_oMr77Wo0HDkmcdJlY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013086850618-uavdrivb1oqsi3nj4f0goe97b579kbp8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

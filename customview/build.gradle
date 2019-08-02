@@ -16,7 +16,10 @@ android {
 //            abiFilters 'arm64-v8a'
         }
     }
-
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -39,7 +42,15 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
     implementation project(path: ':ui_system')
     implementation project(path: ':android_hs_library')
+    implementation project(path: ':firelibrary')
+
+
 
 //    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
-    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.15'
+//    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.15'
+//    //fireBase
+//    implementation 'com.google.firebase:firebase-core:16.0.9'
+//    implementation 'com.google.firebase:firebase-iid:18.0.0'
+//    implementation 'com.google.firebase:firebase-messaging:18.0.0'
 }
+apply plugin: 'com.google.gms.google-services'

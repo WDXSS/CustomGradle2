@@ -3,6 +3,9 @@ package com.example.customview.notify;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -41,18 +44,26 @@ public class NotifyMain extends AppCompatActivity {
         builder.setContentTitle("通知标题");
         builder.setSmallIcon(R.mipmap.ic_launcher);
         builder.setTicker("新消息");
+        builder.setAutoCancel(true);
 
 //        builder.setAutoCancel(true);
 //        builder.setWhen(System.currentTimeMillis());
-//        Intent intent = new Intent(this, MainActivity.class);
-//        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent,PendingIntent.FLAG_CANCEL_CURRENT);
-//        builder.setContentIntent(pendingIntent);
+        Intent intent = new Intent(this, NotifyTestActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0,
+//                intent,PendingIntent.FLAG_CANCEL_CURRENT);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this,
+                0 /* Request code */, intent,
+                PendingIntent.FLAG_ONE_SHOT);
+        builder.setContentIntent(pendingIntent);
 //        Notification notification = builder.build();
 //        notificationManager.notify(1, notification);
         notification = builder.build();
 
+        NotificationManager notificationManager =
+                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
-        notificationManagerCompat.notify(0,notification);
+        notificationManager.notify(0,notification);
     }
 
 

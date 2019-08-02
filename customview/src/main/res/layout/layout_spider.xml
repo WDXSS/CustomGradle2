@@ -30,4 +30,9 @@
         android:onClick="startNotify"
         android:layout_height="wrap_content"
         android:text="显示通知"/>
+    <Button
+        android:layout_width="match_parent"
+        android:onClick="startFireBase"
+        android:layout_height="wrap_content"
+        android:text="大开FireBase"/>
 </LinearLayout>

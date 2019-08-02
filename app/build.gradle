@@ -179,6 +179,16 @@ dependencies {
     //    implementation project(path: ':androidlibrary', configuration: 'baidu')
 //  debugImplementation project(':androidlibrary')
 //    baiduimplementation project(path: ':androidlibrary', configuration: 'baidu')3.0以后不再支持
+
+
+    //--------start
+//    debugImplementation 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+//    releaseImplementation 'com.zhihu.android.library:stetho-no-op:1.0.0'
+//    dependencyReplace {
+//            replace "com.zhihu.android.library:stetho-no-op" with "com.facebook.stetho:stetho-okhttp3:1.5.0" on "mr"
+//    }
+    //------end
+
     //引入不同目录下的lib
 //    implementation project(':outlibrary')
 }

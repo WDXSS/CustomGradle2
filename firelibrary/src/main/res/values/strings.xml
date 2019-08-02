@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FireLibrary</string>
+    <string name="fire_base_name">FireLibrary</string>
+    <string name="fire_base_name_private">FireLibraryPrivate</string>
+</resources>
