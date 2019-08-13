@@ -2,15 +2,15 @@
     package="com.example.firelibrary">
 
     <application>
-        <activity android:name=".FireMainActivity">
+       <!-- <activity android:name=".FireMainActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
 
             </intent-filter>
-        </activity>
-        <!--<activity android:name=".FireMainActivity"/>-->
+        </activity>-->
+        <activity android:name=".FireMainActivity"/>
         <service
             android:name=".fire.MyFirebaseMessagingService"
             android:exported="false">
@@ -28,5 +28,13 @@
         <!--<meta-data-->
         <!--android:name="com.google.firebase.messaging.default_notification_color"-->
         <!--android:resource="@color/colorPrimary"/>-->
+
+        <receiver android:name=".fire.FirebaseBroadcastReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.measurement.UPLOAD" />
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>

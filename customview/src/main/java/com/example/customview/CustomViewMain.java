@@ -12,9 +12,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.codingending.uisystemdemo.MainActivity;
+import com.codingending.uisystemdemo.base.BaseWidgetActivity;
 import com.example.android_hs_library.HuangShuMainActivity;
 import com.example.customview.notify.NotifyMain;
 import com.example.firelibrary.FireMainActivity;
+
+import java.util.ArrayList;
 //import com.google.android.gms.tasks.OnCompleteListener;
 //import com.google.android.gms.tasks.Task;
 //import com.google.firebase.iid.FirebaseInstanceId;
@@ -24,6 +27,7 @@ import com.example.firelibrary.FireMainActivity;
 
 public class CustomViewMain extends AppCompatActivity {
     private static final String TAG = "CustomViewMain";
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,21 +35,27 @@ public class CustomViewMain extends AppCompatActivity {
         setContentView(R.layout.layout_spider);
         getString(R.string.fire_base_name_private);
 //        FirebaseMessaging.getInstance().setAutoInitEnabled(true);
-        test();
+//        test();
         notification();
-        Button button = findViewById(R.id.btn_create_notify);
-        button.getX();
+
+        getSupperClass();
     }
-    private void notification(){
+
+    private void notification() {
         if (getIntent() != null && getIntent().getExtras() != null) {
             String title = (String) getIntent().getExtras().get("title");
             String body = (String) getIntent().getExtras().get("body");
-            System.out.println("title = "+ title + ", body = "+ body);
-            System.out.println("shuju = "+ getIntent().getExtras());
-            System.out.println("actionClick = "+ getIntent().getExtras().getString("click_action"));
+            System.out.println("title = " + title + ", body = " + body);
+            System.out.println("shuju = " + getIntent().getExtras());
+            System.out.println("actionClick = " + getIntent().getExtras().getString("click_action"));
         }
-    }
-    private void test(){
+
+        if (getIntent().getExtras() != null) {
+            for (String key : getIntent().getExtras().keySet()) {
+                Log.i(TAG, "printlnMessage: key = " + key + ",value = "+ getIntent().getExtras().get(key));
+            }
+        }
+//        private void test () {
 //        FirebaseInstanceId.getInstance().getInstanceId()
 //                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
 //                    @Override
@@ -64,25 +74,31 @@ public class CustomViewMain extends AppCompatActivity {
 //                        Toast.makeText(CustomViewMain.this, token, Toast.LENGTH_SHORT).show();
 //                    }
 //                });
-    }
+        }
 
-    public void startUISystem(View view) {
-        startActivity(new Intent(CustomViewMain.this, MainActivity.class));
-    }
+        public void startUISystem (View view){
+            startActivity(new Intent(CustomViewMain.this, MainActivity.class));
+        }
 
-    public void startDrawMain(View view) {
-        startActivity(new Intent(CustomViewMain.this, DrawViewMain.class));
-    }
+        public void startDrawMain (View view){
+            startActivity(new Intent(CustomViewMain.this, DrawViewMain.class));
+        }
 
-    public void startHuangShu(View view) {
-        startActivity(new Intent(CustomViewMain.this, HuangShuMainActivity.class));
-    }
+        public void startHuangShu (View view){
+            startActivity(new Intent(CustomViewMain.this, HuangShuMainActivity.class));
+        }
 
-    public void startNotify(View view) {
-        startActivity(new Intent(CustomViewMain.this, NotifyMain.class));
-    }
+        public void startNotify (View view){
+            startActivity(new Intent(CustomViewMain.this, NotifyMain.class));
+        }
 
-    public void startFireBase(View view) {
-        startActivity(new Intent(CustomViewMain.this, FireMainActivity.class));
+        public void startFireBase (View view){
+            startActivity(new Intent(CustomViewMain.this, FireMainActivity.class));
+        }
+
+
+        private void getSupperClass () {
+
+
+        }
     }
-}

@@ -107,3 +107,8 @@ gen
 CustomGradle2.zip
 customview/src/main/res/drawable-v21/
 customview/src/main/res/drawable/selectable_background.xml
+android_hs_library/libs/
+buildSrc/libs/
+buildSrc/src/
+dynamic_feature/src/main/java/
+firelibrary/libs/
