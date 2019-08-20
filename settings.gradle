@@ -1,5 +1,5 @@
 include ':app', ':javalibrary', ':androidlibrary', ':androidorigin', ':android_hs_library', ':dynamic_feature', ':firelibrary', ':buildSrc',
-        ':designPatternsLib', ':customview', ":ui_system"
+        ':designPatternsLib', ':customview', ":ui_system", ':library-recycler'
 //引入库的方式2
 //include ':outlibrary'
 //                                             //路径，项目名称

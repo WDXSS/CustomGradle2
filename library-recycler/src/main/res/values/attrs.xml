@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RecyclerListView">
+        <attr name="recyclerEnableRefresh" format="boolean" />
+        <attr name="recyclerEnableLoadMore" format="boolean" />
+        <attr name="recyclerLayoutManager" format="enum">
+            <enum name="vertical" value="0" />
+            <enum name="horizontal" value="1" />
+            <enum name="grid" value="2" />
+        </attr>
+        <attr name="recyclerGridSpans" format="integer" />
+        <attr name="recyclerGridBorder">
+            <flag name="all" value="-1" />
+            <flag name="none" value="0" />
+            <flag name="left" value="1" />
+            <flag name="top" value="2" />
+            <flag name="right" value="4" />
+            <flag name="bottom" value="8" />
+        </attr>
+        <attr name="recyclerEnableDivider" format="boolean" />
+        <attr name="recyclerDivider" format="reference" />
+        <attr name="recyclerDividerColor" format="reference|color" />
+        <attr name="recyclerDividerSize" format="reference|dimension" />
+        <attr name="recyclerDividerMarginStart" format="reference|dimension" />
+        <attr name="recyclerDividerMarginEnd" format="reference|dimension" />
+    </declare-styleable>
+</resources>
