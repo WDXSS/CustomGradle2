@@ -5,34 +5,51 @@
     android:background="#000000"
     android:orientation="vertical">
 
-<!--    <com.example.customview.view.SpiderView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />-->
+    <!--    <com.example.customview.view.SpiderView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />-->
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAllCaps="false"
         android:onClick="startDrawMain"
         android:text="draw自定义控件"
-        />
+        android:textAllCaps="false" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="startUISystem"
-        android:text="UI 与文本相关的控件"/>
+        android:text="UI 与文本相关的控件" />
+
     <Button
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="startHuangShu"
-        android:layout_height="wrap_content"
-        android:text="进阶之光"/>
+        android:text="进阶之光" />
+
     <Button
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="startNotify"
-        android:layout_height="wrap_content"
-        android:text="显示通知"/>
+        android:text="显示通知" />
+
     <Button
         android:layout_width="match_parent"
-        android:onClick="startFireBase"
         android:layout_height="wrap_content"
-        android:text="大开FireBase"/>
+        android:onClick="startFireBase"
+        android:text="大开FireBase" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="startFragment"
+        android:text="测试Fragment的生命周期"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="list"
+        android:onClick="startListView"
+        android:textAllCaps="false" />
 </LinearLayout>

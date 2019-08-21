@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.codingending.uisystemdemo.MainActivity;
 import com.codingending.uisystemdemo.base.BaseWidgetActivity;
 import com.example.android_hs_library.HuangShuMainActivity;
+import com.example.customview.fragment.FragmentMainActivity;
+import com.example.customview.list.ListMainActivity;
 import com.example.customview.notify.NotifyMain;
 import com.example.firelibrary.FireMainActivity;
 
@@ -52,7 +54,7 @@ public class CustomViewMain extends AppCompatActivity {
 
         if (getIntent().getExtras() != null) {
             for (String key : getIntent().getExtras().keySet()) {
-                Log.i(TAG, "printlnMessage: key = " + key + ",value = "+ getIntent().getExtras().get(key));
+                Log.i(TAG, "printlnMessage: key = " + key + ",value = " + getIntent().getExtras().get(key));
             }
         }
 //        private void test () {
@@ -74,31 +76,39 @@ public class CustomViewMain extends AppCompatActivity {
 //                        Toast.makeText(CustomViewMain.this, token, Toast.LENGTH_SHORT).show();
 //                    }
 //                });
-        }
-
-        public void startUISystem (View view){
-            startActivity(new Intent(CustomViewMain.this, MainActivity.class));
-        }
-
-        public void startDrawMain (View view){
-            startActivity(new Intent(CustomViewMain.this, DrawViewMain.class));
-        }
-
-        public void startHuangShu (View view){
-            startActivity(new Intent(CustomViewMain.this, HuangShuMainActivity.class));
-        }
-
-        public void startNotify (View view){
-            startActivity(new Intent(CustomViewMain.this, NotifyMain.class));
-        }
-
-        public void startFireBase (View view){
-            startActivity(new Intent(CustomViewMain.this, FireMainActivity.class));
-        }
-
-
-        private void getSupperClass () {
-
-
-        }
     }
+
+    public void startUISystem(View view) {
+        startActivity(new Intent(CustomViewMain.this, MainActivity.class));
+    }
+
+    public void startDrawMain(View view) {
+        startActivity(new Intent(CustomViewMain.this, DrawViewMain.class));
+    }
+
+    public void startHuangShu(View view) {
+        startActivity(new Intent(CustomViewMain.this, HuangShuMainActivity.class));
+    }
+
+    public void startNotify(View view) {
+        startActivity(new Intent(CustomViewMain.this, NotifyMain.class));
+    }
+
+    public void startFireBase(View view) {
+        startActivity(new Intent(CustomViewMain.this, FireMainActivity.class));
+    }
+
+
+    private void getSupperClass() {
+
+
+    }
+
+    public void startFragment(View view) {
+        startActivity(new Intent(CustomViewMain.this, FragmentMainActivity.class));
+    }
+
+    public void startListView(View view) {
+        startActivity(new Intent(CustomViewMain.this, ListMainActivity.class));
+    }
+}

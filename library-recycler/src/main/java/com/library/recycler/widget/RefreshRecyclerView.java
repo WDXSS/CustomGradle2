@@ -3,8 +3,9 @@ package com.library.recycler.widget;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.library.recycler.R;
 
@@ -24,7 +25,7 @@ import com.library.recycler.R;
  * 自定义属性
  * <li> recyclerEnableRefresh：是否可以刷新
  * <li> recyclerEnableLoadMore：是否可以加载更多
- * <li> recyclerLayoutManager：LayoutManager类型，枚举型vertical、horizontal或grid（设置horizontal时，刷新会存在问题）
+ * <li> recyclerLayoutManager：LayoutManager类型，枚举型 vertical、horizontal或grid（设置horizontal时，刷新会存在问题）
  * <li> recyclerGridSpans：Grid列数
  * <li> recyclerGridBorder：Grid的最外层分割线是否显示，{@link GridItemDecoration#setBorder(int)}
  * <li> recyclerEnableDivider：是否显示分割线

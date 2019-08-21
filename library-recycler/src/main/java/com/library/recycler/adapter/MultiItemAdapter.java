@@ -1,7 +1,9 @@
 package com.library.recycler.adapter;
 
-import android.support.annotation.LayoutRes;
-import android.support.annotation.Nullable;
+
+
+import androidx.annotation.LayoutRes;
+import androidx.annotation.Nullable;
 
 import com.chad.library.adapter.base.util.MultiTypeDelegate;
 

@@ -43,7 +43,7 @@ dependencies {
     implementation project(path: ':ui_system')
     implementation project(path: ':android_hs_library')
     implementation project(path: ':firelibrary')
-
+    implementation project(path: ':library-recycler')
 
 
 //    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'

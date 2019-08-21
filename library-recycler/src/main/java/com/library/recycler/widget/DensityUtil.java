@@ -2,8 +2,8 @@ package com.library.recycler.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.StyleableRes;
-import android.support.v4.content.ContextCompat;
+import androidx.annotation.StyleableRes;
+import androidx.core.content.ContextCompat;
 
 /**
  *

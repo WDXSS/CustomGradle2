@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-    <activity android:name=".CustomViewMain">
+        <activity android:name=".CustomViewMain">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,15 +21,15 @@
         <activity android:name=".anim.property.value.LoadingDemo" />
         <activity android:name=".DrawViewMain" />
         <activity android:name=".view.SpiderActivity" />
-        <activity android:name=".notify.NotifyMain"/>
-        <activity android:name=".notify.NotifyTestActivity" >
+        <activity android:name=".notify.NotifyMain" />
+        <activity android:name=".notify.NotifyTestActivity">
             <intent-filter>
                 <action android:name="com.example.customview.notify.NotifyTestActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".fragment.FragmentMainActivity" />
+        <activity android:name=".list.ListMainActivity" />
 
     </application>
 </manifest>
-
