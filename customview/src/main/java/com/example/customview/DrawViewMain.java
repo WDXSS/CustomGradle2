@@ -21,10 +21,6 @@ public class DrawViewMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_draw_view_main);
-
-        Intent intent = new Intent();
-
-
     }
 
     public void startSpider(View view) {
@@ -42,10 +38,6 @@ public class DrawViewMain extends AppCompatActivity {
     }
 
     public void threadBlock(View view) {
-//
-//        while (true){
-//            Log.d(TAG, "threadBlock: ");
-//        }
 
         for (;;){
             Log.d(TAG, "threadBlock: ");

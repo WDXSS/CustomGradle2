@@ -52,4 +52,23 @@
         android:text="list"
         android:onClick="startListView"
         android:textAllCaps="false" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="申请权限"
+            android:onClick="reqPermission"
+            android:textAllCaps="false" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="验证权限"
+            android:onClick="checkPermission"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
 </LinearLayout>

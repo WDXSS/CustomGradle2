@@ -4,27 +4,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.codingending.uisystemdemo.MainActivity;
-import com.codingending.uisystemdemo.base.BaseWidgetActivity;
 import com.example.android_hs_library.HuangShuMainActivity;
 import com.example.customview.fragment.FragmentMainActivity;
 import com.example.customview.list.ListMainActivity;
 import com.example.customview.notify.NotifyMain;
 import com.example.firelibrary.FireMainActivity;
 
-import java.util.ArrayList;
-//import com.google.android.gms.tasks.OnCompleteListener;
-//import com.google.android.gms.tasks.Task;
-//import com.google.firebase.iid.FirebaseInstanceId;
-//import com.google.firebase.iid.InstanceIdResult;
-//import com.google.firebase.messaging.FirebaseMessaging;
 
 
 public class CustomViewMain extends AppCompatActivity {
@@ -35,11 +25,7 @@ public class CustomViewMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //蜘蛛网
         setContentView(R.layout.layout_spider);
-        getString(R.string.fire_base_name_private);
-//        FirebaseMessaging.getInstance().setAutoInitEnabled(true);
-//        test();
         notification();
-
         getSupperClass();
     }
 
@@ -57,25 +43,6 @@ public class CustomViewMain extends AppCompatActivity {
                 Log.i(TAG, "printlnMessage: key = " + key + ",value = " + getIntent().getExtras().get(key));
             }
         }
-//        private void test () {
-//        FirebaseInstanceId.getInstance().getInstanceId()
-//                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<InstanceIdResult> task) {
-//                        if (!task.isSuccessful()) {
-//                            Log.w(TAG, "getInstanceId failed", task.getException());
-//                            return;
-//                        }
-//
-//                        // Get new Instance ID token
-//                        String token = task.getResult().getToken();
-//
-//                        // Log and toast
-//
-//                        Log.d(TAG, token);
-//                        Toast.makeText(CustomViewMain.this, token, Toast.LENGTH_SHORT).show();
-//                    }
-//                });
     }
 
     public void startUISystem(View view) {
@@ -110,5 +77,23 @@ public class CustomViewMain extends AppCompatActivity {
 
     public void startListView(View view) {
         startActivity(new Intent(CustomViewMain.this, ListMainActivity.class));
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        Log.i(TAG, "onRequestPermissionsResult: requestCode = "+ requestCode);
+        for (String permission : permissions) {
+            Log.i(TAG, "onRequestPermissionsResult: permission = "+ permission);
+        }
+        for (int grantResult : grantResults) {
+            Log.i(TAG, "onRequestPermissionsResult: grantResult = " + grantResult);
+        }
+    }
+
+    public void reqPermission(View view) {
+        DeviceInfo.reqPermission(CustomViewMain.this);
+    }
+
+    public void checkPermission(View view) {
+        DeviceInfo.getImeiNew(CustomViewMain.this);
     }
 }
