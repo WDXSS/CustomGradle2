@@ -31,24 +31,36 @@
         </activity>
         <activity android:name=".fragment.FragmentMainActivity" />
         <activity android:name=".list.ListMainActivity" />
-        <activity android:name=".deeplink.DeepLinkActivity" >
+        <activity android:name=".deeplink.DeepLinkActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.BROWSABLE" />
                 <data
                     android:host="s"
                     android:scheme="s" />
             </intent-filter>
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.VIEW" />-->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
 
-<!--                <category android:name="android.intent.category.DEFAULT" />-->
-<!--                <category android:name="android.intent.category.BROWSABLE" />-->
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
 
-<!--                <data-->
-<!--                    android:host="link" 必须有-->
-<!--                    android:scheme="will" />-->
-<!--            </intent-filter>-->
+           <!--     <a href="[scheme]://[host]/[path]?[query]">启动应用程序</a>-->
+                <data
+                    android:scheme="http"
+                    android:host="test.deeplink.com"
+                    android:pathPattern="/mys" />
+            </intent-filter>
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.VIEW" />-->
+
+            <!--                <category android:name="android.intent.category.DEFAULT" />-->
+            <!--                <category android:name="android.intent.category.BROWSABLE" />-->
+
+            <!--                <data-->
+            <!--                    android:host="link" 必须有-->
+            <!--                    android:scheme="will" />-->
+            <!--            </intent-filter>-->
         </activity>
 
     </application>

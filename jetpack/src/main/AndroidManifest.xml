@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jetpack" >
+
+    <application>
+        <activity android:name=".lifecycle.LifecycleActivity" />
+        <activity android:name=".livedata.LiveDataMainActivity" />
+        <activity android:name=".viewModel.ViewModelMainActivity" />
+    </application>
+</manifest>

@@ -5,7 +5,8 @@ apply plugin: 'com.android.application'
 android {
     description "learn gradle"//添加任务描述
     //what is takeName?
-    def  taskName =  gradle.startParameter.taskNames
+    def taskName = gradle.startParameter.taskNames
+
     compileSdkVersion compileSdkVersionCode
     defaultConfig {
         applicationId "gradle.custom.com.customgradle"
@@ -14,8 +15,32 @@ android {
         versionCode appVersionCode
         versionName appVersionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//---------读取配置文件 配置buildConfigField
+        Properties properties = new Properties()
+        properties.load(new FileInputStream("D:\\devSpace\\CustomGradle2\\app\\test.properties"))
+
+        Set<String> name = properties.stringPropertyNames()
+        for (Object str : name) {
+            println str
+            println properties.getProperty(str)
+
+            if("isCode".equals(str)){
+                buildConfigField("boolean", str, properties.getProperty(str))
+            }else{
+                buildConfigField("String", str, properties.getProperty(str))
+            }
+        }
+// ------  the end
+
+
+
+//        Properties properties2 = new Properties()
+//        //相对路径没有设置成功
+//        properties2.load(new FileInputStream("..\\app\\assets\\test2.properties"))
+//        println properties2.getProperty("csdn2")
+
     }
-    println("taskeName is :"+ taskName)
+    println("taskeName is :" + taskName)
 
 ////配置签名文件
 //有2种方法解决密码暴露这个问题
@@ -44,18 +69,18 @@ android {
 //    }
 
     //adb 操作选项
-    adbOptions{
-        timeOutInMs = 5*1000//5秒； 设置执行adb命令的超时时间，包括安装，运行，调试
+    adbOptions {
+        timeOutInMs = 5 * 1000//5秒； 设置执行adb命令的超时时间，包括安装，运行，调试
         //'d' 允许进行降级安装；allow version code downgrade
         //'r' 替换已经存在的应用程序； replace existing application
         //'l' 锁定该应用程序  forward lock application
         //'t' 允许测试包
         //'s' 把应用程序安装到SD卡上
         //'g' 为该应用授予所有运行时权限
-        installOptions 'd','r'
+        installOptions 'd', 'r'
     }
     //java 编译选项
-    compileOptions{
+    compileOptions {
         encoding 'utf-8'
         //配置java源代码的编译级别 ：指定编译.java文件的jdk版本
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -68,7 +93,7 @@ android {
         //1.resValue 自定义资源:string,图片等，生成到generated.xml
         //2.buildConfigField 添加常量到buildConfig.java
         release {
-            resValue('string','channel_tips','google 渠道')
+            resValue('string', 'channel_tips', 'google 渠道')
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 //            signingConfig signingConfigs.release
@@ -80,7 +105,7 @@ android {
 //3.在productFlavor 使用属性dimension分组
 //4.高优先级的flavor会替换掉低优先级的资源，代码，配置等
     flavorDimensions 'resValue', "mode"//需要设置
-    productFlavors{
+    productFlavors {
         //所有的flavors都必须属于同一个风格,使用productFlavor必须使用flavorDimensions统一维度，Gradle3.0以后
         // defaultConfig 实际上属于 ProductFlavor 类
         // https://developer.android.com/studio/build/build-variants?utm_source=android-studio#product-flavors
@@ -89,22 +114,22 @@ android {
         //3.manifestPlaceholders 添加站位符到AndroidManifest.xml
         google {
             applicationIdSuffix ".google"
-            resValue('string','channel_tips','google 渠道')
+            resValue('string', 'channel_tips', 'google 渠道')
             //注意第三个参数 url地址中的双引号不能省略
-            buildConfigField("String","url",'"https://www.google.com.hk/"')//先级高的flavor
+            buildConfigField("String", "url", '"https://www.google.com.hk/"')//先级高的flavor
             //动态配AndroidManifest使用占位符 ManifestPlaceholders
-            manifestPlaceholders.put("channel_id","google_id")
-            manifestPlaceholders.put("channel_name","google_name")
+            manifestPlaceholders.put("channel_id", "google_id")
+            manifestPlaceholders.put("channel_name", "google_name")
 //            signingConfig signingConfigs.release
             dimension 'resValue'
         }
-        baidu{
+        baidu {
             applicationIdSuffix ".buidu"
-            resValue('string','channel_tips','baidu 渠道')
-            buildConfigField("String","url",'"https://www.baidu.com/"')//优级低的flavor，会被替换掉
-            buildConfigField("String","url2",'"https://www.baidu.com/2"')
-            manifestPlaceholders.put("channel_id","buidu_id")
-            manifestPlaceholders.put("channel_name","buidu_name")
+            resValue('string', 'channel_tips', 'baidu 渠道')
+            buildConfigField("String", "url", '"https://www.baidu.com/"')//优级低的flavor，会被替换掉
+            buildConfigField("String", "url2", '"https://www.baidu.com/2"')
+            manifestPlaceholders.put("channel_id", "buidu_id")
+            manifestPlaceholders.put("channel_name", "buidu_name")
 //            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "qh360"]
             dimension 'mode'
         }
@@ -169,11 +194,11 @@ def buildTime() {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     //引入androidLibrary
     implementation project(':androidlibrary')
     //    implementation project(path: ':androidlibrary', configuration: 'baidu')
@@ -191,6 +216,15 @@ dependencies {
 
     //引入不同目录下的lib
 //    implementation project(':outlibrary')
+
+}
+def para = '123'
+println para
+
+
+task config {
+    println "build 就会执行  config--333-----------------"
+//    buildConfigField("String","url",'"https://www.google.com.hk/"')//先级高的flavor
 }
 
 
