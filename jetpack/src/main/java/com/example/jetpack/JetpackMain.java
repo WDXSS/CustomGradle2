@@ -1,4 +1,7 @@
 package com.example.jetpack;
+
+import androidx.lifecycle.Lifecycle;
+
 @DevDescribe(value = "JetPack 概要说明")
 public class JetpackMain {
     /**
@@ -8,7 +11,7 @@ public class JetpackMain {
      * 1. Architecture（架构组件）
      *   1.1 Lifecycle 用于帮助开发者管理Activity和Fragment 的生命周期，由于Lifecycle是LiveData和ViewModel的基础
      */
-
+private Lifecycle mLifecycle;
 
 //1. 在project  build.gradle 中添加  jcenter()
 //    allprojects {
@@ -18,5 +21,7 @@ public class JetpackMain {
 //        }
 //    }
 
+// ViewModel
+// LiveData
 
 }

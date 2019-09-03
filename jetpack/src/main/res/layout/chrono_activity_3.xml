@@ -40,5 +40,15 @@
         android:layout_below="@id/hello_textview"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timer_textview"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="ViewModel 共享数据"
+        android:textAllCaps="false"
+        android:onClick="onShareData"
+        />
 
 </RelativeLayout>
