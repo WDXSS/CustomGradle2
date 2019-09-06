@@ -1,6 +1,8 @@
 package com.example.jetpack;
 
+import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.ViewModelProviders;
 
 @DevDescribe(value = "JetPack 概要说明")
 public class JetpackMain {
@@ -23,5 +25,6 @@ private Lifecycle mLifecycle;
 
 // ViewModel
 // LiveData
-
+//    ViewModelProviders
+//    Fragment.setRetainInstance(boolean) 是Fragment中的一个方法。将这个方法设置为true就可以使当前Fragment在Activity重建时存活下来
 }
