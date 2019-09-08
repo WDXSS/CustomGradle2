@@ -13,6 +13,7 @@ import com.example.android_hs_library.HuangShuMainActivity;
 import com.example.customview.fragment.FragmentMainActivity;
 import com.example.customview.list.ListMainActivity;
 import com.example.customview.notify.NotifyMain;
+import com.example.customview.view.IncludeMainActivity;
 import com.example.firelibrary.FireMainActivity;
 import com.example.jetpack.lifecycle.LifecycleActivity;
 import com.example.jetpack.livedata.LiveDataMainActivity;
@@ -104,5 +105,9 @@ public class CustomViewMain extends AppCompatActivity {
 //        startActivity(new Intent(this, LifecycleActivity.class));
 //        startActivity(new Intent(this, LiveDataMainActivity.class));
         startActivity(new Intent(this, ViewModelMainActivity.class));
+    }
+
+    public void startInclude(View view) {
+        startActivity(new Intent(CustomViewMain.this, IncludeMainActivity.class));
     }
 }

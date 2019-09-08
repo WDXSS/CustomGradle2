@@ -15,22 +15,22 @@ android {
         versionCode appVersionCode
         versionName appVersionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-//---------读取配置文件 配置buildConfigField
-        Properties properties = new Properties()
-        properties.load(new FileInputStream("D:\\devSpace\\CustomGradle2\\app\\test.properties"))
-
-        Set<String> name = properties.stringPropertyNames()
-        for (Object str : name) {
-            println str
-            println properties.getProperty(str)
-
-            if("isCode".equals(str)){
-                buildConfigField("boolean", str, properties.getProperty(str))
-            }else{
-                buildConfigField("String", str, properties.getProperty(str))
-            }
-        }
-// ------  the end
+////---------读取配置文件 配置buildConfigField
+//        Properties properties = new Properties()
+//        properties.load(new FileInputStream("D:\\devSpace\\CustomGradle2\\app\\test.properties"))
+//
+//        Set<String> name = properties.stringPropertyNames()
+//        for (Object str : name) {
+//            println str
+//            println properties.getProperty(str)
+//
+//            if("isCode".equals(str)){
+//                buildConfigField("boolean", str, properties.getProperty(str))
+//            }else{
+//                buildConfigField("String", str, properties.getProperty(str))
+//            }
+//        }
+//// ------  the end
 
 
 

@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:text="start"
         android:textAllCaps="false"
-        android:background="@drawable/selectable_background"/>
+        />
 
     <Button
         android:id="@+id/btn_cancel"
