@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/android_hs_library" />
+            <option value="$PROJECT_DIR$/androidlibrary" />
+            <option value="$PROJECT_DIR$/androidorigin" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/buildSrc" />
+            <option value="$PROJECT_DIR$/customview" />
+            <option value="$PROJECT_DIR$/designPatternsLib" />
+            <option value="$PROJECT_DIR$/dynamic_feature" />
+            <option value="$PROJECT_DIR$/firelibrary" />
+            <option value="$PROJECT_DIR$/javalibrary" />
+            <option value="$PROJECT_DIR$/ui_system" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
