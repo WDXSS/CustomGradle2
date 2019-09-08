@@ -1,0 +1,85 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion compileSdkVersionCode
+
+    defaultConfig {
+        minSdkVersion minSdkVersionCode
+        targetSdkVersion targetSdkVersionCode
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+//    ViewModelProviders 用到
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+
+//    //lifecycle  start
+//    def lifecycle_version = "2.0.0"
+//    // ViewModel and LiveData
+//    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+//    // alternatively - just ViewModel
+//    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+//    // For Kotlin use lifecycle-viewmodel-ktx
+//    // alternatively - just LiveData
+//    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+//    // alternatively - Lifecycles only (no ViewModel or LiveData). Some UI
+//    //     AndroidX libraries use this lightweight import for Lifecycle
+//    implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
+//
+//    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+//    // For Kotlin use kapt instead of annotationProcessor
+//    // alternately - if using Java8, use the following instead of lifecycle-compiler
+//    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+//
+//    // optional - ReactiveStreams support for LiveData
+//    implementation "androidx.lifecycle:lifecycle-reactivestreams:$lifecycle_version"
+//    // For Kotlin use lifecycle-reactivestreams-ktx
+//
+//    // optional - Test helpers for LiveData
+//    testImplementation "androidx.arch.core:core-testing:$lifecycle_version"
+//    //lifecycle  end
+
+    //不使用androidx 的情况
+////    noAndroidx()
+//    def lifecycle_version = "1.1.1"
+//
+//    // 包含ViewModel和LiveData
+//    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+//    // 仅仅包含ViewModel
+//    implementation "android.arch.lifecycle:viewmodel:$lifecycle_version" // For Kotlin use viewmodel-ktx
+//    // 仅仅包含LiveData
+//    implementation "android.arch.lifecycle:livedata:$lifecycle_version"
+//    // 仅仅包含Lifecycles
+//    implementation "android.arch.lifecycle:runtime:$lifecycle_version"
+//
+//    annotationProcessor "android.arch.lifecycle:compiler:$lifecycle_version" // For Kotlin use kapt instead of annotationProcessor
+//    // 如果用Java8, 用于替代compiler
+//    implementation "android.arch.lifecycle:common-java8:$lifecycle_version"
+//
+//    // 可选，ReactiveStreams对LiveData的支持
+//    implementation "android.arch.lifecycle:reactivestreams:$lifecycle_version"
+//
+//    // 可选，LiveData的测试
+//    testImplementation "android.arch.core:core-testing:$lifecycle_version
+// end
+}
+

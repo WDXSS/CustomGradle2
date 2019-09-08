@@ -14,7 +14,9 @@ import com.example.customview.fragment.FragmentMainActivity;
 import com.example.customview.list.ListMainActivity;
 import com.example.customview.notify.NotifyMain;
 import com.example.firelibrary.FireMainActivity;
-
+import com.example.jetpack.lifecycle.LifecycleActivity;
+import com.example.jetpack.livedata.LiveDataMainActivity;
+import com.example.jetpack.viewModel.ViewModelMainActivity;
 
 
 public class CustomViewMain extends AppCompatActivity {
@@ -24,9 +26,10 @@ public class CustomViewMain extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //蜘蛛网
-        setContentView(R.layout.layout_spider);
-        notification();
-        getSupperClass();
+//        setContentView(R.layout.layout_spider);
+        setContentView(R.layout.contraint09);
+//        notification();
+//        getSupperClass();
     }
 
     private void notification() {
@@ -95,5 +98,11 @@ public class CustomViewMain extends AppCompatActivity {
 
     public void checkPermission(View view) {
         DeviceInfo.getImeiNew(CustomViewMain.this);
+    }
+
+    public void lifecycle(View view) {
+//        startActivity(new Intent(this, LifecycleActivity.class));
+//        startActivity(new Intent(this, LiveDataMainActivity.class));
+        startActivity(new Intent(this, ViewModelMainActivity.class));
     }
 }
