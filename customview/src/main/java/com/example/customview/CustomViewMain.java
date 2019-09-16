@@ -27,10 +27,10 @@ public class CustomViewMain extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //蜘蛛网
-//        setContentView(R.layout.layout_spider);
-        setContentView(R.layout.contraint09);
-//        notification();
-//        getSupperClass();
+        setContentView(R.layout.layout_spider);
+//        setContentView(R.layout.contraint09);
+        notification();
+        getSupperClass();
     }
 
     private void notification() {

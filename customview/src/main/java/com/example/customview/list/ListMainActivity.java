@@ -1,6 +1,7 @@
 package com.example.customview.list;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -40,18 +41,22 @@ public class ListMainActivity extends AppCompatActivity {
         mRefreshRecyclerView.setEnableLoadMore(false);
 
         mRecyclerView = mRefreshRecyclerView.getRecyclerView();
-//        StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(4,
+        //layout的方向
+//        mRecyclerView.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+//        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(4,
 //                StaggeredGridLayoutManager.VERTICAL);
 
-//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(ListMainActivity.this,
-//                LinearLayoutManager.HORIZONTAL, false);
+//        LinearLayoutManager layoutManager = new LinearLayoutManager(ListMainActivity.this,
+//                LinearLayoutManager.VERTICAL, false);
 
-//        FlowLayoutManager flowLayoutManager = new FlowLayoutManager(ListMainActivity.this,
+//        FlowLayoutManager layoutManager = new FlowLayoutManager(ListMainActivity.this,
 //                false);
-        com.example.customview.list.manager.v2.FlowLayoutManager flowLayoutManager =
+        com.example.customview.list.manager.v2.FlowLayoutManager layoutManager =
                 new com.example.customview.list.manager.v2.FlowLayoutManager();
+
+
         mRecyclerView.addItemDecoration(new SpaceItemDecoration(dp2px(10)));
-        mRecyclerView.setLayoutManager(flowLayoutManager);
+        mRecyclerView.setLayoutManager(layoutManager);
         mRefreshRecyclerView.setAdapter(mAdapter);
     }
 
@@ -59,14 +64,14 @@ public class ListMainActivity extends AppCompatActivity {
     private void initData() {
 
         ListEngty engty = new ListEngty();
-        engty.name = "内容1 ";
+        engty.name = "-----> ";
         mList.add(engty);
         ListEngty engty2 = new ListEngty();
         engty2.name = "djfdsjsdjfos ";
         mList.add(engty2);
         ListEngty engty3 = new ListEngty();
         engty3.name = "ooooooo ";
-        mList.add(engty);
+        mList.add(engty3);
         ListEngty engty4 = new ListEngty();
         engty4.name = "444444444444444444444 ";
         mList.add(engty4);

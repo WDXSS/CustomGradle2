@@ -18,10 +18,13 @@
             <option value="$PROJECT_DIR$/dynamic_feature" />
             <option value="$PROJECT_DIR$/firelibrary" />
             <option value="$PROJECT_DIR$/javalibrary" />
+            <option value="$PROJECT_DIR$/jetpack" />
+            <option value="$PROJECT_DIR$/library-recycler" />
             <option value="$PROJECT_DIR$/ui_system" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
+        <option name="testRunner" value="PLATFORM" />
       </GradleProjectSettings>
     </option>
   </component>

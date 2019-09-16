@@ -4,6 +4,8 @@ import com.example.jetpack.DevDescribe;
 
 /**
  * https://blog.csdn.net/u012551350/article/details/80204715
+ *
+ * https://developer.android.google.cn/reference/androidx/constraintlayout/classes
  */
 @DevDescribe("ConstraintMain 的继续")
 public class ConstraintMain2 {
@@ -20,7 +22,11 @@ public class ConstraintMain2 {
      *         android:id="@+id/barrier"
      *         android:layout_width="wrap_content"
      *         android:layout_height="wrap_content"
-     *         app:barrierDirection="right"
+     *         app:barrierDirection="right"              //属性
      *         app:constraint_referenced_ids="tv_name,tv_contract"/>
      */
+
+
+    //TODO 9.Group 用于控制多个控件的可见性。
+
 }
