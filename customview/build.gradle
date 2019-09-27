@@ -56,4 +56,10 @@ dependencies {
 //    implementation 'com.google.firebase:firebase-iid:18.0.0'
 //    implementation 'com.google.firebase:firebase-messaging:18.0.0'
 }
-apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.gms.google-services'
+
+task copyTask(type: Copy) {
+    println("copy-----------------------")
+    from 'customview/src/main/java/com/example/customview/DrawViewMain.java'
+    into 'customview/build/explodedWar'
+}

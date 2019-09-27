@@ -31,3 +31,12 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+//task makeJar(type: Copy) {
+////    delete 'build_outer/token-0.1.jar'
+//    println("------------copy ")
+////    from('app\\src\\main\\res\\drawable\\ic_launcher_background.xml')
+////    into('doc/')
+////    include('classes.jar')
+////    rename('classes.jar', 'token-0.1.jar')
+//}

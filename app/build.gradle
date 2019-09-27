@@ -226,7 +226,18 @@ task config {
     println "build 就会执行  config--333-----------------"
 //    buildConfigField("String","url",'"https://www.google.com.hk/"')//先级高的flavor
 }
+// http://wiki.jikexueyuan.com/project/GradleUserGuide-Wiki/  文件操作
 
-
+task copyTask(type: Copy) {
+    //copy 文件
+    //执行方式
+    // 1. gradle-->other-->双击 copyTask ;
+    // 2 Terminal 运行 gradlew copyTask
+    // delete 可以直接 Sync Now , 但是 copy 却不能创建文件 ，不知道为啥
+    delete 'copy'
+    println("copy-----------------------")
+    from '\\src\\main\\java\\gradle\\custom\\com\\customgradle\\MainActivity.java'
+    into 'copy/build/explodedWar'
+}
 
 
