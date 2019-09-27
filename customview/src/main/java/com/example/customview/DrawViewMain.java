@@ -21,6 +21,7 @@ public class DrawViewMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_draw_view_main);
+
     }
 
     public void startSpider(View view) {

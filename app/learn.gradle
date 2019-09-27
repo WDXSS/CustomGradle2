@@ -1,0 +1,39 @@
+android {
+    compileSdkVersion 22//编译的SDK版本
+    buildToolsVersion "22.0.1"//编译的Tools版本
+    defaultConfig {//默认配置
+        applicationId "com.nd.famlink"//应用程序的包名
+        minSdkVersion 8//支持的最低版本
+        targetSdkVersion ""//支持的目标版本
+        versionCode 52//版本号
+        versionName "3.0.1"//版本名
+    }
+    sourceSets {//目录指向配置
+        main {
+            manifest.srcFile 'AndroidManifest.xml'//指定AndroidManifest文件
+            java.srcDirs = ['src']//指定source目录
+            resources.srcDirs = ['src']//指定source目录
+            aidl.srcDirs = ['src']//指定source目录
+            renderscript.srcDirs = ['src']//指定source目录
+            res.srcDirs = ['res']//指定资源目录
+            assets.srcDirs = ['assets']//指定assets目录
+            jniLibs.srcDirs = ['libs']//指定lib库目录
+        }
+        debug.setRoot('build-types/debug')//指定debug模式的路径
+        release.setRoot('build-types/release')//指定release模式的路径
+    }
+    signingConfigs {//签名配置
+        release {//发布版签名配置
+            storeFile file("fk.keystore")//密钥文件路径
+            storePassword "123"//密钥文件密码
+            keyAlias "fk"//key别名
+            keyPassword "123"//key密码
+        }
+        debug {//debug版签名配置
+            storeFile file("fk.keystore")
+            storePassword "123"
+            keyAlias "fk"
+            keyPassword "123"
+        }
+    }
+}

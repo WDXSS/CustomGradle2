@@ -39,8 +39,8 @@ public class LifecycleActivity extends AppCompatActivity {
         MyPresenter presenter = new MyPresenter();
         getLifecycle().addObserver(presenter);
 
-        //3 TODO 自定义LifecycleOwner
-//        如果想实现自定义LifecycleOwner，可以使用LifecycleRegistry，它是Lifecycle的实现类。
+        //3 TODO 自定义 LifecycleOwner
+//        如果想实现自定义 LifecycleOwner，可以使用 LifecycleRegistry，它是Lifecycle的实现类。
 
     }
     @Override
