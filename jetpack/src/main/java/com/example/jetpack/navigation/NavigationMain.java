@@ -3,6 +3,7 @@ package com.example.jetpack.navigation;
 public class NavigationMain {
     // navigation.xml
     //TODO action属性
+
     //app:popUpTo="@id/match"
     // 返回到 stack 指定的activity/fragment
 
