@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".navigation.fragment.OneFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="fragment one" />
+    <Button
+        android:id="@+id/btn_two_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="to twoFragment"
+        android:textAllCaps="false"
+        />
+    <Button
+        android:id="@+id/btn_to_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="to activity"
+        android:textAllCaps="false"
+        />
+</LinearLayout>

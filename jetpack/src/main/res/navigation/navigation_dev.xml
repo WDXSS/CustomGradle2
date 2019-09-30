@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_dev"
+    app:startDestination="@id/oneFragment">
+
+    <fragment
+        android:id="@+id/oneFragment"
+        android:name="com.example.jetpack.navigation.fragment.OneFragment"
+        android:label="fragment_one"
+        tools:layout="@layout/fragment_one" >
+        <action
+            android:id="@+id/action_oneFragment_to_twoFragment"
+            app:destination="@id/twoFragment" />
+        <action
+            android:id="@+id/action_oneFragment_to_lifecycleActivity"
+            app:destination="@id/lifecycleActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/twoFragment"
+        android:name="com.example.jetpack.navigation.fragment.TwoFragment"
+        android:label="fragment_two"
+        tools:layout="@layout/fragment_two" />
+    <activity
+        android:id="@+id/lifecycleActivity"
+        android:name="com.example.jetpack.lifecycle.LifecycleActivity"
+        android:label="LifecycleActivity" />
+</navigation>

@@ -53,7 +53,6 @@ public class LifecycleActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         Log.d(TAG, "onPause");
-
     }
 
 

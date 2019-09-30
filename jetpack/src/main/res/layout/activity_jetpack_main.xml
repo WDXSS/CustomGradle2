@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:onClick="onStartNavigation"
+        android:text="Navigation "
+        android:textAllCaps="false" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:onClick="onStartLifeCycle"
+        android:text="Lifecycle "
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:onClick="onStartLiveData"
+        android:text="LiveData "
+        android:textAllCaps="false" />
+</LinearLayout>

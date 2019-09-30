@@ -15,6 +15,7 @@ import com.example.customview.list.ListMainActivity;
 import com.example.customview.notify.NotifyMain;
 import com.example.customview.view.IncludeMainActivity;
 import com.example.firelibrary.FireMainActivity;
+import com.example.jetpack.JetpackMainActivity;
 import com.example.jetpack.lifecycle.LifecycleActivity;
 import com.example.jetpack.livedata.LiveDataMainActivity;
 import com.example.jetpack.viewModel.ViewModelMainActivity;
@@ -104,7 +105,7 @@ public class CustomViewMain extends AppCompatActivity {
     public void lifecycle(View view) {
 //        startActivity(new Intent(this, LifecycleActivity.class));
 //        startActivity(new Intent(this, LiveDataMainActivity.class));
-        startActivity(new Intent(this, ViewModelMainActivity.class));
+        startActivity(new Intent(this, JetpackMainActivity.class));
     }
 
     public void startInclude(View view) {

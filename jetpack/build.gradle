@@ -26,11 +26,14 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 //    ViewModelProviders 用到
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.1.0'
+    implementation 'androidx.navigation:navigation-ui:2.1.0'
 
 //    //lifecycle  start
 //    def lifecycle_version = "2.0.0"
@@ -82,4 +85,3 @@ dependencies {
 //    testImplementation "android.arch.core:core-testing:$lifecycle_version
 // end
 }
-
