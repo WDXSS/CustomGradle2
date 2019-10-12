@@ -187,6 +187,12 @@ android {
 
         }
     }
+    configurations{
+        baiduDebugImplementation{}
+        //产品特性和版本类型组合在一起的变体添加依赖项，
+        // 则必须在 configurations 代码块中初始化配置名称
+        //如 ：baiduDebugImplementation project(':androidlibrary')
+    }
 
 }
 //时间方法
@@ -204,10 +210,12 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     //引入androidLibrary
-    implementation project(':androidlibrary')
+//    implementation project(':androidlibrary')
+    debugImplementation project(':androidlibrary')//定制版本依赖
+    //产品特性和版本类型组合在一起的变体添加依赖项，则必须在 configurations 代码块中初始化配置名称
+    baiduDebugImplementation project(':androidlibrary')
 //    implementation project(path: ':androidlibrary')
 //        implementation project(path: ':androidlibrary', configuration: 'baidu')
-//  debugImplementation project(':androidlibrary')
 //    baiduimplementation project(path: ':androidlibrary', configuration: 'baidu')3.0以后不再支持
 
 
@@ -244,5 +252,7 @@ task copyTask(type: Copy) {
     from '\\src\\main\\java\\gradle\\custom\\com\\customgradle\\MainActivity.java'
     into 'copy/build/explodedWar'
 }
+
+
 
 
