@@ -58,6 +58,7 @@ public class EditTextFragment extends Fragment {
                 Log.i(TAG, "onTextChanged：" + s);//内容改变时
             }
 
+
             @Override
             public void afterTextChanged(Editable s) {
                 Log.i(TAG, "afterTextChanged：" + s);//内容改变后
