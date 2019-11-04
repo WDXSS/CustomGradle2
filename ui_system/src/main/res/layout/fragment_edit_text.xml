@@ -126,6 +126,8 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
             android:hint="通过代码限制输入内容只能为数字" />
+
+
     </LinearLayout>
 
 </ScrollView>
