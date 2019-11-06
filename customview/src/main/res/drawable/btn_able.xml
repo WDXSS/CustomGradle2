@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/circle" android:state_enabled="false" />
+    <item android:drawable="@drawable/circle_to" android:state_enabled="true" android:state_pressed="true" />
+    <item android:drawable="@drawable/circle_to2" android:state_enabled="true" android:state_pressed="false" />
+    <item android:drawable="@drawable/btn_normal" />
+
+<!--1. android:state_enabled 对应的 java 方法是 button.setEnabled(!b); 不是 button.setClickable(!b);
+    2. android:state_enabled 的优先级要高于 android:state_pressed ,
+      所以有可点击，未按下的效果 android:state_enabled="true" android:state_pressed="false"-->
+</selector>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_marginLeft="54dp"
+    android:layout_marginRight="54dp"
+    android:background="#00ff00"
+    >
+        <TextView
+            android:id="@+id/text_tel_phone"
+            android:layout_width="268dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:text="02 345 6789"
+            android:textSize="17sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/text_tel_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="cancel"
+                android:textSize="17sp"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#EEEEEE"/>
+
+            <TextView
+                android:id="@+id/text_tel_call"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="call_txt"
+                android:textSize="17sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+</LinearLayout>

@@ -82,5 +82,10 @@
         android:textAllCaps="false"
         android:text="jetpack test"
         android:onClick="lifecycle"/>
-
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="WebView test"
+        android:onClick="startWeb"/>
 </LinearLayout>

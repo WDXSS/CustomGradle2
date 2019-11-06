@@ -111,4 +111,20 @@ public class CustomViewMain extends AppCompatActivity {
     public void startInclude(View view) {
         startActivity(new Intent(CustomViewMain.this, IncludeMainActivity.class));
     }
+
+    public void startWeb(View view) {
+        startActivity(new Intent(CustomViewMain.this,WebViewActivity.class));
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        Log.d(TAG, "onWindowFocusChanged() called with: hasFocus = [" + hasFocus + "]");
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Log.d(TAG, "onNewIntent() called with: intent = [" + intent + "]");
+    }
 }
