@@ -88,4 +88,10 @@
         android:textAllCaps="false"
         android:text="WebView test"
         android:onClick="startWeb"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="折叠控件"
+        android:onClick="coordinator"/>
 </LinearLayout>

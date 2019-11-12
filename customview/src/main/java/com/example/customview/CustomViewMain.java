@@ -127,4 +127,8 @@ public class CustomViewMain extends AppCompatActivity {
         super.onNewIntent(intent);
         Log.d(TAG, "onNewIntent() called with: intent = [" + intent + "]");
     }
+
+    public void coordinator(View view) {
+        startActivity(new Intent(CustomViewMain.this,CoordinatorActivity.class));
+    }
 }

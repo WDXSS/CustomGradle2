@@ -47,6 +47,7 @@ dependencies {
     implementation project(path: ':jetpack')
 //    implementation 'hu.meza:barrier:1.0.1'
     api project(path: ':library-recycler')
+    implementation 'com.android.support:design:28.0.0'
 
 
 //    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
