@@ -1,97 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
-    android:orientation="vertical">
-
-    <!--    <com.example.customview.view.SpiderView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />-->
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="startDrawMain"
-        android:text="draw自定义控件"
-        android:textAllCaps="false" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="startUISystem"
-        android:text="UI 与文本相关的控件" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="startHuangShu"
-        android:text="进阶之光" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="startNotify"
-        android:text="显示通知" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="startFireBase"
-        android:text="大开FireBase" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="startFragment"
-        android:text="测试Fragment的生命周期"
-        android:textAllCaps="false" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="list"
-        android:onClick="startListView"
-        android:textAllCaps="false" />
+    android:scrollbars="vertical">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:orientation="vertical">
+
+        <!--    <com.example.customview.view.SpiderView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />-->
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:text="申请权限"
-            android:onClick="reqPermission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startDrawMain"
+            android:text="draw自定义控件"
             android:textAllCaps="false" />
+
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:text="验证权限"
-            android:onClick="checkPermission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startUISystem"
+            android:text="UI 与文本相关的控件" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startHuangShu"
+            android:text="进阶之光" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startNotify"
+            android:text="显示通知" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startFireBase"
+            android:text="大开FireBase" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startFragment"
+            android:text="测试Fragment的生命周期"
             android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="list"
+            android:onClick="startListView"
+            android:textAllCaps="false" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="申请权限"
+                android:onClick="reqPermission"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="验证权限"
+                android:onClick="checkPermission"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="include"
+            android:onClick="startInclude"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="jetpack test"
+            android:onClick="lifecycle" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="WebView test"
+            android:onClick="startWeb" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="折叠控件"
+            android:onClick="coordinator" />
     </LinearLayout>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="include"
-        android:onClick="startInclude"
-        android:textAllCaps="false" />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="jetpack test"
-        android:onClick="lifecycle"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="WebView test"
-        android:onClick="startWeb"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="折叠控件"
-        android:onClick="coordinator"/>
-</LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
