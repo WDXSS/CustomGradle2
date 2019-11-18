@@ -13,6 +13,7 @@ import com.example.android_hs_library.HuangShuMainActivity;
 import com.example.customview.fragment.FragmentMainActivity;
 import com.example.customview.list.ListMainActivity;
 import com.example.customview.notify.NotifyMain;
+import com.example.customview.test.WebActivity;
 import com.example.customview.view.IncludeMainActivity;
 import com.example.firelibrary.FireMainActivity;
 import com.example.jetpack.JetpackMainActivity;
@@ -113,7 +114,7 @@ public class CustomViewMain extends AppCompatActivity {
     }
 
     public void startWeb(View view) {
-        startActivity(new Intent(CustomViewMain.this,WebViewActivity.class));
+        startActivity(new Intent(CustomViewMain.this,BtnEnableActivity.class));
     }
 
     @Override
@@ -129,6 +130,11 @@ public class CustomViewMain extends AppCompatActivity {
     }
 
     public void coordinator(View view) {
-        startActivity(new Intent(CustomViewMain.this,CoordinatorActivity.class));
+//        startActivity(new Intent(CustomViewMain.this,CoordinatorActivity.class));
+        startActivity(new Intent(CustomViewMain.this, WebActivity.class));
+    }
+    public void coordinator2(View view) {
+//        startActivity(new Intent(CustomViewMain.this,CoordinatorActivity.class));
+        startActivity(new Intent(CustomViewMain.this, CoordinatorActivity2.class));
     }
 }

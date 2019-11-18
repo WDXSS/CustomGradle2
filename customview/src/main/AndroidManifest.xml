@@ -65,7 +65,10 @@
         </activity>
         <activity android:name=".view.IncludeMainActivity" />
         <activity android:name=".WebViewActivity" />
-        <activity android:name=".CoordinatorActivity" />
+        <activity android:name=".test.CoordinatorActivity" />
+        <activity android:name=".test.WebActivity" />
+        <activity android:name=".CoordinatorActivity2" />
+        <activity android:name=".BtnEnableActivity" />
 
     </application>
 </manifest>
