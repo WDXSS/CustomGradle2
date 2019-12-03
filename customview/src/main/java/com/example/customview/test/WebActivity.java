@@ -1,5 +1,6 @@
 package com.example.customview.test;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.webkit.WebView;
@@ -12,6 +13,7 @@ import com.example.customview.R;
  * @date 2019/11/13
  */
 public class WebActivity extends CoordinatorActivity {
+    private static final String TAG = "WebActivity";
     WebView mWebView;
     @Override
     protected View getContentLayout() {
@@ -25,5 +27,15 @@ public class WebActivity extends CoordinatorActivity {
         //代码中
 //        mNestedScrollView.setFillViewport(false);
         return view;
+    }
+
+    @Override
+    public void test() {
+        Log.d(TAG, "test() called");
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }
