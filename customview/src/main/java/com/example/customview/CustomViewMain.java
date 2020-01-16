@@ -2,6 +2,7 @@ package com.example.customview;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 
@@ -33,6 +34,13 @@ public class CustomViewMain extends AppCompatActivity {
 //        setContentView(R.layout.contraint09);
         notification();
         getSupperClass();
+        Log.e(TAG, "onCreate: "+ 766132%15 );
+        String number ="12345678";
+        if (!TextUtils.isEmpty(number) && number.length() > 4) {
+            int length = number.length();
+            String str = number.substring(length - 4, length);
+            Log.d(TAG, "onCreate() called with: savedInstanceState = [" + str + "]");
+        }
     }
 
     private void notification() {
@@ -130,6 +138,7 @@ public class CustomViewMain extends AppCompatActivity {
     }
 
     public void coordinator(View view) {
+        getString(R.string.error);
 //        startActivity(new Intent(CustomViewMain.this,CoordinatorActivity.class));
         startActivity(new Intent(CustomViewMain.this, WebActivity.class));
     }
