@@ -19,6 +19,7 @@ import javax.net.ssl.SSLContext;
 
 @RestrictTo(RestrictTo.Scope.LIBRARY)
 public class FireMainActivity extends AppCompatActivity {
+    //測試 fireBase
     private static final String TAG = "FireMainActivity";
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
