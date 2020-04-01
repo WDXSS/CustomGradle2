@@ -74,6 +74,8 @@
         <activity android:name=".book.custom._10canvas.ShapeInstanceActivity" />
         <activity android:name=".book.custom._10canvas.TenMainActivity" />
         <activity android:name=".book.custom._10canvas.ShapeConstructorActivity" />
+        <activity android:name=".book.custom._7paint.SevenMainActivity" />
+        <activity android:name=".book.custom._7paint.BitmapShaderActivity" />
 
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

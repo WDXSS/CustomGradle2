@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textAllCaps="false"
+            android:text="1. Shader 是从控件的左上角开始，和绘图函数（canvas.drawRect()）设置的位置,大小无关
+\n 2. 图片不能填充满控件时的复用策略
+\n 3. 复用是先从Y轴，后X轴" />
+
+        <com.example.customview.book.custom._7paint.view.BitmapShaderView
+            android:layout_margin="20dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="#000000" />
+    </LinearLayout>
+
+</ScrollView>
+

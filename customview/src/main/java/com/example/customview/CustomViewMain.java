@@ -36,7 +36,7 @@ public class CustomViewMain extends AppCompatActivity {
         notification();
         getSupperClass();
         verifyStoragePermissions(this);
-        LogCollector.getInstance(getApplication()).start();
+//        LogCollector.getInstance(getApplication()).start();
     }
 
     private void notification() {

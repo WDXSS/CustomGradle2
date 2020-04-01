@@ -16,5 +16,12 @@
         android:text="第10 Android 画布"
         android:onClick="start10Canvas"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:text="第7 绘图进阶"
+        android:onClick="startSevenPaint"
+        />
 </LinearLayout>
 </androidx.core.widget.NestedScrollView>
