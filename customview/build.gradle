@@ -4,7 +4,7 @@ android {
     compileSdkVersion compileSdkVersionCode
 
     defaultConfig {
-        applicationId "gradle.custom.com.customgradle"
+        applicationId "gradle.com.example.customview.book.custom.com.customgradle"
         minSdkVersion minSdkVersionCode
         targetSdkVersion targetSdkVersionCode
         versionCode appVersionCode
@@ -48,6 +48,7 @@ dependencies {
 //    implementation 'hu.meza:barrier:1.0.1'
     api project(path: ':library-recycler')
     implementation 'com.android.support:design:28.0.0'
+    compile project(path: ':logcollector')
 
 
 //    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'

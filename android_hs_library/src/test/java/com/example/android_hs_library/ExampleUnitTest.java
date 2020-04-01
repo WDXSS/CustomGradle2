@@ -13,5 +13,8 @@ public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
+
+        double db = 5.3;
+        System.out.println("转成long 类型 "+((long)db));
     }
 }

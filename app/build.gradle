@@ -9,7 +9,7 @@ android {
 
     compileSdkVersion compileSdkVersionCode
     defaultConfig {
-        applicationId "gradle.custom.com.customgradle"
+        applicationId "gradle.com.example.customview.book.custom.com.customgradle"
         minSdkVersion minSdkVersionCode
         targetSdkVersion targetSdkVersionCode
         versionCode appVersionCode
@@ -249,7 +249,7 @@ task copyTask(type: Copy) {
     // delete 可以直接 Sync Now , 但是 copy 却不能创建文件 ，不知道为啥
     delete 'copy'
     println("copy-----------------------")
-    from '\\src\\main\\java\\gradle\\custom\\com\\customgradle\\MainActivity.java'
+    from '\\src\\main\\java\\gradle\\com.example.customview.book.custom\\com\\customgradle\\MainActivity.java'
     into 'copy/build/explodedWar'
 }
 

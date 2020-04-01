@@ -1,24 +1,27 @@
 package com.example.customview;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import com.codingending.uisystemdemo.MainActivity;
 import com.example.android_hs_library.HuangShuMainActivity;
+import com.example.customview.book.BookMainActivity;
 import com.example.customview.fragment.FragmentMainActivity;
 import com.example.customview.list.ListMainActivity;
 import com.example.customview.notify.NotifyMain;
 import com.example.customview.view.IncludeMainActivity;
 import com.example.firelibrary.FireMainActivity;
 import com.example.jetpack.JetpackMainActivity;
-import com.example.jetpack.lifecycle.LifecycleActivity;
-import com.example.jetpack.livedata.LiveDataMainActivity;
-import com.example.jetpack.viewModel.ViewModelMainActivity;
+
+import cn.ljuns.logcollector.LogCollector;
 
 
 public class CustomViewMain extends AppCompatActivity {
@@ -32,6 +35,8 @@ public class CustomViewMain extends AppCompatActivity {
 //        setContentView(R.layout.contraint09);
         notification();
         getSupperClass();
+        verifyStoragePermissions(this);
+        LogCollector.getInstance(getApplication()).start();
     }
 
     private void notification() {
@@ -50,6 +55,9 @@ public class CustomViewMain extends AppCompatActivity {
         }
     }
 
+    public void startBookMain(View view) {
+        startActivity(new Intent(CustomViewMain.this, BookMainActivity.class));
+    }
     public void startUISystem(View view) {
         startActivity(new Intent(CustomViewMain.this, MainActivity.class));
     }
@@ -131,4 +139,28 @@ public class CustomViewMain extends AppCompatActivity {
     public void coordinator(View view) {
         startActivity(new Intent(CustomViewMain.this,CoordinatorActivity.class));
     }
+
+    private static final int REQUEST_EXTERNAL_STORAGE = 1;
+    private static String[] PERMISSIONS_STORAGE = {
+            "android.permission.READ_EXTERNAL_STORAGE",
+            "android.permission.WRITE_EXTERNAL_STORAGE" };
+
+
+    public static void verifyStoragePermissions(Activity activity) {
+
+        try {
+            //检测是否有写的权限
+            int permission = ActivityCompat.checkSelfPermission(activity,
+                    "android.permission.WRITE_EXTERNAL_STORAGE");
+            if (permission != PackageManager.PERMISSION_GRANTED) {
+                // 没有写的权限，去申请写的权限，会弹出对话框
+                ActivityCompat.requestPermissions(activity, PERMISSIONS_STORAGE,REQUEST_EXTERNAL_STORAGE);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
 }

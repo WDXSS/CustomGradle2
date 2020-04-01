@@ -12,6 +12,8 @@ import com.example.customview.anim.property.value.LoadingDemo;
 import com.example.customview.anim.view.tween.ScannerDome;
 import com.example.customview.view.SpiderActivity;
 
+import cn.ljuns.logcollector.LogCollector;
+
 public class DrawViewMain extends AppCompatActivity {
     private static final String TAG = "DrawViewMain";
 
@@ -21,6 +23,7 @@ public class DrawViewMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_draw_view_main);
+        LogWriteUtil.writeLogtoFile("v","TAG","1234566");
 
     }
 
@@ -43,5 +46,11 @@ public class DrawViewMain extends AppCompatActivity {
         for (;;){
             Log.d(TAG, "threadBlock: ");
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "onDestroy() called");
     }
 }

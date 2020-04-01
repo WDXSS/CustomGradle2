@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("gradle.custom.com.customgradle", appContext.getPackageName());
+        assertEquals("gradle.com.example.customview.book.custom.com.customgradle", appContext.getPackageName());
     }
 }

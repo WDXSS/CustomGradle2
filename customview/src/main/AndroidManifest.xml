@@ -1,4 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.customview">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -12,7 +13,7 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".CustomViewMain">
-
+          <!-- activity 中的属性 不在最近打开应用列表中显示   android:excludeFromRecents="true"-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -21,7 +22,9 @@
         </activity>
         <activity android:name=".anim.view.tween.ScannerDome" />
         <activity android:name=".anim.property.value.LoadingDemo" />
-        <activity android:name=".DrawViewMain" />
+        <activity android:name=".DrawViewMain"
+            android:noHistory="true"
+            />
         <activity android:name=".view.SpiderActivity" />
         <activity android:name=".notify.NotifyMain" />
         <activity android:name=".notify.NotifyTestActivity">
@@ -66,6 +69,16 @@
         <activity android:name=".view.IncludeMainActivity" />
         <activity android:name=".WebViewActivity" />
         <activity android:name=".CoordinatorActivity" />
+        <activity android:name=".book.BookMainActivity" />
+        <activity android:name=".book.custom.CustomBookMain" />
+        <activity android:name=".book.custom._10canvas.ShapeInstanceActivity" />
+        <activity android:name=".book.custom._10canvas.TenMainActivity" />
+        <activity android:name=".book.custom._10canvas.ShapeConstructorActivity" />
 
     </application>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
 </manifest>

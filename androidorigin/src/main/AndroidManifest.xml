@@ -1,4 +1,4 @@
-<manifest package="gradle.custom.com.androidorigin"
+<manifest package="gradle.com.example.customview.book.custom.com.androidorigin"
           xmlns:android="http://schemas.android.com/apk/res/android"
     >
     <application>

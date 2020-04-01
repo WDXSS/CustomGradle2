@@ -15,6 +15,13 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="startBookMain"
+            android:text="打开书籍"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:onClick="startDrawMain"
             android:text="draw自定义控件"
             android:textAllCaps="false" />
