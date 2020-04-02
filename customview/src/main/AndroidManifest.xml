@@ -76,6 +76,9 @@
         <activity android:name=".book.custom._10canvas.ShapeConstructorActivity" />
         <activity android:name=".book.custom._7paint.SevenMainActivity" />
         <activity android:name=".book.custom._7paint.BitmapShaderActivity" />
+        <activity android:name=".book.custom._10canvas.TelescopeActivity" />
+        <activity android:name=".book.custom._7paint.TelescopeActivity" />
+        <activity android:name=".book.custom._7paint.AuthorActivity" />
 
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

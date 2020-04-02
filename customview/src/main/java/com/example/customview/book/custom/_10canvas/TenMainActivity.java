@@ -29,4 +29,11 @@ public class TenMainActivity extends AppCompatActivity {
         intent.setClass(this, ShapeConstructorActivity.class);
         startActivity(intent);
     }
+    public void startTelescopeActivity(View view) {
+        //通过创建Drawable对象，将画好的Drawable 对象画到 画布上
+        // 调用 Drawable 的draw() 方法将其画到画布上
+        Intent intent = new Intent();
+        intent.setClass(this, TelescopeActivity.class);
+        startActivity(intent);
+    }
 }

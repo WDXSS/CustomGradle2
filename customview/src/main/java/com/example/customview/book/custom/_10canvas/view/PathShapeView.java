@@ -1,17 +1,12 @@
-package com.example.customview.book.custom.view;
+package com.example.customview.book.custom._10canvas.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Path;
 import android.graphics.Rect;
-import android.graphics.RectF;
 import android.graphics.drawable.ShapeDrawable;
-import android.graphics.drawable.shapes.ArcShape;
-import android.graphics.drawable.shapes.OvalShape;
 import android.graphics.drawable.shapes.PathShape;
-import android.graphics.drawable.shapes.RectShape;
-import android.graphics.drawable.shapes.RoundRectShape;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -40,11 +35,6 @@ public class PathShapeView extends View {
         initPathShape();
     }
 
-    public PathShapeView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-
-        initPathShape();
-    }
 
     private void initPathShape() {
         setLayerType(LAYER_TYPE_SOFTWARE, null);

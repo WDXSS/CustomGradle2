@@ -30,7 +30,7 @@
         android:text=" 1. new PathShape(path,100,100) 是讲ShapeDrawable 横向纵向分成 若干份，
          path.lineTo(50, 0); 表示在横向上占50份 "
         />
-    <com.example.customview.book.custom.view.PathShapeView
+    <com.example.customview.book.custom._10canvas.view.PathShapeView
         android:layout_width="250px"
         android:layout_height="150px"
         android:layout_margin="50dp"
@@ -48,7 +48,7 @@
         android:text="2 .设置 ShapeView 的背景为黑色，margin= 50 \n
 1.在ShapeView中通过ShapeDrawable 画出矩形 并 验证画图形的默认起始点是view的左上角左边，非屏幕的左上角" />
 
-    <com.example.customview.book.custom.view.ShapeView
+    <com.example.customview.book.custom._10canvas.view.ShapeView
         android:layout_width="match_parent"
         android:layout_height="600px"
         android:layout_margin="50dp"

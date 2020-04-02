@@ -20,4 +20,12 @@ public class SevenMainActivity extends AppCompatActivity {
         //BitmapShader 的基本用法
         startActivity(new Intent(this, BitmapShaderActivity.class));
     }
+
+    public void startTelescopeActivity(View view) {
+        startActivity(new Intent(this, TelescopeActivity.class));
+    }
+
+    public void startAuthorActivity(View view) {
+        startActivity(new Intent(this, AuthorActivity.class));
+    }
 }

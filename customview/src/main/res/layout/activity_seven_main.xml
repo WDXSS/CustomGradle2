@@ -15,6 +15,14 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textAllCaps="false"
-        android:text="通过drawable 对象画图"
-        android:onClick="startShapeConstructorActivity" />
+        android:text="望眼镜效果"
+        android:onClick="startTelescopeActivity" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:text="生成不规则头像"
+        android:onClick="startAuthorActivity" />
 </LinearLayout>
