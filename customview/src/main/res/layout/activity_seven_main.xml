@@ -3,7 +3,17 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAllCaps="false"
+    android:layout_margin="10dp"
+    android:textSize="16sp"
+    android:text="Shader的布局和显示是分离的；Shader总是从控件的左上角开始布局的，
+    如果单张图片无法覆盖整个控件，则会使用TieMode重复模式来填充空白区域；
+而canvas.draw 系列函数则只表示那部分区域被显示出来
+\n Shader 的几个子类的实现：BitmapShader，LinearGradient"
+    />
     <Button
         android:layout_width="match_parent"
         android:layout_height="50dp"
