@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <TextView
+            android:id="@+id/tv"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="欢迎光临启舰的blog"
+            android:textColor="#ff0000"/>
+
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用默认的drawabel 为背景效果"
+        android:textColor="#ff0000"/>
+</LinearLayout>
+

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+  >
+    <TextView
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="总结： setBounds() 和 scaleType "
+        android:background="@mipmap/avator"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="#000000"
+            android:layout_margin="10dp"
+            android:scaleType="fitStart"
+            />
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="#000000"
+            android:layout_margin="10dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="#000000"
+            android:layout_margin="10dp"
+            android:scaleType="fitEnd"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:text="fitStart"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:text="fitCenter"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:text="fitEnd"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img4"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="#000000"
+            android:layout_margin="10dp"
+            android:scaleType="centerInside"/>
+
+        <ImageView
+            android:id="@+id/img5"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="#000000"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/img6"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="#000000"
+            android:layout_margin="10dp"
+            android:scaleType="center"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:text="centerInside"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:text="centerCrop"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:text="center"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/img7"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="#000000"
+        android:layout_margin="10dp"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="#000000"
+        android:layout_margin="10dp"
+        android:src="@mipmap/avator"
+        android:scaleType="center"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:text="fitXY"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="xml 直接设置 center"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+
+</LinearLayout>

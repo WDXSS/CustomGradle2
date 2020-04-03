@@ -36,4 +36,16 @@ public class TenMainActivity extends AppCompatActivity {
         intent.setClass(this, TelescopeActivity.class);
         startActivity(intent);
     }
+
+    public void startCustomDrawableActivity(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, CustomDrawableActivity.class);
+        startActivity(intent);
+    }
+
+    public void startBackgroundDrawableActivity(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, BackgroundDrawableActivity.class);
+        startActivity(intent);
+    }
 }

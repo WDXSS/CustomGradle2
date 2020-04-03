@@ -15,12 +15,25 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textAllCaps="false"
-        android:text="Drawable 对象通过 Shape 画图"
+        android:text="Drawable 子类ShapeDrawable 对象通过 Shape 画图"
         android:onClick="startShapeConstructorActivity" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textAllCaps="false"
         android:text="shader 实现放大镜效果"
         android:onClick="startTelescopeActivity" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="自定义Drawable的\nsetBounds()与 Imagview 的scaleType有关系"
+        android:onClick="startCustomDrawableActivity" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="textView设置 Drawable 为背景 "
+        android:onClick="startBackgroundDrawableActivity" />
 </LinearLayout>
