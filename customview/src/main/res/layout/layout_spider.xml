@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbars="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -53,8 +54,8 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="list"
             android:onClick="startListView"
+            android:text="list"
             android:textAllCaps="false" />
 
         <LinearLayout
@@ -65,45 +66,53 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:text="申请权限"
                 android:onClick="reqPermission"
+                android:text="申请权限"
                 android:textAllCaps="false" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:text="验证权限"
                 android:onClick="checkPermission"
+                android:text="验证权限"
                 android:textAllCaps="false" />
         </LinearLayout>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="include"
             android:onClick="startInclude"
+            android:text="include"
             android:textAllCaps="false" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAllCaps="false"
+            android:onClick="lifecycle"
             android:text="jetpack test"
-            android:onClick="lifecycle" />
+            android:textAllCaps="false" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAllCaps="false"
+            android:onClick="startWeb"
             android:text="WebView test"
-            android:onClick="startWeb" />
+            android:textAllCaps="false" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAllCaps="false"
+            android:onClick="coordinator"
+            android:text="抽象套用折叠控件"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="coordinator2"
             android:text="折叠控件"
-            android:onClick="coordinator" />
+            android:textAllCaps="false" />
+
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

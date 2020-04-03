@@ -3,4 +3,51 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="base_F9A6A3">#F9A6A3</color>
+    <color name="base_F55B51">#F55B51</color>
+    <color name="base_FC3438">#FC3438</color>
+    <color name="base_FF2951">#FF2951</color>
+    <color name="base_CB2F32">#CB2F32</color>
+    <color name="base_FFFFFF">#FFFFFF</color>
+    <color name="base_9B9B9B">#9B9B9B</color>
+    <color name="base_F6F6F6">#F6F6F6</color>
+    <color name="base_D8D8D8">#D8D8D8</color>
+    <color name="base_666666">#666666</color>
+    <color name="base_838080">#838080</color>
+    <color name="base_302B2B">#302B2B</color>
+    <color name="base_333333">#333333</color>
+    <color name="base_4D7BFE">#4D7BFE</color>
+    <color name="base_D6D5D5">#D6D5D5</color>
+    <color name="base_282828">#282828</color>
+    <color name="base_151515">#151515</color>
+    <color name="base_999999">#999999</color>
+    <color name="base_BBBBBB">#BBBBBB</color>
+    <color name="base_595555">#595555</color>
+    <color name="base_000000">#000000</color>
+    <color name="base_DDDDDD">#DDDDDD</color>
+    <color name="base_CBCACA">#CBCACA</color>
+    <color name="base_Transparent">#00000000</color>
+
+    <!--埃森哲-->
+    <color name="base_80E7E8ED">#80E7E8ED</color>
+    <color name="base_EE2F53">#EE2F53</color>
+    <color name="base_FC0100">#FC0100</color>
+    <color name="base_EC3A5A">#EC3A5A</color>
+    <color name="base_FF3E5B">#FF3E5B</color>
+    <color name="base_FF1240">#FF1240</color>
+    <color name="base_FF3B57">#FF3B57</color>
+    <color name="base_F21B97">#F21B97</color>
+    <color name="base_80FF3E5B">#80FF3E5B</color>
+    <color name="base_26A40F25">#26A40F25</color>
+    <color name="base_4F577C">#4F577C</color>
+    <color name="base_141E50">#141E50</color>
+    <color name="base_A1A5B9">#A1A5B9</color>
+    <color name="base_E7E8ED">#E7E8ED</color>
+    <color name="base_F9F9FA">#F9F9FA</color>
+    <color name="base_E40521">#E40521</color>
+    <color name="base_831F82">#831F82</color>
+    <color name="base_49479d">#49479d</color>
+    <color name="base_d60f3c">#d60f3c</color>
+    <color name="base_ffd618">#ffd618</color>
 </resources>
