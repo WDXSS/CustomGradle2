@@ -40,4 +40,8 @@ public class SevenMainActivity extends AppCompatActivity {
     public void startRadialActivity(View view) {
         startActivity(new Intent(this, RadialGradientActivity.class));
     }
+
+    public void startBezierMainActivity(View view) {
+        startActivity(new Intent(this, BezierMainActivity.class));
+    }
 }

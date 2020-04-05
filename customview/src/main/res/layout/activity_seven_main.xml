@@ -54,4 +54,12 @@
         android:textAllCaps="false"
         android:text="shader的派生类RadialGradient"
         android:onClick="startRadialActivity" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="path绘制贝济埃曲线"
+        android:textAllCaps="false"
+        android:onClick="startBezierMainActivity"
+        />
+
 </LinearLayout>

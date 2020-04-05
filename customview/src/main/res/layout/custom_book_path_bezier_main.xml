@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="二阶贝济埃曲线path.quadTo()"
+        android:textAllCaps="false"
+        android:onClick="startBezierWaveActivity" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="通过path画手势轨迹路径"
+        android:textAllCaps="false"
+        android:onClick="startNormalGestureTrackActivity"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="通过贝济埃曲线画手势轨迹路径"
+        android:textAllCaps="false"
+        android:onClick="startBezierGestureTrackActivity"
+        />
+</LinearLayout>

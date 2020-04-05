@@ -53,8 +53,9 @@
             android:layout_margin="10dp"
             android:textAllCaps="false"
             android:text="点击波纹效果 \n通过RadialGradient 加 属性动画，实现点击波纹效果" />
+
         <com.example.customview.book.custom._7paint.view.RippleView
             android:layout_width="match_parent"
-            android:layout_height="100dp"/>
+            android:layout_height="100dp" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

@@ -84,6 +84,11 @@
         <activity android:name=".book.custom._7paint.LinearGradientActivity" />
         <activity android:name=".book.custom._7paint.ShimmerTextActivity" />
         <activity android:name=".book.custom._7paint.RadialGradientActivity" />
+        <activity android:name=".book.custom._7paint.BezierWaveActivity" />
+        <activity android:name=".book.custom._7paint.BezierMainActivity" />
+        <activity android:name=".book.custom._7paint.NormalGestureTrackActivity" />
+        <activity android:name=".book.custom._7paint.BezierGestureTrackActivity" />
+        <activity android:name=".book.custom._7paint.AnimWaveActivity" />
 
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textAllCaps="false"
+    android:text="//path 绘制二阶贝济埃曲线的方法1. path.quadTo(); 2.rQuadTo();\n
+//path.quadTo() 参数表示是 控制点和终点的坐标 \n
+//path.rQuadTo() 参数表示是:现对于上一个终点x坐标的位移坐标，\n
+// 例如 :上一个终点的坐标(300,400),利用path.rQuadTo(100,-100,200,100); \n
+// 得到的控制点(300+100,400-100), 终点坐标(300+200,400+100)"
+    />
+    <com.example.customview.book.custom._7paint.view.BezierWaveView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        android:background="#000000" />
+</LinearLayout>
