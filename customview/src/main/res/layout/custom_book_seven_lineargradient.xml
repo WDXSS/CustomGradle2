@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:layout_margin="5dp"
+        android:text="总结：Shader 的派生类 LinearGradient 线性渐变在两点之间填充渐变颜色
+        \n LinearGradient 两种构造函数，1.双色渐变，2.多色渐变
+        \n 例子中是：1.多色渐变 2.通过多色渐变实现闪光字"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#000000" />
+
+    <com.example.customview.book.custom._7paint.view.LinearGradientView
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#000000" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:layout_margin="5dp"
+        android:text="闪光字是在自定义View 设置 渐变的LinearGradient 通过canvas.drawText()函授绘制文字" />
+    <com.example.customview.book.custom._7paint.view.LinearGradientTextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:layout_margin="5dp"
+        android:text="闪光字是在自定义TextView，添加shader的派生类多色 LinearGradient ，
+    通过对shader添加属性动画，移动shader的位置" />
+
+    <com.example.customview.book.custom._7paint.view.ShimmerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:layout_margin="20dp"
+        android:textColor="#000000"
+        android:text="欢迎关注启舰的blog" />
+</LinearLayout>

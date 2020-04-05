@@ -81,6 +81,9 @@
         <activity android:name=".book.custom._7paint.AuthorActivity" />
         <activity android:name=".book.custom._10canvas.CustomDrawableActivity" />
         <activity android:name=".book.custom._10canvas.BackgroundDrawableActivity" />
+        <activity android:name=".book.custom._7paint.LinearGradientActivity" />
+        <activity android:name=".book.custom._7paint.ShimmerTextActivity" />
+        <activity android:name=".book.custom._7paint.RadialGradientActivity" />
 
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

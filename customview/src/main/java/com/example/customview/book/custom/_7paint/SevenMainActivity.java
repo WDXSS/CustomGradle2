@@ -28,4 +28,16 @@ public class SevenMainActivity extends AppCompatActivity {
     public void startAuthorActivity(View view) {
         startActivity(new Intent(this, AuthorActivity.class));
     }
+
+    public void startLinearGradientActivity(View view) {
+        startActivity(new Intent(this, LinearGradientActivity.class));
+    }
+
+    public void startShimmerTextActivity(View view) {
+        startActivity(new Intent(this, ShimmerTextActivity.class));
+    }
+
+    public void startRadialActivity(View view) {
+        startActivity(new Intent(this, RadialGradientActivity.class));
+    }
 }

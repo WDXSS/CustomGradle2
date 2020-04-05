@@ -35,4 +35,23 @@
         android:textAllCaps="false"
         android:text="生成不规则头像"
         android:onClick="startAuthorActivity" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:text="Shader 派生类LinearGradient渐变 "
+        android:onClick="startLinearGradientActivity" />
+    android:onClick="startAuthorActivity" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:text="LinearGradient闪光文字效果 "
+        android:onClick="startShimmerTextActivity" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:text="shader的派生类RadialGradient"
+        android:onClick="startRadialActivity" />
 </LinearLayout>

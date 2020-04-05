@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.customview.book.custom._7paint.view.ShimmerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:layout_margin="20dp"
+        android:textColor="#000000"
+        android:text="欢迎关注启舰的blog" />
+    <com.example.customview.book.custom._7paint.view.ShimmerTextViewBook
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:layout_margin="20dp"
+        android:textColor="#000000"
+        android:text="源码中的效果欢迎关注启舰的blog"/>
+</LinearLayout>
