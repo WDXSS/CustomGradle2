@@ -14,7 +14,7 @@ public class AnimWaveActivity extends AppCompatActivity {
     TextView mTextView1;
     TextView mTextView2;
     private String info1 = "绘制一个波长的曲线，添加移动动画，来说明波浪动画的实现原理:" +
-            "\n 通过path.moveTo()移动绘制曲线的起始点 实现移动";
+            "\n 通过path.moveTo()移动绘制曲线的起始点 实现移动，\n 注意在onDraw()绘制是将路径重置，path.reset()";
     private String info2 = "绘制波浪曲线，在屏幕的左侧绘制出额外的一个波长的曲线，然后\n通过path.moveTo()移动绘制曲线的起始点 实现移动";
 
     @Override
