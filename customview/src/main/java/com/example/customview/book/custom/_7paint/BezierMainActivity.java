@@ -31,4 +31,9 @@ public class BezierMainActivity extends AppCompatActivity {
         //通过 贝济埃曲线 绘制轨迹
         startActivity(new Intent(this, BezierGestureTrackActivity.class));
     }
+
+    public void startAnimWaveActivity(View view) {
+        //动态的波浪曲线
+        startActivity(new Intent(this, AnimWaveActivity.class));
+    }
 }

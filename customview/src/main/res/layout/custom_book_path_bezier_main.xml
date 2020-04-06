@@ -26,4 +26,11 @@
         android:textAllCaps="false"
         android:onClick="startBezierGestureTrackActivity"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:text="二阶贝济埃曲线+属性动画实现波浪"
+        android:onClick="startAnimWaveActivity"
+        />
 </LinearLayout>
