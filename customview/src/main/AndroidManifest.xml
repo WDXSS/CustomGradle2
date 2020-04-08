@@ -93,6 +93,7 @@
         <activity android:name=".book.custom._7paint.XmlShadowLayerActivity" />
         <activity android:name=".book.custom._7paint.BitmapBlurMaskFilterActivity" />
         <activity android:name=".book.custom._7paint.BlurMaskFilterActivity" />
+        <activity android:name=".book.custom._7paint.BlurMaskFilterStyleActivity" />
 
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

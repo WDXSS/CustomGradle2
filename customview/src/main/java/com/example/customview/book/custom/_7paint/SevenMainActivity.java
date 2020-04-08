@@ -60,4 +60,8 @@ public class SevenMainActivity extends AppCompatActivity {
     public void startBlurMaskFilterActivity(View view) {
         startActivity(new Intent(this, BlurMaskFilterActivity.class));
     }
+
+    public void startBlurMaskFilterStyleActivity(View view) {
+        startActivity(new Intent(this, BlurMaskFilterStyleActivity.class));
+    }
 }

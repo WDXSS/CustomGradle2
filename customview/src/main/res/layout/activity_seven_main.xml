@@ -115,5 +115,11 @@
             android:textAllCaps="false"
             android:text="BlurMaskFilter 添加发光效果"
             android:onClick="startBlurMaskFilterActivity"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="BlurMaskFilter发光四种样式"
+            android:onClick="startBlurMaskFilterStyleActivity"/>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
