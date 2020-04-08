@@ -17,7 +17,7 @@ import com.example.jetpack.DevDescribe;
 /**
  * Created by qijian on 17/2/5.
  */
-@DevDescribe("通过RadialGradient 加 属性动画，实现点击波纹效果")
+@DevDescribe("通过RadialGradient 加 属性动画，实现 点击 波纹效果")
 public class RippleView extends androidx.appcompat.widget.AppCompatButton {
     private int mX, mY;
     private ObjectAnimator mAnimator;

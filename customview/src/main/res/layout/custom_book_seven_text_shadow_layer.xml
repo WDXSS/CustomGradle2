@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textSize="18dp"
+        android:text="使用XML添加阴影效果"
+        android:shadowRadius="3"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowColor="@android:color/darker_gray"/>
+
+    <Button
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:text="使用XML添加阴影效果"
+        android:layout_margin="5dp"
+        android:shadowRadius="3"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowColor="@android:color/darker_gray"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="使用XML添加阴影效果"
+        android:shadowRadius="3"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowColor="@android:color/darker_gray"
+        />
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用代码生成的阴影"/>
+</LinearLayout>

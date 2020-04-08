@@ -44,4 +44,20 @@ public class SevenMainActivity extends AppCompatActivity {
     public void startBezierMainActivity(View view) {
         startActivity(new Intent(this, BezierMainActivity.class));
     }
+
+    public void startShadowLayerActivity(View view) {
+        startActivity(new Intent(this, ShadowLayerActivity.class));
+    }
+
+    public void startXmlShadowLayerActivity(View view) {
+        startActivity(new Intent(this, XmlShadowLayerActivity.class));
+    }
+
+    public void startBitmapShadowLayerActivity(View view) {
+        startActivity(new Intent(this, BitmapBlurMaskFilterActivity.class));
+    }
+
+    public void startBlurMaskFilterActivity(View view) {
+        startActivity(new Intent(this, BlurMaskFilterActivity.class));
+    }
 }

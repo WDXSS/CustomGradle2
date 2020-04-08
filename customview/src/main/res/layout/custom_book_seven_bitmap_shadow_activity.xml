@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:layout_margin="10dp"
+        android:text="给图片添加纯色阴影 原理：1.生成和原图一样大小的灰色副本，2.然后使用BlurMaskFilter 使其内外发光，3.然后偏移一定的距离形成阴影效果"
+        />
+<com.example.customview.book.custom._7paint.view.BitmapBlurMaskFilterView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+</LinearLayout>

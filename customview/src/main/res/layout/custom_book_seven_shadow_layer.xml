@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/set_shadow_layer_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        android:text="1. setShadowLayer示例"/>
+    <Button
+        android:id="@+id/dx_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="dx+5"/>
+    <Button
+        android:id="@+id/dy_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="dy+5"/>
+
+    <Button
+        android:id="@+id/radius_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="radius+5"/>
+
+    <Button
+        android:id="@+id/clear_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="clearShadow"/>
+
+    <Button
+        android:id="@+id/show_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="showShadow"/>
+
+    <com.example.customview.book.custom._7paint.view.ShadowLayerView
+        android:id="@+id/shadowlayerview"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

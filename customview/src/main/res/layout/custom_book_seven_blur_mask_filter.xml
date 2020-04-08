@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.customview.book.custom._7paint.view.BlurMaskFilterTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="自定义 textView 实现 边缘模糊效果"
+
+        android:textSize="24sp"
+        android:padding="15dp" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="16sp"
+    android:layout_margin="10dp"
+    android:text="2.设置图像的模糊效果"
+    />
+    <com.example.customview.book.custom._7paint.view.BlurMaskFilterView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#000000" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        android:text="3.设置种颜色图像的模糊效果：是根据边缘颜色进行模糊"
+        />
+    <com.example.customview.book.custom._7paint.view.BlurMaskFilterView2
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        android:background="#000000" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        android:text="4.设置种颜色图片的模糊效果：是根据图片边缘颜色进行模糊"
+        />
+    <com.example.customview.book.custom._7paint.view.BlurMaskFilterView3
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
