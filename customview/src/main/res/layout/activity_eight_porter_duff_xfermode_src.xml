@@ -1,0 +1,149 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:layout_margin="15dp"
+            android:textColor="#000000"
+            android:text="目标图像（圆形图案, 在paint设置xfermode 之前绘制的图像叫做目标图像），
+            \n源图像（矩形图案，在paint设置xfermode 之前绘制的图像叫做源图像)" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.example.customview.book.custom._8xfermode.view.src.PorterDuffXfermodeViewSrcIn
+                android:layout_width="200dp"
+                android:layout_height="120dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:layout_margin="5dp"
+                android:textColor="#000000"
+                android:text="公式：[Sa*Da,Sc*Dc] \n当目标图像透明度为0时，源图像就完全不显示 用例：圆角图片和图片倒影效果" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.example.customview.book.custom._8xfermode.view.src.PorterDuffXfermodeViewSrc
+                android:layout_width="200dp"
+                android:layout_height="170dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:layout_margin="5dp"
+                android:textColor="#000000"
+                android:text="公式：[Sa,Sc] \n目标图像和源图像相交时完全显示源图像" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#000000">
+
+            <com.example.customview.book.custom._8xfermode.view.src.PorterDuffXfermodeViewSrcOut
+                android:layout_width="170dp"
+                android:layout_height="200dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:layout_margin="5dp"
+                android:textColor="#000000"
+                android:text="公式：[Sa*(1-Da),Sc*(1-Dc)] \n以目标图像的透明度的补值来调节源图像的透明度和饱和度，
+                即：当目标图像的透明度为100%时,显示透明（相交位置为背景颜色);
+                当目标图像的透明度为0时,显示源图像。 用例：橡皮擦效果.刮刮卡效果" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.example.customview.book.custom._8xfermode.view.src.PorterDuffxfermodeViewSrcOver
+                android:layout_width="170dp"
+                android:layout_height="170dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:layout_margin="5dp"
+                android:textColor="#000000"
+                android:text="公式：
+                \n[Sa+(1-Sa)*Da, Rc= Sc +(1-Sa)*Dc]
+                \n 当源图的透明度是 100% 时，就原样显示源图像" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.example.customview.book.custom._8xfermode.view.src.PorterDuffXfermodeViewSrcAtop
+                android:layout_width="170dp"
+                android:layout_height="250dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:layout_margin="5dp"
+                android:textColor="#000000"
+                android:text="公式：
+                \n [Da, Sc*Da + (1-Sa)*Dc] 显示效果和src_in相同
+                \n对比后公式的结论：1.当透明度是100%或者0时，两种模式相同。2.当透明度不是100%或者0时,src_atop相比src_in源图像的饱和度会增加，即会显得更亮。
+                \n用例:圆角效果，倒影效果" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

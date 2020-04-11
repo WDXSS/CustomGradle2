@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.customview.R;
 import com.example.customview.book.custom._10canvas.TenMainActivity;
 import com.example.customview.book.custom._7paint.SevenMainActivity;
+import com.example.customview.book.custom._8xfermode.EightMainActivity;
 
 public class CustomBookMain extends AppCompatActivity {
     @Override
@@ -30,5 +31,12 @@ public class CustomBookMain extends AppCompatActivity {
         intent.setClass(this, SevenMainActivity.class);
         startActivity(intent);
 
+    }
+
+    public void startEightMainActivity(View view) {
+        //打开 第8  混合模式
+        Intent intent = new Intent();
+        intent.setClass(this, EightMainActivity.class);
+        startActivity(intent);
     }
 }

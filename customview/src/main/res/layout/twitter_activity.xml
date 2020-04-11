@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        android:textColor="#000000"
+        android:text="这里使用了PorterDuff.Mode.MULTIPLY 模式（正片叠加）\n
+    Paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.MULTIPLY)); \n
+
+ 目标图像是蓝色背景的小鸟，源图是内部透明的小鸟， \n
+ 合成原理算法：\n
+ 两者的透明度相城得出合成后的图片的透明度，\n
+两者的颜色相乘得出合成后图片的颜色" />
+
+    <com.example.customview.book.custom._8xfermode.view.TwitterView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</LinearLayout>

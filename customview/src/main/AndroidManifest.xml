@@ -94,6 +94,11 @@
         <activity android:name=".book.custom._7paint.BitmapBlurMaskFilterActivity" />
         <activity android:name=".book.custom._7paint.BlurMaskFilterActivity" />
         <activity android:name=".book.custom._7paint.BlurMaskFilterStyleActivity" />
+        <activity android:name=".book.custom._8xfermode.EightMainActivity" />
+        <activity android:name=".book.custom._8xfermode.AvoidXfermodeColorActivity" />
+        <activity android:name=".book.custom._8xfermode.PorterDuffXfermodeActivity" />
+        <activity android:name=".book.custom._8xfermode.TwitterActivity" />
+        <activity android:name=".book.custom._8xfermode.PorterDuffXfermodeSrcActivity" />
 
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

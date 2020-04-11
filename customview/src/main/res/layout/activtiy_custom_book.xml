@@ -23,5 +23,12 @@
         android:text="第7 绘图进阶"
         android:onClick="startSevenPaint"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:text="第8 混合模式"
+        android:onClick="startEightMainActivity"
+        />
 </LinearLayout>
 </androidx.core.widget.NestedScrollView>

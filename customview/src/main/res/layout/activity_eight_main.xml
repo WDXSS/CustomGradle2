@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            android:text="Paint 混合模式可以将两张图片无缝结合，实现类似PhotoShop 中的两张图片融合.
+\n Xfermode 的子类有AviodXfermode, pixelXorXfermode,和 porterXfermode
+\n 注意两点 ：1.禁用硬件加速 2. 使用离屏绘制" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="AvoidXfermode 图片替换颜色"
+            android:onClick="startAvoidXfermodeColorActivity" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="PorterDuffXfermode 颜色叠加模式"
+            android:onClick="startPorterDuffXfermodeActivity" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="Twitter 标识的描边效果"
+            android:onClick="starTwitter" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="porterXfermode之源图像模式"
+            android:onClick="startPorterDuffXfermodeSrcActivity" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="LinearGradient闪光文字效果 "
+            android:onClick="startShimmerTextActivity" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="shader的派生类RadialGradient"
+            android:onClick="startRadialActivity" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            android:text="path绘制贝济埃曲线的函数，并通过贝济埃曲线实现手势轨迹和波浪动画" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="path绘制贝济埃曲线"
+            android:textAllCaps="false"
+            android:onClick="startBezierMainActivity" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            android:text="Paint.setShadowLayer 设置文字，图案，图片的阴影效果
+        \n 注意硬件加速的问题，最好禁止硬件加速，多数情况不支持硬件加速" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="setShadowLayer和阴影效果"
+            android:textAllCaps="false"
+            android:onClick="startShadowLayerActivity" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="使用Xml 添加文字阴影效果"
+            android:onClick="startXmlShadowLayerActivity"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="BlurMaskFilter 发光效果和图片阴影"
+            android:onClick="startBitmapShadowLayerActivity"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="BlurMaskFilter 添加发光效果"
+            android:onClick="startBlurMaskFilterActivity"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="BlurMaskFilter发光四种样式"
+            android:onClick="startBlurMaskFilterStyleActivity"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
