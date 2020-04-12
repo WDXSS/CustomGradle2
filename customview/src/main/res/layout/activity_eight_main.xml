@@ -55,8 +55,8 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:textAllCaps="false"
-            android:text="LinearGradient闪光文字效果 "
-            android:onClick="startShimmerTextActivity" />
+            android:text="Eraser_srout 橡皮擦效果"
+            android:onClick="startEraserSrcOutActivity" />
 
         <Button
             android:layout_width="match_parent"

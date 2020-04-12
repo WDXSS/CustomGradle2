@@ -99,6 +99,7 @@
         <activity android:name=".book.custom._8xfermode.PorterDuffXfermodeActivity" />
         <activity android:name=".book.custom._8xfermode.TwitterActivity" />
         <activity android:name=".book.custom._8xfermode.PorterDuffXfermodeSrcActivity" />
+        <activity android:name=".book.custom._8xfermode.EraserSrcOutActivity" />
 
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

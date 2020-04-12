@@ -20,19 +20,23 @@ public class EightMainActivity extends AppCompatActivity {
 
     public void startAvoidXfermodeColorActivity(View view) {
         //混合模式之替换颜色
-        startActivity(new Intent(this,AvoidXfermodeColorActivity.class));
+        startActivity(new Intent(this, AvoidXfermodeColorActivity.class));
     }
 
     public void startPorterDuffXfermodeActivity(View view) {
         //混合模式之替换颜色
-        startActivity(new Intent(this,PorterDuffXfermodeActivity.class));
+        startActivity(new Intent(this, PorterDuffXfermodeActivity.class));
     }
 
     public void starTwitter(View view) {
-        startActivity(new Intent(this,TwitterActivity.class));
+        startActivity(new Intent(this, TwitterActivity.class));
     }
 
     public void startPorterDuffXfermodeSrcActivity(View view) {
-        startActivity(new Intent(this,PorterDuffXfermodeSrcActivity.class));
+        startActivity(new Intent(this, PorterDuffXfermodeSrcActivity.class));
+    }
+
+    public void startEraserSrcOutActivity(View view) {
+        startActivity(new Intent(this, EraserSrcOutActivity.class));
     }
 }
