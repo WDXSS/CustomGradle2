@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_margin="10dp"
+        android:textSize="16sp"
+        android:text="区域波纹效果：分析波在文字里做动画效果，文字是遮罩，波纹是要显示的内容；
+对于Dst_In 模式而言，要显示的内容波纹是目标图像，文字是遮罩是源图像" />
+
+    <com.example.customview.book.custom._8xfermode.view.IrregularWaveViewDst_In
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        />
+    <com.example.customview.book.custom._8xfermode.view.IrregularWaveViewBook
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp" />
+
+</LinearLayout>

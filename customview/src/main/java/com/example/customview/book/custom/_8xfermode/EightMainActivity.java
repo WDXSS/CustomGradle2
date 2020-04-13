@@ -56,4 +56,9 @@ public class EightMainActivity extends AppCompatActivity {
     public void startTextWaveActivity(View view) {
         startActivity(new Intent(this, TextWaveActivity.class));
     }
+
+    public void startIrregularWaveActivity(View view) {
+        //不规则的波形
+        startActivity(new Intent(this, IrregularWaveActivity.class));
+    }
 }

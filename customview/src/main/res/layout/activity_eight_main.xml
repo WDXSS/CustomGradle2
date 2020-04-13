@@ -81,5 +81,12 @@
             android:textAllCaps="false"
             android:text="xfermode 之Drt_In区域波纹"
             android:onClick="startTextWaveActivity" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="xfermode 之Drt_In不规则区域波纹"
+            android:onClick="startIrregularWaveActivity" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
