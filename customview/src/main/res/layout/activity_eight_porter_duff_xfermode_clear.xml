@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:layout_margin="15dp"
+        android:textColor="#000000"
+        android:text="目标图像（圆形图案, 在paint设置xfermode 之前绘制的图像叫做目标图像），
+            \n源图像（矩形图案，在paint设置xfermode 之前绘制的图像叫做源图像)" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.example.customview.book.custom._8xfermode.view.PorterDuffXfermodeViewClear
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:layout_margin="5dp"
+            android:textColor="#000000"
+            android:text="公式[0,0] 源图像所在区域变成空白像素，起到清空源图像所在区域图像的作用 用例：区域波纹" />
+    </LinearLayout>
+</LinearLayout>

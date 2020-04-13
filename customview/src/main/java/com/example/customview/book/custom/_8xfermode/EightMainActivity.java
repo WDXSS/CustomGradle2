@@ -39,4 +39,17 @@ public class EightMainActivity extends AppCompatActivity {
     public void startEraserSrcOutActivity(View view) {
         startActivity(new Intent(this, EraserSrcOutActivity.class));
     }
+
+    public void startRoundImageActivity(View view) {
+        startActivity(new Intent(this, RoundImageActivity.class));
+    }
+
+    public void startPorterDuffXfermodeDstActivity(View view) {
+        startActivity(new Intent(this, PorterDuffXfermodeDstActivity.class));
+
+    }
+
+    public void startPorterDuffXfermodeClearActivity(View view) {
+        startActivity(new Intent(this, PorterDuffXfermodeClearActivity.class));
+    }
 }

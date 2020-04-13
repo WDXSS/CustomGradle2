@@ -1,10 +1,9 @@
-package com.example.customview.book.custom._8xfermode.view.color;
+package com.example.customview.book.custom._8xfermode.view.dst;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
@@ -14,7 +13,10 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
-public class PorterDuffXfermodeViewMultiply extends View {
+import com.example.jetpack.DevDescribe;
+
+@DevDescribe("源图像模式之 SRC ")
+public class PorterDuffXfermodeViewDst extends View {
     private int width = 200;
     private int heigth = 200;
     private Paint mPaint;
@@ -22,15 +24,15 @@ public class PorterDuffXfermodeViewMultiply extends View {
     private Bitmap mSrcBtm;
     private Paint mPaintText;
 
-    public PorterDuffXfermodeViewMultiply(Context context) {
+    public PorterDuffXfermodeViewDst(Context context) {
         this(context, null);
     }
 
-    public PorterDuffXfermodeViewMultiply(Context context, @Nullable AttributeSet attrs) {
+    public PorterDuffXfermodeViewDst(Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public PorterDuffXfermodeViewMultiply(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public PorterDuffXfermodeViewDst(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         //关闭硬件加速
         setLayerType(LAYER_TYPE_SOFTWARE, null);
@@ -40,7 +42,6 @@ public class PorterDuffXfermodeViewMultiply extends View {
 
         mPaintText = new Paint();
         mPaintText.setTextSize(30);
-        mPaintText.setColor(Color.BLACK);
     }
 
     private Bitmap markDst() {
@@ -71,7 +72,7 @@ public class PorterDuffXfermodeViewMultiply extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.drawText("PorterDuff.Mode.MULTIPLY ", 10, heigth*2, mPaintText);
+        canvas.drawText("PorterDuff.Mode.DST ",  10, heigth *2, mPaintText);
         //保存状态
         int layerId = canvas.saveLayer(0, 0, getWidth(), getHeight(), null, Canvas.ALL_SAVE_FLAG);
 
@@ -80,13 +81,13 @@ public class PorterDuffXfermodeViewMultiply extends View {
 
         //设置混合 xfermode
         @SuppressLint("DrawAllocation")
-        PorterDuffXfermode porterDuffXfermode = new PorterDuffXfermode(PorterDuff.Mode.MULTIPLY);
+        PorterDuffXfermode porterDuffXfermode = new PorterDuffXfermode(PorterDuff.Mode.DST);
         mPaint.setXfermode(porterDuffXfermode);
         //设置源图（矩形图）
         canvas.drawBitmap(mSrcBtm, width / 2, heigth / 2, mPaint);
         mPaint.setXfermode(null);//paint 设置Xfermode为空
         canvas.restoreToCount(layerId);
-//
+
 //        //説明：
 //        在Xfermode 设置之前画出的图像叫做 目标图像，即给谁应用xfermode;
 //        在xfermode 设置之后画出的图像叫作 源图像，即拿什么应用xfermode；

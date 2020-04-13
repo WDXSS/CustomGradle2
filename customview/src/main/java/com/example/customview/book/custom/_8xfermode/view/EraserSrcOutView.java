@@ -87,6 +87,8 @@ public class EraserSrcOutView extends View {
                 invalidate();
                 return true;
             case MotionEvent.ACTION_MOVE:
+                //对于橡皮擦效果是非必须，因为在activity中使用了NestedScrollView，有滑动事件冲突
+                getParent().requestDisallowInterceptTouchEvent(true);//屏蔽父控件拦截onTouch事件
                 //找到控制点和终点
                 float endX = (mPreX + event.getX()) / 2;
                 float endY = (mPreY + event.getY()) / 2;
@@ -131,4 +133,6 @@ public class EraserSrcOutView extends View {
         canvas.restoreToCount(layerId);
 
     }
+
+
 }

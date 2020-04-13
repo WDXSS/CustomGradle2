@@ -34,7 +34,7 @@
                 android:textSize="14sp"
                 android:layout_margin="5dp"
                 android:textColor="#000000"
-                android:text="公式：[Sa*Da,Sc*Dc] \n当目标图像透明度为0时，源图像就完全不显示 用例：圆角图片和图片倒影效果" />
+                android:text="公式：[Sa*Da,Sc*Da] \n当目标图像透明度为0时，源图像就完全不显示 用例：圆角图片和图片倒影效果" />
         </LinearLayout>
 
 
