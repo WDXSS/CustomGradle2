@@ -103,6 +103,7 @@
         <activity android:name=".book.custom._8xfermode.RoundImageActivity" />
         <activity android:name=".book.custom._8xfermode.PorterDuffXfermodeDstActivity" />
         <activity android:name=".book.custom._8xfermode.PorterDuffXfermodeClearActivity" />
+        <activity android:name=".book.custom._8xfermode.TextWaveActivity" />
 
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

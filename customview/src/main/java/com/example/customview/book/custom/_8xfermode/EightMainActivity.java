@@ -52,4 +52,8 @@ public class EightMainActivity extends AppCompatActivity {
     public void startPorterDuffXfermodeClearActivity(View view) {
         startActivity(new Intent(this, PorterDuffXfermodeClearActivity.class));
     }
+
+    public void startTextWaveActivity(View view) {
+        startActivity(new Intent(this, TextWaveActivity.class));
+    }
 }

@@ -75,5 +75,11 @@
             android:text="xfermode 之Src_In 实现圆角效果"
             android:onClick="startRoundImageActivity" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="xfermode 之Drt_In区域波纹"
+            android:onClick="startTextWaveActivity" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
