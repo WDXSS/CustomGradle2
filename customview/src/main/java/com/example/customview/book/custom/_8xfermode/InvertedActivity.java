@@ -8,11 +8,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.customview.R;
 import com.example.jetpack.DevDescribe;
 
-@DevDescribe("不规则区域波纹")
-public class IrregularWaveActivity extends AppCompatActivity {
+@DevDescribe("xFremode 图像合成 实现倒影效果")
+public class InvertedActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.custom_book_8_irregular_wave_dst_in);
+        setContentView(R.layout.custom_book_8_inverted_activity);
     }
+
 }

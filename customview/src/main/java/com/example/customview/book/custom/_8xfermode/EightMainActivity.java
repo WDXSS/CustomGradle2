@@ -61,4 +61,13 @@ public class EightMainActivity extends AppCompatActivity {
         //不规则的波形
         startActivity(new Intent(this, IrregularWaveActivity.class));
     }
+
+    public void startInvertedActivity(View view) {
+        startActivity(new Intent(this, InvertedActivity.class));
+
+    }
+
+    public void startLightenActivity(View view) {
+        startActivity(new Intent(this, LightBookActivity.class));
+    }
 }

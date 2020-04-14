@@ -105,6 +105,8 @@
         <activity android:name=".book.custom._8xfermode.PorterDuffXfermodeClearActivity" />
         <activity android:name=".book.custom._8xfermode.TextWaveActivity" />
         <activity android:name=".book.custom._8xfermode.IrregularWaveActivity" />
+        <activity android:name=".book.custom._8xfermode.InvertedActivity" />
+        <activity android:name=".book.custom._8xfermode.LightBookActivity" />
 
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

@@ -51,21 +51,28 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:textAllCaps="false"
-            android:text="porterXfermode之Clear模式"
+            android:text="porterXfermode之Clear模式和Xor模式"
             android:onClick="startPorterDuffXfermodeClearActivity" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:textAllCaps="false"
-            android:text="Twitter 标识的描边效果"
+            android:text="Twitter 标识的描边效果 multiply 正片叠加"
             android:onClick="starTwitter" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="xFermode之颜色模式 lighten 效果"
+            android:onClick="startLightenActivity" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:textAllCaps="false"
-            android:text="Eraser_srout 橡皮擦效果"
+            android:text="Eraser 橡皮擦效果之src_out"
             android:onClick="startEraserSrcOutActivity" />
 
         <Button
@@ -74,6 +81,12 @@
             android:textAllCaps="false"
             android:text="xfermode 之Src_In 实现圆角效果"
             android:onClick="startRoundImageActivity" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="xFermode 图片倒影效果 之src_in模式"
+            android:onClick="startInvertedActivity" />
 
         <Button
             android:layout_width="match_parent"
