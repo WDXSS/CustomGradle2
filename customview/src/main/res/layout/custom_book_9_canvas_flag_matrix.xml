@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ff0000"
+            android:layout_margin="10dp"
+            android:text="从API级别API级别28开始，唯一有效的saveFlags是ALL_SAVE_FLAG。所有其他标志将被忽略。" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="#000000"
+            android:text=" 总结：matrix_save_flag
+        \n 1. Canvas.MATRIX_SAVE_FLAG 标识只会保存位置矩阵，在恢复时也只会恢复画布的位置，除此之外的任何信息（比如 画布大小）都不会恢复；save()和saveLayer()函数相同;
+       \n
+        \n 2. saveLayer()函数在使用用Canvas.MATRIX_SAVE_FLAG 标识时需要与 Canvas.HAS_ALPHA_LAYER_SAVE_FLAG标识一起使用，否则新建的画布所在区域原来的图像将被清空"
+            android:textAllCaps="false" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ff0000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="#000000"
+            android:text="通过旋转的例子理解matrix_save_flag
+        \n1.首先调用 canvas.save(Canvas.MATRIX_SAVE_FLAG);函数将 Canvas 的位置矩阵保存起来；
+        \n 2.然后将画布旋转40度，画一个灰色的矩形；
+        \n 3.接着调用 canvas.restore(); 函数将画布恢复；
+        \n 4.最后在同一位置画一个黑色矩形
+        \n
+        \n 证明：canvas.save(Canvas.MATRIX_SAVE_FLAG) 只会保存位置矩阵，恢复是只恢复矩阵位置，其他任何信息都不恢复"
+            android:textAllCaps="false" />
+
+        <com.example.book_custom._9view.CanvasFlag_MatrixView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#DDC917"
+            android:layout_margin="10dp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="#000000"
+            android:text="通过裁剪的例子理解matrix_save_flag
+        \n 1.先对画布进行保存 canvas.save(Canvas.MATRIX_SAVE_FLAG);
+        \n 2.然后将画布裁剪成一个矩形，并画布绘制成灰色
+        \n 3.接着调用 canvas.restore(); 函数将画布恢复；
+        \n 4.将画布绘制成黑色
+        \n
+        \n 结果: 只有裁剪的部分被染成了黑色，再次证明 canvas.save(Canvas.MATRIX_SAVE_FLAG) 只会保存位置矩阵，恢复是只恢复矩阵位置，其他任何信息都不恢复(包括画布大小)"
+            android:textAllCaps="false" />
+
+        <com.example.book_custom._9view.CanvasFlag_MatrixView2
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#DDC917"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -107,6 +107,9 @@
         <activity android:name=".book.custom._8xfermode.IrregularWaveActivity" />
         <activity android:name=".book.custom._8xfermode.InvertedActivity" />
         <activity android:name=".book.custom._8xfermode.LightBookActivity" />
+        <activity android:name=".book.custom._9canvas.NineMainActivity" />
+        <activity android:name=".book.custom._9canvas.SaveFlagMatrixActivity" />
+        <activity android:name=".book.custom._9canvas.SaveFlagClipActivity" />
 
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

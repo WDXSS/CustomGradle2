@@ -11,6 +11,7 @@ import com.example.customview.R;
 import com.example.customview.book.custom._10canvas.TenMainActivity;
 import com.example.customview.book.custom._7paint.SevenMainActivity;
 import com.example.customview.book.custom._8xfermode.EightMainActivity;
+import com.example.customview.book.custom._9canvas.NineMainActivity;
 
 public class CustomBookMain extends AppCompatActivity {
     @Override
@@ -37,6 +38,12 @@ public class CustomBookMain extends AppCompatActivity {
         //打开 第8  混合模式
         Intent intent = new Intent();
         intent.setClass(this, EightMainActivity.class);
+        startActivity(intent);
+    }
+    public void startNineMainActivity(View view) {
+        //打开 第9  混合模式
+        Intent intent = new Intent();
+        intent.setClass(this, NineMainActivity.class);
         startActivity(intent);
     }
 }

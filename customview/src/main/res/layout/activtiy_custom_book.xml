@@ -4,31 +4,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbars="vertical">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
 
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textAllCaps="false"
-        android:text="第10 Android 画布"
-        android:onClick="start10Canvas"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textAllCaps="false"
-        android:text="第7 绘图进阶"
-        android:onClick="startSevenPaint"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textAllCaps="false"
-        android:text="第8 混合模式"
-        android:onClick="startEightMainActivity"
-        />
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="第10 Android 画布"
+            android:onClick="start10Canvas" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="第7 绘图进阶"
+            android:onClick="startSevenPaint" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="第8 混合模式"
+            android:onClick="startEightMainActivity" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="第9 Canvas 与 图层"
+            android:onClick="startNineMainActivity" />
+    </LinearLayout>
 </androidx.core.widget.NestedScrollView>

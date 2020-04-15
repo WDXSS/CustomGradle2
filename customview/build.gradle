@@ -49,6 +49,7 @@ dependencies {
     api project(path: ':library-recycler')
     implementation 'com.android.support:design:28.0.0'
     compile project(path: ':logcollector')
+    implementation project(path: ':book_custom')
 
 
 //    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
