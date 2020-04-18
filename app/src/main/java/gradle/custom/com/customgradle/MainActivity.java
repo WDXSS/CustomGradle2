@@ -7,7 +7,9 @@ import androidx.annotation.RestrictTo;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 
+import gradle.com.example.customview.book.custom.com.customgradle.R;
 import gradle.custom.com.androidlibrary.LibActivity;
+
 
 //那就是 support-annotations 库的 RestrictTo 注解，配合 lint 使用。
 // 比如 MainActivity.java 要禁止外部使用

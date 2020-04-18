@@ -19,6 +19,6 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
-#
-# 在依赖中 需要使用 consumerProguardFiles 'proguard-rules.pro'
--keep class com.example.book_custom.ProguardUtil
+-keep class com.example.customview.CustomViewMain
+-keep class com.example.customview.LogWriteUtil
+-keep class com.example.customview.LogProguardWriteUtil {*;}

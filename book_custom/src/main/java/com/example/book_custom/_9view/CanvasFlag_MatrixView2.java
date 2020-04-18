@@ -10,6 +10,7 @@ import android.view.View;
 import androidx.annotation.Nullable;
 
 import com.example.book_custom.DevDescribe;
+import com.example.book_custom.ProguardUtil;
 
 @DevDescribe("新的Api 已经不支持 canvas.save(Canvas.MATRIX_SAVE_FLAG); 中的入参 Canvas.MATRIX_SAVE_FLAG" +
         "对画布进行裁剪")
@@ -28,7 +29,7 @@ public class CanvasFlag_MatrixView2 extends View {
 //           标识一起使用，否则新建的画布所在区域原来的图像将被清空
 
 
-
+        ProguardUtil.getTest();
 //
     }
 

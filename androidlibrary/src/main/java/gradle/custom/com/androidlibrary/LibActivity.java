@@ -4,6 +4,8 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import gradle.com.example.customview.book.custom.com.androidlibrary.R;
+
 /**
  * Created by zc on 2019/1/4
  */

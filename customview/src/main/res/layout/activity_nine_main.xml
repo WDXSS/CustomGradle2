@@ -22,6 +22,14 @@
         \n save()和SaveLayer()的区别在于：\n 1.saveLayer()会创建一块新的透明画布，之后所有的操作都是在新建的画布上;
         \n 2.save()不会新建画布；"
         />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_margin="10dp"
+        android:textColor="#ff0000"
+        android:text="在android 8.0(API 26)及以后的版本中，除了All_save_flag 以外，其他的flag都已经废弃"
+        />
     <Button
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -35,5 +43,11 @@
         android:textAllCaps="false"
         android:text="SaveFlags之 clip_save_flag"
         android:onClick="startClipSaveFlagActivity"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:text="其他的flag参考第9章内容，不写用例了"
         />
 </LinearLayout>

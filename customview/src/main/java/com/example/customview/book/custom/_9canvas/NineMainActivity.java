@@ -23,7 +23,7 @@ public class NineMainActivity extends AppCompatActivity {
     }
 
     public void startClipSaveFlagActivity(View view) {
-
+        startActivity(new Intent(this, SaveFlagClipActivity.class));
 
     }
 }

@@ -1,6 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:layout_margin="10dp"
+            android:text="总结：Canvas.CLIP_SAVE_FLAG
+\n 1.clip_save_flag 标识只会保存裁剪的信息，在恢复时也只会恢复画布的裁剪信息
+\n saveLayer()函数在使用clip_save_flag 标识时，需要与Canvas.Has_alpha_layer_save_flag 标识一起使用，
+否则新建的画布所在区域原来的图像将被清空" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="#ff0000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:layout_margin="10dp"
+            android:text="通过对画布染色理解：Clip_save_flag
+\n 在代码中
+\n 1.首先将画布染成红色
+\n 2.保存flag 为 clip_save_flag
+\n 3.在画布裁剪一个矩形 canvas.clipRect(100,0,200,100);
+\n 4.然后恢复画布
+\n 5.最后将恢复的画布染成黄色
+\n 结论：整个屏幕被染成了黄色，这说明在恢复画布时，已经将裁剪操作恢复了" />
+
+        <com.example.book_custom._9view.SaveFlags_ClipView
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_margin="10dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="#ff0000" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:layout_margin="10dp"
+            android:text="通过在相同位置绘制矩形：Clip_save_flag
+\n 在代码中 画布染成黄色
+\n 1.首先在固定位置绘制矩形 canvas.drawRect(100,0,200,100,mPaint);
+\n 2.保存flag 为 clip_save_flag
+\n 3.将画布旋转 40
+\n 4.然后恢复画布  canvas.restore();
+\n 5.重新设置画笔颜色为红色，相同的位置绘制红色矩形
+\n 结论：画布恢复时并没有恢复画布的旋转信息" />
+        <com.example.book_custom._9view.SaveFlags_ClipView2
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_margin="10dp"
+            />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

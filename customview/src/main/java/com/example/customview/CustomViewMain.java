@@ -26,7 +26,10 @@ import cn.ljuns.logcollector.LogCollector;
 
 public class CustomViewMain extends AppCompatActivity {
     private static final String TAG = "CustomViewMain";
-
+    private static final int REQUEST_EXTERNAL_STORAGE = 1;
+    private static String[] PERMISSIONS_STORAGE = {
+            "android.permission.READ_EXTERNAL_STORAGE",
+            "android.permission.WRITE_EXTERNAL_STORAGE" };
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -140,10 +143,7 @@ public class CustomViewMain extends AppCompatActivity {
         startActivity(new Intent(CustomViewMain.this,CoordinatorActivity.class));
     }
 
-    private static final int REQUEST_EXTERNAL_STORAGE = 1;
-    private static String[] PERMISSIONS_STORAGE = {
-            "android.permission.READ_EXTERNAL_STORAGE",
-            "android.permission.WRITE_EXTERNAL_STORAGE" };
+
 
 
     public static void verifyStoragePermissions(Activity activity) {
