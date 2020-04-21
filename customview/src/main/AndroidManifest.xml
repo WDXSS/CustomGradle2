@@ -110,6 +110,7 @@
         <activity android:name=".book.custom._9canvas.NineMainActivity" />
         <activity android:name=".book.custom._9canvas.SaveFlagMatrixActivity" />
         <activity android:name=".book.custom._9canvas.SaveFlagClipActivity" />
+        <activity android:name=".book.custom._12view.TwelveMainActivity" />
 
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

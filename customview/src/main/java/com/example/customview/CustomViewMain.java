@@ -22,6 +22,7 @@ import com.example.firelibrary.FireMainActivity;
 import com.example.jetpack.JetpackMainActivity;
 
 import cn.ljuns.logcollector.LogCollector;
+import pl.droidsonroids.gif.GifImageView;
 
 
 public class CustomViewMain extends AppCompatActivity {
@@ -40,6 +41,7 @@ public class CustomViewMain extends AppCompatActivity {
         getSupperClass();
         verifyStoragePermissions(this);
 //        LogCollector.getInstance(getApplication()).start();
+        GifImageView gifImageView = findViewById(R.id.main_balance_img);
     }
 
     private void notification() {

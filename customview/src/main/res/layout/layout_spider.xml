@@ -111,6 +111,13 @@
             android:textAllCaps="false"
             android:text="折叠控件"
             android:onClick="coordinator" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/main_balance_img"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
