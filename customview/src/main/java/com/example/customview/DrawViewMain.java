@@ -12,7 +12,6 @@ import com.example.customview.anim.property.value.LoadingDemo;
 import com.example.customview.anim.view.tween.ScannerDome;
 import com.example.customview.view.SpiderActivity;
 
-import cn.ljuns.logcollector.LogCollector;
 
 public class DrawViewMain extends AppCompatActivity {
     private static final String TAG = "DrawViewMain";
