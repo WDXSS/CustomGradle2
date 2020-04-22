@@ -4,4 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:text="通过自定义TextView 熟悉 declare-styleable 标签"
+        android:onClick="startDeclareStyleableActivity"
+        />
+
 </LinearLayout>

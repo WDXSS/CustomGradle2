@@ -26,6 +26,8 @@ public class BackgroundDrawableActivity extends AppCompatActivity {
         CustomDrawableBackground drawable = new CustomDrawableBackground(bitmap);
         TextView tv = (TextView) findViewById(R.id.tv);
         tv.setBackground(drawable);
+
+
         TextView tv2 = (TextView) findViewById(R.id.tv2);
         tv2.setBackground(getDrawable(R.mipmap.avator));
     }

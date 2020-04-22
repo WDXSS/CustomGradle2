@@ -37,5 +37,12 @@
             android:textAllCaps="false"
             android:text="第9 Canvas 与 图层"
             android:onClick="startNineMainActivity" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="第12章 封装控件"
+            android:onClick="startTwelveMainActivity" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

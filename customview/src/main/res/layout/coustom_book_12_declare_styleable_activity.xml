@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.customview.book.custom._12view.view.MyTextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="通过 declare_styleable 实现自定义属性"
+        app:header_height="10dp"
+        app:age="child|yang|old"
+        app:header_name="自定义属性"
+        app:orientation="vertical" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ff0000" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:text="format 的用法 ：
+       \n1.reference 资源Id
+        \n2.color 颜色值
+       \n3.boolean 布尔值
+       \n4.dimension 尺寸值
+        \n5.float 浮点型
+        \n6.integer 整形
+       \n7.string 字符
+        \n8.fraction 百分数
+       \n9.enum 枚举
+        \n10.flag 位或运算" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:text="注意使用完后，必须调用 typedArray.recycle();
+\n flag 和枚举 的区别
+\n app:age=child | yang | old  -----flag
+\n app:orientation=vertical  -----enum "/>
+
+</LinearLayout>

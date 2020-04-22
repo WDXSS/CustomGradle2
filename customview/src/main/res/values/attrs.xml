@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyTextView">
+
+        <attr name="header_name" format="reference|string" />
+        <attr name="header_height" format="dimension" />
+        <attr name="age">
+            <flag name="child" value="10" />
+            <flag name="yang" value="20" />
+            <flag name="old" value="60" />
+
+        </attr>
+        <attr name="orientation">
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+        <!-- format 的用法 ：
+        1.reference 资源Id
+        2.color 颜色值
+        3.boolean 布尔值
+        4.dimension 尺寸值
+        5.float 浮点型
+        6.integer 整形
+        7.string 字符
+        8.fraction 百分数
+        9.enum 枚举
+        10.flag 位或运算-->
+    </declare-styleable>
+</resources>
