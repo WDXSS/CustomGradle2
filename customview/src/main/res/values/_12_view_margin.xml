@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="_12_margin">
+        <b>自定义ViewGroup 支持 子控件的 layout_margin \n </b>
+        <p>
+           1.首先 如果自定义ViewGroup 支持 子控件的 layout_margin 属性，则自定义ViewGroup必须重写 <font color="#008B8B"> <i> generateLayoutParams() </i></font> 函数并且在该函数中返回一个 ViewGroup.MarginLayoutParams 对象；\n
+        2.其次 在测量 <font color="#008B8B"> <i> onMeasure() </i></font> 函数中 计算 margin 值 \n
+        3.接着 在布局子控件是 将margin 值设置到 <font color="#008B8B"> <i> layout() </i></font> 函数中 \n
+        </p>
+
+    </string>
+</resources>

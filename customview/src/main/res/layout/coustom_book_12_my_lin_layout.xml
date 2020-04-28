@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:textAllCaps="false"
+            android:text="通过继承ViewGroup \n在自定义的MyLinLayout
+    布局宽度设置为 match_parent, 高设置为 wrap_content ,并且设置 margin 值 分别 margin_top 10,20,30。
+    \n 添加三个TextView，
+    \n 测量，布局和获取子控件的margin 值 " />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:layout_margin="@dimen/dp_10"
+            android:text="@string/_12_getMeasureWidth_getWidth" />
+
+        <com.example.customview.book.custom._12view.view.MyLinLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff00ff">
+
+            <TextView
+                android:background="#ff0000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="第一个View" />
+
+            <TextView
+                android:background="#00ff00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="第二个View" />
+
+            <TextView
+                android:background="#0000ff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="第三个View" />
+        </com.example.customview.book.custom._12view.view.MyLinLayout>
+
+        <com.example.customview.book.custom._12view.view.MyLinLayoutBook
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#ff00ff">
+
+            <TextView
+                android:text="第一个VIEW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#ff0000" />
+
+            <TextView
+                android:text="第二个VIEW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#00ff00" />
+
+            <TextView
+                android:text="第三个VIEW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="#0000ff" />
+        </com.example.customview.book.custom._12view.view.MyLinLayoutBook>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

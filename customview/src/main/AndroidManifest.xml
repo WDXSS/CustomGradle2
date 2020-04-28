@@ -112,6 +112,9 @@
         <activity android:name=".book.custom._9canvas.SaveFlagClipActivity" />
         <activity android:name=".book.custom._12view.TwelveMainActivity" />
         <activity android:name=".book.custom._12view.DeclareStyleableActivity" />
+        <activity android:name=".book.custom._12view.OnMeasureActivity" />
+        <activity android:name=".book.custom._12view.GetMarginActivity" />
+        <activity android:name=".book.custom._12view.MyLinLayoutActivity" />
 
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

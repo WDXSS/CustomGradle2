@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="_12_viewGroup">
+        <b>ViewGroup 的绘制流程\n</b>
+            <p>
+            1. onMeasure() 测量<font color="#ff0000">当前控件</font>的大小,为正式布局提供建议
+                （注意：只是建议，至于用不用，要看onLayout() 函数）\n
+            2. onLayout() 使用layout()函数对<font color="#ff0000">所有子控件</font>进行布局 \n
+            3. onDraw(): 根据布局的位置绘图\n
+            </p>
+    </string>
+    <string name="_12_measure">
+        <b>onMeasure()函数和 MeasureSpec \n</b>
+        <p>
+            1.测量过程是通过<font color="#008B8B"> <i> measure() </i></font> 函数来实现的，是View 树自上而下的遍历，
+              每个view再循环过程中将尺寸细节往下传递，当测量过程完成后，
+              <font color="#ff0000">所有的view都存储了自己的尺寸</font>\n
+            2. 测量完成后需要通过 <font color="#008B8B"> <i> setMeasuredDimension()</i></font> 函数设置给系统 \n
+
+        </p>
+
+        <body>
+             <b>MeasureSpec \n</b>
+            <p>
+                1.MeasureSpec: int 类型的数字，是由 mode + size 组成的 \n
+                2.widthMeasureSpec 和 heightMeasureSpec 转成二进制数字表示，它们都是32位的，前2位代表模式(mode),后30位代表数值(size) \n
+            </p>
+
+        </body>
+    </string>
+    <string name="_12_Mode">
+          <b>模式分类 \n</b>
+            <p>
+                1.UNSPECIFIED (未指定) -- 00 000000000000000000000000000000：\n
+                2.EXACTLY(全部)-- 01 000000000000000000000000000000：-> match_parent \n
+                3.AT_MOST(至多)-- 10 000000000000000000000000000000：-> wrap_content \n
+                 <font color="##808080">由于前2位代表模式，所以它们分别对应十进制的0,1,2 </font>\n
+                \n
+            </p>
+
+        <b>测量时---模式分析\n</b>
+        <p>
+            当模式是MeasureSpec.EXACTLY 时，就不必设定我们计算的数值了，因为这个大小是用户指定的，我们不应该修改。\n
+            当模式是MeasureSpec.AT_MOST 时，就是说布局设置为warp_content,需要将大小设定为我们计算的数值\n
+        </p>
+        \n
+         <b>模式 ---提取 \n</b>
+        <p>
+            android 已经为我们提供拉 MeasureSpec 类来辅助实现这个功能。\n
+         <b>模式 ---提取 原理：MASK 的与，非运算 \n</b>
+           <font color="#008B8B">
+               <i>
+               //11 000000000000000000000000000000 共32位，前2位是1 \n
+                int mode_mask = 0xc0000000; \n
+                private void getMode(int spec){ \n
+                    int mode = mode_mask &amp; spec;//提取模式 \n
+                } \n
+                private void getSize(int spec){\n
+                    int size = ~mode_mask &amp; spec;//提取数值\n
+                }\n
+               </i>
+           </font>
+        </p>
+    </string>
+    <string name="_12_getMeasureWidth_getWidth">
+         <b>getMeasuredWidth()和getWidth() 的区别 \n</b>
+        <p>
+            1.<font color="#008B8B"> <i> getMeasuredWidth() </i></font> 函数是在<font color="#008B8B"> <i> measure() </i></font> 过程结束后可以获得到宽度值；
+                而<font color="#008B8B"> <i> getWidth() </i></font>函数是要在 <font color="#008B8B"> <i> layout() </i></font>过程结束后才能获得到值；\n
+            2. <font color="#008B8B"> <i> getMeasuredWidth() </i></font>函数得到的值是通过 <font color="#008B8B"> <i> setMeasuredDimension() </i></font>函数进行设置的，
+            而 <font color="#008B8B"> <i> getWidth() </i></font>得到的值是通过<font color="#008B8B"> <i> layout(left,top,right,bottom) </i></font>函数进行设置的\n
+            3.  onMeasure() 测量<font color="#ff0000">当前控件</font>的大小,为正式布局提供建议 ，
+            所以 <font color="#008B8B"> <i> getMeasuredWidth() </i></font> 和 <font color="#008B8B"> <i> getWidth() </i></font>得到值有可能不想等
+                （注意：只是建议，至于用不用，要看onLayout() 函数）\n
+        </p>
+    </string>
+
+</resources>

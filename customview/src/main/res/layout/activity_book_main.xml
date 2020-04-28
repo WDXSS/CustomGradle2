@@ -12,6 +12,5 @@
         android:text="自定义控件入门到实战"
         android:onClick="startCustomBook"
         />
-
 </LinearLayout>
 </androidx.core.widget.NestedScrollView>

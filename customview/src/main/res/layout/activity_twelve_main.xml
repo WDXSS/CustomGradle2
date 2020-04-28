@@ -4,12 +4,40 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/_12_viewGroup" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textAllCaps="false"
         android:text="通过自定义TextView 熟悉 declare-styleable 标签"
-        android:onClick="startDeclareStyleableActivity"
+        android:onClick="startDeclareStyleableActivity" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:text="测量onMeasure() 分析"
+        android:onClick="startMeasureActivity" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:text="获取子控件margin 值的方法"
+        android:onClick="startGetMarginActivity"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:text="继承自ViewGroup的自定义MyLinLayout"
+        android:onClick="startMyLinLayoutActivity"
+        />
+
+
 
 </LinearLayout>
