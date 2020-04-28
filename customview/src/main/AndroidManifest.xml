@@ -115,6 +115,7 @@
         <activity android:name=".book.custom._12view.OnMeasureActivity" />
         <activity android:name=".book.custom._12view.GetMarginActivity" />
         <activity android:name=".book.custom._12view.MyLinLayoutActivity" />
+        <activity android:name=".book.custom._12view.FlowLayoutActivity" />
 
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

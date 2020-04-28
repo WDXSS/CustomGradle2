@@ -38,6 +38,12 @@
         android:onClick="startMyLinLayoutActivity"
         />
 
-
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:text="实现FlowLayout 容器"
+        android:onClick="startFlowLayoutActivity"
+        />
 
 </LinearLayout>
