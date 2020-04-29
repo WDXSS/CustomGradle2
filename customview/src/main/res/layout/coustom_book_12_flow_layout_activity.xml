@@ -4,4 +4,113 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Flow "
+        android:textAllCaps="false" />
+
+    <com.example.customview.book.custom._12view.view.FlowLayoutBook
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_03"
+            android:text="Welcome"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_03"
+            android:text="IT工程师"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_03"
+            android:text="我真是可以的"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_03"
+            android:text="你觉得呢"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_03"
+            android:text="不要只知道挣钱，不要只知道挣钱，不要只知道挣钱，不要只知道挣钱，不要只知道挣钱，不要只知道挣钱，不要只知道挣钱不要只知道挣钱"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_03"
+            android:text="努力ing"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_03"
+            android:text="I thick i can"
+            android:textColor="@android:color/white" />
+    </com.example.customview.book.custom._12view.view.FlowLayoutBook>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFEB3B"
+        android:text="下面的是自定义 ViewGroup 没有获取 自控件的margin 值"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textAllCaps="false" />
+
+    <com.example.customview.book.custom._12view.view.FlowLayoutView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00ff00">
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_03"
+            android:text="Welcome"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_03"
+            android:text="IT工程师"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_03"
+            android:text="我真是可以的"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_03"
+            android:text="你觉得呢"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_03"
+            android:text="不要只知道挣钱，不要只知道挣钱，不要只知道挣钱，不要只知道挣钱，不要只知道挣钱，不要只知道挣钱，不要只知道挣钱不要只知道挣钱"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_03"
+            android:text="努力ing"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_03"
+            android:text="I thick i can"
+            android:textColor="@android:color/white" />
+    </com.example.customview.book.custom._12view.view.FlowLayoutView>
 </LinearLayout>

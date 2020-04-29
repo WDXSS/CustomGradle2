@@ -18,13 +18,10 @@ import com.example.jetpack.DevDescribe;
 
 @DevDescribe("第12章 ：封装控件")
 public class TwelveMainActivity extends AppCompatActivity {
-    private static final String TAG = "TwelveMainActivity";
-    private ImageView mImageView;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_twelve_main);
-        mImageView = findViewById(R.id.img1);
     }
 
     public void startDeclareStyleableActivity(View view) {
@@ -44,4 +41,7 @@ public class TwelveMainActivity extends AppCompatActivity {
 
     }
 
+    public void startFlowLayoutActivity(View view) {
+        startActivity(new Intent(this,FlowLayoutActivity.class));
+    }
 }
