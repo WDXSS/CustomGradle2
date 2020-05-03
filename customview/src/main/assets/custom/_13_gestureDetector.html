@@ -1,0 +1,130 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+</head>
+<h3>GestureDetector 手势检测</h3>
+<body>
+
+<p>
+<font color= "#ff00ff">GestureDetector</font> 类提供了两个接口 OnGestureListener 和 OnDoubleTapListener 和 一个外部实现类 SimpleOnGestureListener.
+</p>
+
+<b> OnGestureListener 接口，</b>
+
+<p>GestureDetector 构造方法中的入参需要 一个OnGestureListener 实现，所以OnGestureListener必须实现  </p>
+<pre class="OnGestureListenerImpl"><code class=" hljs bash">
+private static class OnGestureListenerImpl implements GestureDetector.OnGestureListener {
+
+        @Override
+        public boolean onDown(MotionEvent e) {
+            //当用户按下屏幕就会触发该函数
+            Log.v(TAG, "onDown: 当用户按下屏幕就会触发该函数");
+            return true;
+        }
+
+        @Override
+        public void onShowPress(MotionEvent e) {
+            Log.v(TAG, "onShowPress: 按下的时间超过瞬间，并且没有拖动或者滑动，触发该函数");
+            //按下的时间超过瞬间，并且没有拖动或者滑动，触发该函数
+        }
+        @Override
+        public void onLongPress(MotionEvent e) {
+            Log.v(TAG, "onLongPress: 长按屏幕，超过一定时长，就会触发该函数.    执行顺序：onDown()--->onShowPress()---->onLongPress()");
+            //长按屏幕，超过一定时长，就会触发该函数
+            // 执行顺序：onDown()--->onShowPress()---->onLongPress()
+        }
+
+        @Override
+        public boolean onSingleTapUp(MotionEvent e) {
+            Log.v(TAG, "onSingleTapUp: 点击一下屏幕，立刻抬起来，才会触发该函数。如果除了down 以外沒有其他操作，如滑动等     执行顺序：onDown()--->onSingleTapUp()");
+            //点击一下屏幕，立刻抬起来，才会触发该函数。如果除了down 以外沒有其他操作，如滑动等
+            // 执行顺序：onDown()--->onSingleTapUp()
+            return true;
+        }
+
+        @Override
+        public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+            Log.v(TAG, "onScroll: 在屏幕上拖动事件，无论是手拖动view，还是以抛的形式滚动，都会多次触发这个函数      拖动执行顺序：onDown()---> onScroll()---->onScroll()------>onFling()");
+            //在屏幕上拖动事件，无论是手拖动view，还是以抛的形式滚动，都会多次触发这个函数
+            // 拖动执行顺序：onDown()---> onScroll()---->onScroll()------>onFling();
+            //无论滑屏还是拖动，影响的只是中间 onScroll() 的数量，最终都会调用到 onFling() 函数
+            return true;
+        }
+
+        @Override
+        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+            Log.v(TAG, "onFling: 滑屏 用户按下屏幕，快速移动后松开，有一个 MotionEvent.ACTION_DOWN ,多个MotionEvent.ACTION_MOVE, 一个 MotionEvent.ACTION_UP 触发 " +
+                    "      滑屏执行顺序：onDown()---> onScroll()......onScroll()------>onFling()");
+            //滑屏 用户按下屏幕，快速移动后松开，有一个 MotionEvent.ACTION_DOWN ,多个MotionEvent.ACTION_MOVE, 一个 MotionEvent.ACTION_UP 触发
+            // 滑屏执行顺序：onDown()---> onScroll()......onScroll()------>onFling();
+            //e1 : 第一个 ACTION_DOWN 事件
+            //e2 : 最后一个 ACTION_MOVE 事件
+            //velocityX : x轴上的移动速度，单位为 像素 / 秒
+            //velocityY : y 轴上的移动速度，单位为 像素 / 秒
+            return true;
+        }
+    }
+</code></pre>
+
+<b> OnDoubleTapListener 接口介绍</b>
+<pre class="OnGestureListenerImpl"><code class=" hljs bash">
+private static class OnDoubleTapListenerImpl implements GestureDetector.OnDoubleTapListener {
+
+        @Override
+        public boolean onSingleTapConfirmed(MotionEvent e) {
+            Log.v(TAG, "OnDoubleTapListener.onSingleTapConfirmed: 单击事件 " +
+                    "执行顺序：OnGestureListener.onDown() ---> OnGestureListener.onSingleTapUp() ---> OnDoubleTapListener.onSingleTapConfirmed()");
+            //单击事件
+            //执行顺序：OnGestureListener.onDown() ---> OnGestureListener.onSingleTapUp() ---> OnDoubleTapListener.onSingleTapConfirmed()
+
+            // OnGestureListener.onSingleTapUp() 和 OnDoubleTapListener.onSingleTapConfirmed() 区别
+            // OnGestureListener.onSingleTapUp() 只要抬手就会触发
+            // OnDoubleTapListener.onSingleTapConfirmed()  如果双击，就不会触发
+            return true;
+        }
+
+        @Override
+        public boolean onDoubleTap(MotionEvent e) {
+            Log.v(TAG, "OnDoubleTapListener.onDoubleTap:  双击事件 ");
+
+
+            return true;
+        }
+
+        @Override
+        public boolean onDoubleTapEvent(MotionEvent e) {
+            Log.v(TAG, "OnDoubleTapListener.onDoubleTapEvent:  双击间隔中发生的 --- 动作   指的是在触发 onDoubleTap() 以后，在双击之间发生的其他动作，包含：down, up move 事件");
+            //双击间隔中发生的 --- 动作   指的是在触发 onDoubleTap() 以后，在双击之间发生的其他动作，包含：down, up move 事件
+            //
+            return true;
+        }
+    }
+</code></pre>
+
+
+<b>通过 TextView 设置手势事件，来理解方法的处理过程</b>
+
+<pre class="OnGestureListenerImpl"><code class=" hljs bash">
+private void init() {
+        mOnGestureListener = new OnGestureListenerImpl();
+        mOnDoubleTapListener = new OnDoubleTapListenerImpl();
+        //构造方法中必须传入一个 OnGestureListener
+        mGestureDetector = new GestureDetector(this, mOnGestureListener);
+        mGestureDetector.setOnDoubleTapListener(mOnDoubleTapListener);
+        
+        mTextView = findViewById(R.id._13_gesture_detector_tv);
+        //在OnTouch 事件中进行拦截
+        mTextView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return mGestureDetector.onTouchEvent(event);
+            }
+        });
+        mTextView.setFocusable(true);
+        mTextView.setClickable(true);
+        mTextView.setLongClickable(true);
+    }
+</code></pre>
+</body>
+
+</html>

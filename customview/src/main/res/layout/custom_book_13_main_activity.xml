@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="GestureDetector 类提供了两个接口 OnGestureListener 和 OnDoubleTapListener 和 一个外部实现类 SimpleOnGestureListener."
+        android:layout_margin="10dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:onClick="startGestureDetectorActivity"
+        android:text="GestureDetector 手势检测" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:onClick="startOnDoubleTabListenerActivity"
+        android:text="OnDoubleTabListener 手势检测" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:onClick="startGestureDetectorWeb"
+        android:text="手势检测 两个接口的总结" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:onClick="startSimpleOnGestureDetectorActivity"
+        android:text="SimpleOnGestureDetector 类 " />
+</LinearLayout>

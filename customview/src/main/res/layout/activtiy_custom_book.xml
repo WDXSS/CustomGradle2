@@ -44,5 +44,12 @@
             android:textAllCaps="false"
             android:text="第12章 封装控件"
             android:onClick="startTwelveMainActivity" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="第13章 高级自定义控件封装"
+            android:onClick="startThirteenMainActivity" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

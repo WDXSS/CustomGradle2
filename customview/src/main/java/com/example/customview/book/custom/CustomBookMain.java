@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.customview.R;
 import com.example.customview.book.custom._10canvas.TenMainActivity;
 import com.example.customview.book.custom._12view.TwelveMainActivity;
+import com.example.customview.book.custom._13view.ThirteenMainActivity;
 import com.example.customview.book.custom._7paint.SevenMainActivity;
 import com.example.customview.book.custom._8xfermode.EightMainActivity;
 import com.example.customview.book.custom._8xfermode.TwitterActivity;
@@ -53,6 +54,13 @@ public class CustomBookMain extends AppCompatActivity {
         //打开 第12  封装控件
         Intent intent = new Intent();
         intent.setClass(this, TwelveMainActivity.class);
+        startActivity(intent);
+    }
+
+    public void startThirteenMainActivity(View view) {
+        //打开 第13  封装控件
+        Intent intent = new Intent();
+        intent.setClass(this, ThirteenMainActivity.class);
         startActivity(intent);
     }
 }
