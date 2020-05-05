@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.customview.R;
 import com.example.customview.book.custom.CustomBookMain;
+import com.example.customview.book.light.AdvancedLightBookMain;
 
 public class BookMainActivity extends AppCompatActivity {
 
@@ -27,4 +28,10 @@ public class BookMainActivity extends AppCompatActivity {
     }
 
 
+    public void startAdvancedLightActivity(View view) {
+        //打开android 进阶之光
+        Intent intent = new Intent();
+        intent.setClass(this, AdvancedLightBookMain.class);
+        startActivity(intent);
+    }
 }

@@ -121,6 +121,9 @@
         <activity android:name=".book.custom._13view.OnDoubleTabListenerActivity" />
         <activity android:name=".book.custom._13view.GestureDetectorWeb" />
         <activity android:name=".book.custom._13view.SimpleOnGestureDetectorActivity" />
+        <activity android:name=".book.light.AdvancedLightBookMain" />
+        <activity android:name=".book.light._3view.TitleBarActivity" />
+        <activity android:name=".book.light._3view.ThreeMainActivity" />
 
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
