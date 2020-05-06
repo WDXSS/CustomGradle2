@@ -3,10 +3,22 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<TextView
-    android:id="@+id/_13_gesture_detector_tv"
-    android:layout_width="match_parent"
-    android:layout_height="300dp"
-    android:background="#FFEB3B"
-    />
+
+    <TextView
+        android:id="@+id/_13_gesture_detector_tv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#FFEB3B" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        >
+        <TextView
+            android:id="@+id/tv_gesture_detector"
+            style="@style/text_content" />
+
+    </androidx.core.widget.NestedScrollView>
+
 </LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="_13_window">
+        <b>window 有三种类型 \n</b>
+        <p>
+            1.应用window、子window、系统window \n
+            2.应用window对应着一个Activity，子window不能独立存在，他需要附属在特定的父window中，如：dialog 就是一个子window。\n
+            3.系统window是需要声明权限才能创建，比如Toast 和系统状态栏都是 系统window。\n
+        </p>
+        \n
+
+        <b> Window 分层，层级大的window 会覆盖在层级小 Window 的上面 \n</b>
+        <p>
+            1.应用 Window 的层级范围：1~99;  \n
+            2.子 Window 的层级范围：1000~1999;  \n
+            3.系统 Window 的层级范围：2000~2999;\n
+
+            type 参数对应这些数字
+        </p>
+    </string>
+    <string name="_13_window_view">
+      <b>WindowManager 添加View \n</b>
+        <p>
+            WindowManager 提供了三个方法 \n
+            <code>
+                public interface WindowManager extends ViewManager{}  \n
+                public interface ViewManager{ \n
+                public void addView(View view, ViewGroup.LayoutParams params);\n\n
+                     public void updateViewLayout(View view, ViewGroup.LayoutParams params);\n\n
+                     public void removeView(View view);\n\n
+                }
+                \n
+            </code>
+        </p>
+</string>
+</resources>

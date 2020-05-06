@@ -42,4 +42,11 @@ public class ThirteenMainActivity extends AppCompatActivity {
         intent.setClass(this, SimpleOnGestureDetectorActivity.class);
         startActivity(intent);
     }
+
+    public void startWindowActivity(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, WindowBookActivity.class);
+        startActivity(intent);
+
+    }
 }

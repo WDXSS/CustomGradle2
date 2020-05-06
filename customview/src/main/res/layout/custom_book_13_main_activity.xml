@@ -37,4 +37,9 @@
         android:textAllCaps="false"
         android:onClick="startSimpleOnGestureDetectorActivity"
         android:text="SimpleOnGestureDetector 类 " />
+
+    <Button
+        style="@style/btn_flag"
+        android:onClick="startWindowActivity"
+        android:text="Window 和 WindowManager" />
 </LinearLayout>

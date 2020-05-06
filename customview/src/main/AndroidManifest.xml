@@ -124,11 +124,13 @@
         <activity android:name=".book.light.AdvancedLightBookMain" />
         <activity android:name=".book.light._3view.TitleBarActivity" />
         <activity android:name=".book.light._3view.ThreeMainActivity" />
+        <activity android:name=".book.custom._13view.WindowBookActivity" />
 
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.READ_LOGS"
         tools:ignore="ProtectedPermissions" />
 </manifest>
