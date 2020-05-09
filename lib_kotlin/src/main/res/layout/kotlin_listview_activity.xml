@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/text_content"
+        android:text="点：\n
+1.可变集合 mutableListOf \n
+2.repeat 函数 Kotlin 标准函数 将所有的水果数据添加了 两遍 \n
+3.Adapter 中 view 的初始化 需要使用 findViewById" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

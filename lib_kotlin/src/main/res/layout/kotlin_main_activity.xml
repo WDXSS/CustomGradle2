@@ -15,4 +15,9 @@
         android:text="kotlin 自定义TitleLayout"
         android:textAllCaps="false"
         android:onClick="startCustomTitleActivity" />
+    <Button
+        style="@style/btn_flag"
+        android:text="kotlin ListView 使用"
+        android:textAllCaps="false"
+        android:onClick="startListViewActivity" />
 </LinearLayout>

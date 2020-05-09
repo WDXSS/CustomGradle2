@@ -6,6 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlin._3kotlin.FirstActivity
 import com.example.kotlin._4kotlin.CustomTitleLayoutActivity
+import com.example.kotlin._4kotlin.ListViewActivity
 
 class KotlinMainActivity :AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,5 +21,9 @@ class KotlinMainActivity :AppCompatActivity() {
 
     fun startCustomTitleActivity(view: View) {
         startActivity(Intent(this, CustomTitleLayoutActivity::class.java))
+    }
+
+    fun startListViewActivity(view: View) {
+        startActivity(Intent(this, ListViewActivity::class.java))
     }
 }

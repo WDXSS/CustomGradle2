@@ -8,7 +8,7 @@ class StandardFunTest {
     // with 函数： with函数接收两个参数：第一个可以任意类型的对象，第二个参数 是 lambda表达式; lambda 表达式中的上下文是 第一个参数；lambda 表达式的最后一条语句作为返回值返回
     // run  函数： run 函数接收一个参数：参数是 lambda ; run 函数需要 对象进行调用，lambda表达式中的上下文是调用对象; lambda 表达式的最后一条语句作为返回值返回
     // apply 函数：apply 和 run 相似； 区别：apply 返回的是 调用者对象 ，run 是将 lambda 表达式最后一条语句作为返回值返回
-
+    // repeat 函数： 传入 一个数值 n ，然后会将lambda 表达式的内容执行 n 次
 
 }
 
@@ -19,6 +19,8 @@ fun main() {
     runTest()
     println("kotlin 标准函数之 apply 函数")
     applyTest()
+    println("kotlin 标准函数之 repeat 函数")
+    repeatTest()
 }
 
 fun letTest(study: Study?) {
@@ -84,6 +86,11 @@ fun applyTest() {
     println(strResultBuffer.toString())
 }
 
+fun repeatTest(){
+    repeat(3){
+        println("repeat 函数：传入 一个数值 n ，然后会将lambda 表达式的内容执行 n 次")
+    }
+}
 
 class Study {
     fun readBook() {
