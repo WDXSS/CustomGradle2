@@ -20,4 +20,14 @@
         android:text="kotlin ListView 使用"
         android:textAllCaps="false"
         android:onClick="startListViewActivity" />
+    <Button
+        style="@style/btn_flag"
+        android:text="kotlin RecyclerView 使用"
+        android:textAllCaps="false"
+        android:onClick="startRecyclerActivity" />
+    <Button
+        style="@style/btn_flag"
+        android:text="kotlin 聊天界面"
+        android:textAllCaps="false"
+        android:onClick="startChatActivity" />
 </LinearLayout>

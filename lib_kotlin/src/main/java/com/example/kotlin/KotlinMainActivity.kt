@@ -5,8 +5,10 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlin._3kotlin.FirstActivity
+import com.example.kotlin._4kotlin.ChatActivity
 import com.example.kotlin._4kotlin.CustomTitleLayoutActivity
 import com.example.kotlin._4kotlin.ListViewActivity
+import com.example.kotlin._4kotlin.RecyclerViewFruitActivity
 
 class KotlinMainActivity :AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,5 +27,13 @@ class KotlinMainActivity :AppCompatActivity() {
 
     fun startListViewActivity(view: View) {
         startActivity(Intent(this, ListViewActivity::class.java))
+    }
+
+    fun startRecyclerActivity(view: View) {
+        startActivity(Intent(this, RecyclerViewFruitActivity::class.java))
+    }
+
+    fun startChatActivity(view: View) {
+        startActivity(Intent(this, ChatActivity::class.java))
     }
 }

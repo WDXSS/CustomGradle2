@@ -1,4 +1,4 @@
-package com.example.kotlin._4kotlin
+package com.example.kotlin._4kotlin.adater
 
 import android.app.Activity
 import android.view.LayoutInflater
@@ -8,9 +8,9 @@ import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.kotlin.R
-import com.example.kotlin._4kotlin.entity.Fruit
+import com.example.kotlin._4kotlin.entity.FruitEntity
 
-class FruitAdapter(activity: Activity, val resourceId: Int, data: List<Fruit>) : ArrayAdapter<Fruit>(activity, resourceId, data) {
+class FruitAdapter(activity: Activity, val resourceId: Int, data: List<FruitEntity>) : ArrayAdapter<FruitEntity>(activity, resourceId, data) {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val view: View
