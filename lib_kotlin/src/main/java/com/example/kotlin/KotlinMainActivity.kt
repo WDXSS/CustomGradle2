@@ -9,6 +9,7 @@ import com.example.kotlin._4kotlin.ChatActivity
 import com.example.kotlin._4kotlin.CustomTitleLayoutActivity
 import com.example.kotlin._4kotlin.ListViewActivity
 import com.example.kotlin._4kotlin.RecyclerViewFruitActivity
+import com.example.kotlin._5kotlin.NewsMainActivity
 
 class KotlinMainActivity :AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,5 +36,9 @@ class KotlinMainActivity :AppCompatActivity() {
 
     fun startChatActivity(view: View) {
         startActivity(Intent(this, ChatActivity::class.java))
+    }
+
+    fun startNewsMainActivity(view: View) {
+        startActivity(Intent(this, NewsMainActivity::class.java))
     }
 }

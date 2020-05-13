@@ -30,4 +30,9 @@
         android:text="kotlin 聊天界面"
         android:textAllCaps="false"
         android:onClick="startChatActivity" />
+    <Button
+        style="@style/btn_flag"
+        android:text="使用限定符，Fragment单双页展示"
+        android:textAllCaps="false"
+        android:onClick="startNewsMainActivity" />
 </LinearLayout>

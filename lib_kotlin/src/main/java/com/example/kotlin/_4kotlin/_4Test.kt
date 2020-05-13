@@ -7,11 +7,11 @@ import com.example.kotlin.R
 import com.example.kotlin._2kotlin.DevKotlin
 
 class _4Test {
-    //密封类 : 参考 MsgViewHolder
-    //延迟初始化 lateinit 如：ChatActivity
+    //1.密封类 关键字 sealed class : 参考 MsgViewHolder
+    //2.延迟初始化 lateinit 如：ChatActivity
 }
 
-@DevKotlin("密封类 关键字 sealed class ")
+@DevKotlin("密封类  实现继承关系--  写法:")
 sealed class MsgViewHolder(view: View) : RecyclerView.ViewHolder(view)
 
 class LeftViewHolder(view: View) : MsgViewHolder(view) {
@@ -34,6 +34,7 @@ fun sealedTest(holder: MsgViewHolder) {
     }
 }
 
+@DevKotlin("通过 接口 实现继承关系   实现 ")
 interface Result {}
 class Success(val msg: String) : Result {
 }
