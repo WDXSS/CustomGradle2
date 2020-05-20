@@ -1,4 +1,4 @@
-package com.example.kotlin._5kotlin
+package com.example.kotlin._5kotlin.test
 
 import com.example.kotlin._2kotlin.DevKotlin
 

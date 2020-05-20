@@ -1,4 +1,4 @@
-package com.example.kotlin._5kotlin
+package com.example.kotlin._5kotlin.test
 
 class ClassNameTest {
     fun String.lettersCount(): Int {

@@ -47,10 +47,12 @@ fun withTest() {
 //    with函数接收两个参数：第一个可以任意类型的对象，第二个参数 是 lambda表达式;
 //    lambda 表达式中的上下文是 第一个参数；lambda 表达式的最后一条语句作为返回值返回
     val strBuffer = StringBuffer()
+
     val strResult = with(strBuffer) {
         append("Start eating fruits \n")
         for (str in list) {
             append(str + "\n")
+
         }
         append("ate all fruits.")
         toString()
