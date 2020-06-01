@@ -25,6 +25,9 @@ private fun _05_Chapter() {
 
 private fun _06_Chapter() {
     //高阶函数 和 内联函数
-    //1.扩展函数是指在不修改 某个类的源码情况下，仍然可以打开这个类，向该类中添加新的函数
-    //2.运算符重载
+    //关键字
+    //1. 内联函数 ： inline
+    //2. 取消内联 ： noinline
+    //3. crossinline   标记内联函数中的 lambda 表达式中 不使用 return  （lambda 表达式代替匿名类 时 中不可以使用 return）
+    //4. return@  表示局部返回
 }

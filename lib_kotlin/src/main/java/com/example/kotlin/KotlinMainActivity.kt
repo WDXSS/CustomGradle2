@@ -2,6 +2,7 @@ package com.example.kotlin
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlin._3kotlin.FirstActivity
@@ -12,17 +13,21 @@ import com.example.kotlin._4kotlin.RecyclerViewFruitActivity
 import com.example.kotlin._5kotlin.NewsMainActivity
 
 class KotlinMainActivity :AppCompatActivity() {
+    val TAG = "KotlinMainActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.kotlin_main_activity)
         supportActionBar?.hide()//隐藏title
+        Log.d(TAG,"onCreate  KotlinMainActivity")
     }
 
     fun startFirstActivity(view: View) {
+        Log.d(TAG,"onCreate  startFirstActivity")
         startActivity(Intent(this, FirstActivity::class.java))
     }
 
     fun startCustomTitleActivity(view: View) {
+        Log.d(TAG,"onCreate  startCustomTitleActivity")
         startActivity(Intent(this, CustomTitleLayoutActivity::class.java))
     }
 

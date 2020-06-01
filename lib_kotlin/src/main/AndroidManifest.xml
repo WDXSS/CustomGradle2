@@ -11,6 +11,7 @@
         <activity android:name="._4kotlin.ListViewActivity" />
         <activity android:name="._4kotlin.RecyclerViewFruitActivity" />
         <activity android:name="._5kotlin.NewsMainActivity" />
+        <activity android:name="._07kotlin.SevenKotlinActivity" />
     </application>
 
 </manifest>

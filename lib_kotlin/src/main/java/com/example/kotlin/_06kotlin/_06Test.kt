@@ -6,4 +6,6 @@ import com.example.kotlin._2kotlin.DevKotlin
 class _06Test {
     //高阶函数：如果一个函数接收另一个函数作为参数，或者返回值的类型是另一函数，那么这个函数就成为高阶函数。
     // :: 函数名   表示将 函数 作为参数值传递给 高阶函数    如：_06HighetFunTest 中的实例
+
+    // 关键字 inline 内联函数 ：  用 inline 关键字 修饰 高价函数 的函数就是 内联函数
 }
