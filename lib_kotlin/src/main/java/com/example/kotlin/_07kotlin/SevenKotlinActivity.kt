@@ -19,14 +19,18 @@ class SevenKotlinActivity : AppCompatActivity() {
         setContentView(R.layout.kotlin_07_shareprefrence)
 
         saveButton.setOnClickListener {
+
+        val edit = getSharedPreferences("data", Context.MODE_PRIVATE).edit()
+            edit.putString("name", "Tom")
+            edit.putInt("age", 28)
+            edit.putBoolean("married", false)
+            edit.apply()
+            //简化后的写法
 //            getSharedPreferences("data", Context.MODE_PRIVATE).edit {
 //                putString("name", "Tom")
 //                putInt("age", 28)
 //                putBoolean("married", false)
 //            }
-            getSharedPreferences("data",Context.MODE_PRIVATE).edit {
-
-            }
         }
         restoreButton.setOnClickListener {
             val prefs = getSharedPreferences("data", Context.MODE_PRIVATE)
