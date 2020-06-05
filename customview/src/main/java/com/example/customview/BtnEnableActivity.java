@@ -27,6 +27,8 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import okhttp3.OkHttpClient;
+
 /**
  * @author zhouchao
  * @date 2019/11/5
@@ -43,6 +45,7 @@ public class BtnEnableActivity extends AppCompatActivity {
         setContentView(R.layout.activity_btn_enable);
         mEditText = findViewById(R.id.edit);
         Button button = findViewById(R.id.btn);
+
         mEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
