@@ -23,6 +23,8 @@
             <option value="$PROJECT_DIR$/firelibrary" />
             <option value="$PROJECT_DIR$/javalibrary" />
             <option value="$PROJECT_DIR$/jetpack" />
+            <option value="$PROJECT_DIR$/lib_java" />
+            <option value="$PROJECT_DIR$/lib_kotlin" />
             <option value="$PROJECT_DIR$/library-recycler" />
             <option value="$PROJECT_DIR$/logcollector" />
             <option value="$PROJECT_DIR$/ui_system" />

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/decode_byte_array_btn"
+            android:text="2.3  decodeByteArray示例"
+            style="@style/btn_flag"
+            android:textAllCaps="false"
+           />
+
+        <Button
+            android:id="@+id/decode_stream_btn"
+            style="@style/btn_flag"
+            android:text="2.5 decodeStream示例"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bitmap_factory_option_btn"
+            style="@style/btn_flag"
+            android:text="3 BitmapFactory.Options"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bitmap_static_constructor"
+            style="@style/btn_flag"
+            android:text="4 Bitmap静态创建"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bitmap_extract_alpha"
+            style="@style/btn_flag"
+            android:text="5.2 extractAlpha()函数 抽取Bitmap的alpha 通道"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bitmap_density"
+            style="@style/btn_flag"
+            android:text="5.5 bitmap density"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bitmap_pixel"
+            style="@style/btn_flag"
+            android:text="5.6 setPixel、getPixel"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bitmap_compress"
+            style="@style/btn_flag"
+            android:text="5.7 compress"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bitmap_watermark"
+            style="@style/btn_flag"
+            android:text="6.3 生成水印"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+</ScrollView>
+

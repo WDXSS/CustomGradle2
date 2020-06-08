@@ -10,7 +10,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        >
 
         <activity android:name=".CustomViewMain">
           <!-- activity 中的属性 不在最近打开应用列表中显示   android:excludeFromRecents="true"-->
@@ -125,6 +127,17 @@
         <activity android:name=".book.light._3view.TitleBarActivity" />
         <activity android:name=".book.light._3view.ThreeMainActivity" />
         <activity android:name=".book.custom._13view.WindowBookActivity" />
+        <activity android:name=".book.custom._10canvas.bitmap.BitmapCompressActivity" />
+        <activity android:name=".book.custom._10canvas.bitmap.WaterMarkActivity" />
+        <activity android:name=".book.custom._10canvas.bitmap.ExtraAlphaActivity" />
+        <activity android:name=".book.custom._10canvas.bitmap.decodeStreamActivity" />
+        <activity android:name=".book.custom._10canvas.bitmap.decodeByteArrayActivity" />
+        <activity android:name=".book.custom._10canvas.bitmap.BmpBlankGradientActivity" />
+        <activity android:name=".book.custom._10canvas.bitmap.BitmapStaticConstructorActivity" />
+        <activity android:name=".book.custom._10canvas.bitmap.BitmapPixelActivity" />
+        <activity android:name=".book.custom._10canvas.bitmap.BitmapFactoryOptionsActivity" />
+        <activity android:name=".book.custom._10canvas.bitmap.BitmapDensityActivity" />
+        <activity android:name=".book.custom._10canvas.bitmap.TenBitmapMainActivity" />
 
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

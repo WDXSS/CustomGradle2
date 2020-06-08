@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000">
+
+    <TextView
+        style="@style/text_content"
+        android:textColor="#ffffff"
+        android:text="Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888); 通过Bitmap的静态方法
+     createBitmap() 创建一个空白透明的的bitmap;
+     \n 然后通过 LinearGradient 实现颜色渐变效果" />
+
+    <com.example.customview.book.custom._10canvas.bitmap.view.LinearGradientView
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
+

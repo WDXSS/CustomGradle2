@@ -1,16 +1,19 @@
 package com.example.customview.book;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.customview.R;
 import com.example.customview.book.custom.CustomBookMain;
 import com.example.customview.book.light.AdvancedLightBookMain;
+import com.example.kotlin.KotlinMainActivity;
 
 public class BookMainActivity extends AppCompatActivity{
     private static final String TAG = "BookMainActivity";
@@ -37,5 +40,22 @@ public class BookMainActivity extends AppCompatActivity{
         Intent intent = new Intent();
         intent.setClass(this, AdvancedLightBookMain.class);
         startActivity(intent);
+    }
+
+    public void startKotlinMainActivity(View view) {
+        Log.i(TAG, "startKotlinMainActivity: ");
+        Intent intent = new Intent();
+        intent.setClass(this, KotlinMainActivity.class);
+        startActivity(intent);
+    }
+    private void test(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setNegativeButton("", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+
     }
 }

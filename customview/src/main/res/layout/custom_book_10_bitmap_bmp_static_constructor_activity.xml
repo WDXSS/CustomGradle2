@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:id="@+id/bitmap_blank_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:text="7.5.4.1  生成白色透明渐变图像"
+            android:textAllCaps="false" />
+
+
+        <Button
+            android:id="@+id/bitmap_crop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:textAllCaps="false"
+            android:text="7.5.4.3 裁剪图像" />
+
+
+        <TextView
+            style="@style/text_content"
+            android:text="@string/_10_bitmap_cut" />
+
+        <Button
+            android:id="@+id/bitmap_crop_matrix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:textAllCaps="false"
+            android:text="7.5.4.4 裁剪图像并用Matrix" />
+
+        <TextView
+            style="@style/text_content"
+            android:text="@string/_10_bitmap_matrix" />
+
+        <Button
+            android:id="@+id/bitmap_colors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:textAllCaps="false"
+            android:text="7.5.4.5 createBmp_Colors" />
+
+        <TextView
+            style="@style/text_content"
+            android:text="@string/_10_bitmap_color" />
+        <Button
+            android:id="@+id/bitmap_scaled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="7.5.4.6 createScaledBmp" />
+        <TextView
+            style="@style/text_content"
+            android:text="@string/_10_bitmap_scaled" />
+
+        <TextView
+            style="@style/text_content"
+            android:text="原图" />
+
+        <ImageView
+            android:id="@+id/bmp_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center" />
+
+        <TextView
+            style="@style/text_content"
+            android:text="处理后的图" />
+
+        <ImageView
+            android:id="@+id/bmp_img2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center" />
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+

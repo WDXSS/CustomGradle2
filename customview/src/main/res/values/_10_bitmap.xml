@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="_10_bitmap_cut">
+        <b>Bitmap 静态方法裁剪  \n</b>
+        <p>
+            createBitmap(Bitmap source, int x, int y, int width, int height) \n
+            参数：
+             \n <b> Bitmap source </b>用于裁剪的源图像
+            \n <b> int x, y </b>开始裁剪的位置坐标
+            \n <b>int width, height</b> 裁剪的宽高
+        </p>
+    </string>
+    <string name="_10_bitmap_matrix">
+        <b>Bitmap 静态方法裁剪  \n</b>
+        <p>
+            createBitmap(Bitmap source, int x, int y, int width, int height,
+            Matrix m, boolean filter) \n
+            参数：
+             \n <b> Bitmap source </b>用于裁剪的源图像
+            \n <b> int x, y </b>开始裁剪的位置坐标
+            \n <b>int width, height</b> 裁剪的宽高
+            \n <b> Matrix m</b> 给裁剪后的图像添加矩阵
+            \n <b> filter </b> 是否给图像添加滤波效果，true 添加，添加后可以减少图像由于噪声引起的突兀的孤立像素点或像素块
+
+            \n <b> 效果：</b> 效果同上面裁剪的例子相同，只不过是将裁剪后的小狗宽度放大两倍
+        </p>
+    </string>
+    <string name="_10_bitmap_color">
+        <b>Bitmap 指定颜色创建图像  \n</b>
+        <p>
+           createBitmap(int[] colors,int width, int height, Config config) \n
+            参数：
+             \n <b> int[] colors </b>当前图像所对应的每个像素的数组，数组长度必须大于 width*height
+            \n <b>int width, height</b> 裁剪的宽高
+            \n <b> Config config) </b>指定每个像素的存储格式，默认是ARGB_8888
+        </p>
+    </string>
+    <string name="_10_bitmap_scaled">
+        <b>缩放Bitmap\n</b>
+        <p>
+           createScaledBitmap(Bitmap src, int dstWidth, int dstHeight,
+            boolean filter) { \n
+            参数：
+            \n <b> Bitmap source </b>要缩放的原图像
+            \n <b>int dstWidth, dstHeight</b> 缩放后的目标宽高
+            \n <b> filter) </b>是否给图像添加滤波效果，true 添加，添加后可以减少图像由于噪声引起的突兀的孤立像素点或像素块
+        </p>
+    </string>
+
+    <string name="_10_bitmap_extract_alpha">
+        <b>抽取Bitmap的 alpha 值\n</b>
+        <p>
+            有两个函数 \n
+            <font color="#008B8B"> <i> extractAlpha() </i></font> \n
+            函数比较简单：返回像素存储格式是 ALPHA_8，即只有alpha通道，不会有颜色值 \n
+             <font color="#008B8B"> <i> extractAlpha(Paint paint, int[] offsetXY)  </i></font> \n
+            参数
+             \n <b> Paint paint</b> 具有 MaskFilter 效果的Paint 对象，一般使用 BlurMaskFilter 模糊效果
+            \n <b> int[] offsetXY </b> <font color="#ff0000">返回</font> BlurMaskFilter 效果后 的原点偏移量
+
+        </p>
+    </string>
+
+    <string name="_10_bitmap_density">
+         <p>
+             <b> inDensity </b> 资源文件的分辨率 \n
+            <b> inTargetDensity </b> 真实屏幕的分辨率 \n
+            缩放比例 scale = inTargetDensity/inDensity"\n
+            效果，通过将Density 放大两倍，在屏幕分辨率不变的情况向，使显示出来的图片缩小一半
+         </p>
+    </string>
+</resources>

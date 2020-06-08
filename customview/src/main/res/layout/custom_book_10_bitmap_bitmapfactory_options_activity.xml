@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_dark"
+        android:text="会有日志输出哦,记得查看哈"
+        android:textAllCaps="false" />
+<TextView
+   style="@style/text_content"
+    android:text="BitmapFactory.Options 的的设置"
+    />
+    <Button
+        android:id="@+id/injust_decode_bounds_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="7.5.3.1 inJustDecodeBounds 只解析图片信息，不获取图片，不分配内存"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/in_sample_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="7.5.3.2 inSampleSize 采样压缩"
+        android:textAllCaps="false" />
+
+
+    <Button
+        android:id="@+id/in_density_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="7.5.3.4 inDensity、inTargetDensity"
+        android:textAllCaps="false" />
+    <TextView
+        style="@style/text_content"
+        android:text="inDensity 资源文件的分辨率
+        \n inTargetDensity 真实屏幕的分辨率
+        \n 缩放比例 scale = inTargetDensity/inDensity"
+        />
+
+    <Button
+        android:id="@+id/in_scaled_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="7.5.3.4 inScaled"
+        android:textAllCaps="false" />
+    <TextView
+        style="@style/text_content"
+        android:text="inScaled 默认值 true
+        \n当资源文件和真实屏幕大小不匹配是，inScaled 控制是否缩放;
+        \n false 不缩放，true 缩放"
+        />
+    <Button
+        android:id="@+id/in_preferred_config_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="7.5.3.5 PreferredConfig"
+        android:textAllCaps="false" />
+    <TextView
+        style="@style/text_content"
+        android:text="PreferredConfig 默认值 ARGB_8888
+        \n 设置像素的存储格式;"
+        />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:textAllCaps="false" />
+</LinearLayout>
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="_10_canvas_drawable">
+        <b>fitXY \n</b>
+        <p>
+            在除了 fitXY 以外的模式下，ImageView 会根据 <font color="#008B8B"> CustomDrawable 的  <i> getIntrinsicWidth()和getIntrinsicHeight() </i></font>函数中返回的宽、高
+            进行等比拉伸，以适配ImageView。在计算出 CustomDrawable 的显示位置以后，通过setBounds()传递给 CustomDrawable显示。<font color="##808080">而对于fitXY模式</font>
+            ，则将整个 <font color="#ff0000">ImageView </font> 的区域通过 setBounds() 函数设置给 CustomDrawable。
+        </p>
+    </string>
+</resources>

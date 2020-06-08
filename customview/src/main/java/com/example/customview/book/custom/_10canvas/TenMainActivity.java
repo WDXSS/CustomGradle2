@@ -8,6 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.customview.R;
+import com.example.customview.book.custom._10canvas.bitmap.TenBitmapMainActivity;
 
 public class TenMainActivity extends AppCompatActivity {
     @Override
@@ -46,6 +47,12 @@ public class TenMainActivity extends AppCompatActivity {
     public void startBackgroundDrawableActivity(View view) {
         Intent intent = new Intent();
         intent.setClass(this, BackgroundDrawableActivity.class);
+        startActivity(intent);
+    }
+
+    public void startTenBitmapMainActivity(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, TenBitmapMainActivity.class);
         startActivity(intent);
     }
 }

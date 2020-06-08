@@ -21,5 +21,10 @@
             android:text="Android 进阶之光"
             android:textAllCaps="false"
             android:onClick="startAdvancedLightActivity" />
+        <Button
+            style="@style/btn_flag"
+            android:text="第一行代码"
+            android:onClick="startKotlinMainActivity"
+            />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

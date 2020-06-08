@@ -36,4 +36,17 @@
         android:textAllCaps="false"
         android:text="textView设置 Drawable 为背景 "
         android:onClick="startBackgroundDrawableActivity" />
+    <Button
+        style="@style/btn_flag"
+        android:text="Drawable 和Bitmap 的区别-- 10.15"
+        />
+    <TextView
+       style="@style/text_content"
+        android:text="Bitmap 是绘图中一个非常重要的概念。在Canvas中保存着一个Bitmap 对象，
+        在调用Canvas 绘图函数，最终是绘制在Bitmap对象上。"/>
+    <Button
+        style="@style/btn_flag"
+        android:text="Bitmap-- 10.2"
+        android:onClick="startTenBitmapMainActivity"
+        />
 </LinearLayout>
