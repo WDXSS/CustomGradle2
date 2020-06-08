@@ -21,6 +21,8 @@ import com.example.customview.view.IncludeMainActivity;
 import com.example.firelibrary.FireMainActivity;
 import com.example.jetpack.JetpackMainActivity;
 
+import java.util.Random;
+
 import cn.ljuns.logcollector.LogCollector;
 import pl.droidsonroids.gif.GifImageView;
 
@@ -62,6 +64,19 @@ public class CustomViewMain extends AppCompatActivity {
 
     public void startBookMain(View view) {
         startActivity(new Intent(CustomViewMain.this, BookMainActivity.class));
+
+        Random random = new Random();
+        //生成5位的随机数
+        int rannum = (int) (random.nextDouble() * (99999 - 10000 + 1)) + 10000;
+        double dou = random.nextDouble() * 90000 + 10000;
+        Log.d(TAG, "startBookMain() random.nextDouble() = [" + dou + "]");
+        Log.d(TAG, "startBookMain() random.nextDouble() = [" + (99999 - 10000 + 1) + "]");
+        Log.d(TAG, "startBookMain() rannum = [" + rannum + "]");
+        Log.d(TAG, "startBookMain() Math.random()*100 = [" + Math.random()*100 + "]");
+
+        for (int i = 0; i < 100; i++) {
+            Log.d(TAG, "startBookMain() random.nextDouble() *100 = [" + random.nextDouble() *100000 + "]");
+        }
     }
     public void startUISystem(View view) {
         startActivity(new Intent(CustomViewMain.this, MainActivity.class));
