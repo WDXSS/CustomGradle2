@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.example.kotlin._08kotlin._08MainActivity
+import com.example.kotlin._09kotlin.NotificationMainActivity
 import com.example.kotlin._3kotlin.FirstActivity
 import com.example.kotlin._4kotlin.ChatActivity
 import com.example.kotlin._4kotlin.CustomTitleLayoutActivity
@@ -45,5 +47,13 @@ class KotlinMainActivity :AppCompatActivity() {
 
     fun startNewsMainActivity(view: View) {
         startActivity(Intent(this, NewsMainActivity::class.java))
+    }
+
+    fun start08MainActivity(view: View) {
+        startActivity(Intent(this, _08MainActivity::class.java))
+    }
+
+    fun startNotificationMainActivity(view: View) {
+        startActivity(Intent(this, NotificationMainActivity::class.java))
     }
 }

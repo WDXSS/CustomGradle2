@@ -28,11 +28,13 @@ class Delegate {
 }
 
 @DevKotlin("模仿 kotlin 中的 lazy 函数  这里定义成了 类 ")
-class Later<T>(val block: () -> T) {
+class LaterTest<T>(val block: () -> T) {
     var value : T? = null
     operator fun getValue(any: Any?, property: KProperty<*>): T? {
         println("getValue")
-        if(block() != null){
+//        if(block() == null){
+        if(value == null){
+            //这里的判断 条件 是 value == null
             value = block()
         }
         return value
@@ -43,11 +45,12 @@ class Later<T>(val block: () -> T) {
     }
 }
 @DevKotlin("模仿 kotlin 中的 lazy 函数  这里定义一个顶层方法 ")
-fun <T>laterMethod( block: () -> T) = Later(block)
+fun <T>laterMethod( block: () -> T) = LaterTest(block)
 
 fun main() {
     println("模仿 kotlin 中的 lazy 函数")
-    val p2 by Later<String> {
+    val p2 by LaterTest<String> {
+        println("str  p2 中的 lambda 表达式  laterMethod")
         var str = StringBuffer()
         str.append("22222222")
         str.toString()
@@ -55,20 +58,24 @@ fun main() {
 
     println("str  p2 = $p2")
 
-    //var 编译通过
+    //var 编译不通过
     val p3 by laterMethod {
+        println("str  p3 中的 lambda 表达式  laterMethod")
         var str = StringBuffer()
         str.append("33333333")
         str.toString()
     }
     println("str  p3 = $p3")
+    println("第二次调用  p3 = $p3")
 
 
-    // kotlin 中的 lazy 懒加载  当第一次掉用时初始化
+    // kotlin 中的 lazy 懒加载  当第一次掉用时初始化，
     val p4 by lazy {
+        println("str  p4 中的 lambda 表达式  lazy")
         "4444444444"
     }
-
+    println("str  p3 = $p4")
+    println("第二次调用  p4 = $p4")
 }
 
 

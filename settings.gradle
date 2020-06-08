@@ -5,3 +5,5 @@ include ':app', ':javalibrary', ':androidlibrary', ':androidorigin', ':android_h
 //                                             //路径，项目名称
 //project(':outlibrary').projectDir = new File('G:/gradleSpace','outlibrary')
 include ':book_custom'
+include ':lib_kotlin'
+include ':lib_java'

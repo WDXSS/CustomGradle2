@@ -7,8 +7,12 @@ import java.lang.StringBuilder
 class _08Test {
     //1.泛型
     //2.委托 ：类委托 (DelegateClass.kt)和 委托属性
+    //2.1 类委托：//通过类委托，不需要将接口里的方法都实现
+    //2.2 委托属性：实现对该类的属性统一管理
     //委托的关键字  by
     //3.懒加载技术  by lazy ,by 和 lazy 是两独立的 ， by 是关键字 ， lazy 是高价函数
+
+
 }
 
 
@@ -54,6 +58,7 @@ fun <T> T.build(block: T.() -> Unit): T {
 
 fun main() {
     val list = listOf("Apple", "Banana", "Orange", "Pear", "Grape")
+    //这里是 StringBuffer
     val result = StringBuffer().build {
         for (str in list) {
             append(str).append("\n")
@@ -61,6 +66,7 @@ fun main() {
     }
     println("编写高阶build 函数 \n" +result.toString())
 
+    //这里是 StringBuilder
     val result2 = StringBuilder().build {
         for (str in list) {
             append(str).append("\n")

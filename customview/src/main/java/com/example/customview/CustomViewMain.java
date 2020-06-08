@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 
@@ -23,7 +24,12 @@ import com.example.jetpack.JetpackMainActivity;
 
 import java.util.Random;
 
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import cn.ljuns.logcollector.LogCollector;
+import cn.ljuns.logcollector.util.LevelUtils;
 import pl.droidsonroids.gif.GifImageView;
 
 
@@ -177,7 +183,5 @@ public class CustomViewMain extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
-
 
 }

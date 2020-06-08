@@ -230,6 +230,9 @@ dependencies {
     //引入不同目录下的lib
 //    implementation project(':outlibrary')
 
+
+    implementation 'com.ljuns:logcollector:1.2.0'
+
 }
 def para = '123'
 println para

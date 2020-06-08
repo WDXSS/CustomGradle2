@@ -35,4 +35,15 @@
         android:text="使用限定符，Fragment单双页展示"
         android:textAllCaps="false"
         android:onClick="startNewsMainActivity" />
+
+    <Button
+        style="@style/btn_flag"
+        android:text="kotlin 委托"
+        android:textAllCaps="false"
+        android:onClick="start08MainActivity" />
+    <Button
+        style="@style/btn_flag"
+        android:text="通知类的Activity"
+        android:textAllCaps="false"
+        android:onClick="startNotificationMainActivity" />
 </LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="._08kotlin._08MainActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="kotlin中的 lazy函数  委托属性 懒加载"
+        android:onClick="testLazy"
+        android:textAllCaps="false"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        style="@style/btn_flag"
+        android:onClick="testLazy2"
+        android:text="test自定义的 委托属性 懒加载"
+        android:textAllCaps="false" />
+
+    <Button
+        style="@style/btn_flag"
+        android:onClick="testLazy3"
+        android:text="test 书中的 自定义的 委托属性 懒加载"
+        android:textAllCaps="false" />
+</LinearLayout>
