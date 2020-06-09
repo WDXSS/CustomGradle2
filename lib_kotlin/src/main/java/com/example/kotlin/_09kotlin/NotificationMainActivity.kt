@@ -13,6 +13,7 @@ import androidx.core.app.NotificationCompat
 import com.example.kotlin.R
 import com.example.kotlin._2kotlin.DevKotlin
 import kotlinx.android.synthetic.main.kotlin_09_notification_main_activity.*
+import kotlin.math.log
 
 @DevKotlin("创建 一个 Notification")
 class NotificationMainActivity() : AppCompatActivity() {
@@ -20,6 +21,9 @@ class NotificationMainActivity() : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.kotlin_09_notification_main_activity)
+
+        val name =  intent.getStringExtra("ActivityName")
+        println("name== $name")
         manager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         //創建channel
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

@@ -14,22 +14,22 @@ import com.example.kotlin._4kotlin.ListViewActivity
 import com.example.kotlin._4kotlin.RecyclerViewFruitActivity
 import com.example.kotlin._5kotlin.NewsMainActivity
 
-class KotlinMainActivity :AppCompatActivity() {
+class KotlinMainActivity : AppCompatActivity() {
     val TAG = "KotlinMainActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.kotlin_main_activity)
         supportActionBar?.hide()//隐藏title
-        Log.d(TAG,"onCreate  KotlinMainActivity")
+        Log.d(TAG, "onCreate  KotlinMainActivity")
     }
 
     fun startFirstActivity(view: View) {
-        Log.d(TAG,"onCreate  startFirstActivity")
+        Log.d(TAG, "onCreate  startFirstActivity")
         startActivity(Intent(this, FirstActivity::class.java))
     }
 
     fun startCustomTitleActivity(view: View) {
-        Log.d(TAG,"onCreate  startCustomTitleActivity")
+        Log.d(TAG, "onCreate  startCustomTitleActivity")
         startActivity(Intent(this, CustomTitleLayoutActivity::class.java))
     }
 
@@ -54,6 +54,12 @@ class KotlinMainActivity :AppCompatActivity() {
     }
 
     fun startNotificationMainActivity(view: View) {
-        startActivity(Intent(this, NotificationMainActivity::class.java))
+//        startActivity(Intent(this, NotificationMainActivity::class.java))
+//        startActivity<NotificationMainActivity>(this)
+        startActivity<NotificationMainActivity>(this){
+            val intent = Intent()
+            intent.putExtra("ActivityName","NotificationMainActivity")
+            intent
+        }
     }
 }
