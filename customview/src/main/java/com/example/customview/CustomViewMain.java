@@ -1,8 +1,10 @@
 package com.example.customview;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -11,6 +13,7 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.codingending.uisystemdemo.MainActivity;
 import com.example.android_hs_library.HuangShuMainActivity;
@@ -18,6 +21,7 @@ import com.example.customview.book.BookMainActivity;
 import com.example.customview.fragment.FragmentMainActivity;
 import com.example.customview.list.ListMainActivity;
 import com.example.customview.notify.NotifyMain;
+import com.example.customview.other.ImmersionActivity;
 import com.example.customview.view.IncludeMainActivity;
 import com.example.firelibrary.FireMainActivity;
 import com.example.jetpack.JetpackMainActivity;
@@ -156,14 +160,35 @@ public class CustomViewMain extends AppCompatActivity {
         Log.d(TAG, "onWindowFocusChanged() called with: hasFocus = [" + hasFocus + "]");
     }
 
-    @Override
-    protected void onNewIntent(Intent intent) {
-        super.onNewIntent(intent);
-        Log.d(TAG, "onNewIntent() called with: intent = [" + intent + "]");
-    }
+
 
     public void coordinator(View view) {
         startActivity(new Intent(CustomViewMain.this,CoordinatorActivity.class));
+    }
+
+    public void immerisive(View view) {
+        //c沉浸式
+        startActivity(new Intent(CustomViewMain.this, ImmersionActivity.class));
+    }
+
+    public void callPhone(View view) {
+
+        if (checkReadPermission(Manifest.permission.CALL_PHONE, 10111)) {
+            //拨打电话
+            Intent intent1 = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + 12345566));
+            startActivityForResult(intent1,9999);
+        }
+
+    }
+
+    public boolean checkReadPermission(String string_permission, int request_code) {
+        boolean flag = false;
+        if (ContextCompat.checkSelfPermission(this, string_permission) == PackageManager.PERMISSION_GRANTED) {//已有权限
+            flag = true;
+        } else {//申请权限
+            ActivityCompat.requestPermissions(this, new String[]{string_permission}, request_code);
+        }
+        return flag;
     }
 
 
@@ -183,5 +208,31 @@ public class CustomViewMain extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Log.d(TAG, "onNewIntent() called with: intent = [" + intent + "]");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG, "onStart: ");
+
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(TAG, "onRestart: ");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG, "onResume: ");
+    }
+
 
 }

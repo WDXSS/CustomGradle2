@@ -139,12 +139,15 @@
         <activity android:name=".book.custom._10canvas.bitmap.BitmapDensityActivity" />
         <activity android:name=".book.custom._10canvas.bitmap.TenBitmapMainActivity" />
         <activity android:name=".bitmap.BitmapMainActivity" />
+        <activity android:name=".other.ImmersionActivity"
+            android:theme="@style/TranslucentTheme" />
 
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_LOGS"
         tools:ignore="ProtectedPermissions" />
 </manifest>

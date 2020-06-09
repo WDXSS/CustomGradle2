@@ -111,7 +111,16 @@
             android:textAllCaps="false"
             android:text="折叠控件"
             android:onClick="coordinator" />
-
+        <Button
+            style="@style/btn_flag"
+            android:text="开启沉浸式"
+            android:onClick="immerisive"
+            />
+        <Button
+            style="@style/btn_flag"
+            android:text="拨号界面"
+            android:onClick="callPhone"
+            />
         <pl.droidsonroids.gif.GifImageView
             android:id="@+id/main_balance_img"
             android:layout_width="match_parent"
