@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     android:orientation="vertical">
 
     <LinearLayout
@@ -80,15 +81,21 @@
             android:textAllCaps="false"
             android:text="跳转到指定位置[18]"/>
     </LinearLayout>
-
     <!-- 普通RecyclerView -->
-    <androidx.appcompat.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <!-- 带有动画和多布局的RecyclerView -->
+<!--
     <androidx.appcompat.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+-->
+
+    <!-- 带有动画和多布局的RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_style"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

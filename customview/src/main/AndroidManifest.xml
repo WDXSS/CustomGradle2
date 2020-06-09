@@ -138,6 +138,7 @@
         <activity android:name=".book.custom._10canvas.bitmap.BitmapFactoryOptionsActivity" />
         <activity android:name=".book.custom._10canvas.bitmap.BitmapDensityActivity" />
         <activity android:name=".book.custom._10canvas.bitmap.TenBitmapMainActivity" />
+        <activity android:name=".bitmap.BitmapMainActivity" />
 
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
