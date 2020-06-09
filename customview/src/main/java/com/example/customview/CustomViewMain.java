@@ -21,6 +21,8 @@ import com.example.customview.book.BookMainActivity;
 import com.example.customview.fragment.FragmentMainActivity;
 import com.example.customview.list.ListMainActivity;
 import com.example.customview.notify.NotifyMain;
+import com.example.customview.other.CoordinatorLayoutDemo;
+import com.example.customview.other.CoordinatorLayoutMainActivity;
 import com.example.customview.other.ImmersionActivity;
 import com.example.customview.view.IncludeMainActivity;
 import com.example.firelibrary.FireMainActivity;
@@ -170,13 +172,23 @@ public class CustomViewMain extends AppCompatActivity {
         //c沉浸式
         startActivity(new Intent(CustomViewMain.this, ImmersionActivity.class));
     }
-
+    public void startCoordinatorLayout(View view) {
+        startActivity(new Intent(CustomViewMain.this, CoordinatorLayoutMainActivity.class));
+    }
+    private boolean isCall = false;
     public void callPhone(View view) {
 
         if (checkReadPermission(Manifest.permission.CALL_PHONE, 10111)) {
+//            Intent intents [] = new Intent[2];
+//            Intent intent = new Intent(this,ImmersionActivity.class);
+//            intents[0] = intent;
             //拨打电话
             Intent intent1 = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + 12345566));
             startActivityForResult(intent1,9999);
+            isCall = true;
+//
+//            intents[1] = intent1;
+//            startActivities(intents);
         }
 
     }
@@ -226,6 +238,11 @@ public class CustomViewMain extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
         Log.d(TAG, "onRestart: ");
+        if(isCall){
+            isCall = false;
+            Intent intent = new Intent(this,ImmersionActivity.class);
+            startActivity(intent);
+        }
     }
 
     @Override
@@ -233,6 +250,7 @@ public class CustomViewMain extends AppCompatActivity {
         super.onResume();
         Log.d(TAG, "onResume: ");
     }
+
 
 
 }
