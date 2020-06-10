@@ -52,5 +52,9 @@
         android:text="HttpUrlConnection 使用"
         android:textAllCaps="false"
         android:onClick="startUrlConnection"/>
-
+    <Button
+        style="@style/btn_flag"
+        android:text="okHttp 使用"
+        android:textAllCaps="false"
+        android:onClick="startOkHttp"/>
 </LinearLayout>

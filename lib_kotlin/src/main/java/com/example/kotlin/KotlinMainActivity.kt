@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlin._08kotlin._08MainActivity
 import com.example.kotlin._09kotlin.NotificationMainActivity
 import com.example.kotlin._11kotlin.HttpUrlConnectionActivity
+import com.example.kotlin._11kotlin.OkHttpActivity
 import com.example.kotlin._3kotlin.FirstActivity
 import com.example.kotlin._4kotlin.ChatActivity
 import com.example.kotlin._4kotlin.CustomTitleLayoutActivity
@@ -66,5 +67,9 @@ class KotlinMainActivity : AppCompatActivity() {
 
     fun startUrlConnection(view: View) {
         startActivity<HttpUrlConnectionActivity>(this)
+    }
+
+    fun startOkHttp(view: View) {
+        startActivity<OkHttpActivity>(this)
     }
 }
