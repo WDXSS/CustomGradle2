@@ -14,6 +14,7 @@
         <activity android:name="._5kotlin.NewsMainActivity" />
         <activity android:name="._07kotlin.SevenKotlinActivity" />
         <activity android:name="._09kotlin.NotificationMainActivity" />
+        <activity android:name="._11kotlin.HttpUrlConnectionActivity" />
     </application>
 
 </manifest>

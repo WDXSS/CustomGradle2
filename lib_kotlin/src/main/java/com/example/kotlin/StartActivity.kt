@@ -21,7 +21,7 @@ inline fun <reified T : Activity> startActivity(context: Context, block: () -> I
 }
 
 @DevKotlin("高价函数 Intent 的扩展函数 不使用返回值")
-inline fun <reified T > startActivity(context: Context, block: Intent.() -> Unit){
+inline fun <reified T > startActivity2(context: Context, block: Intent.() -> Unit){
     var intent = Intent()
     intent.setClass(context,T::class.java)
     intent.block()

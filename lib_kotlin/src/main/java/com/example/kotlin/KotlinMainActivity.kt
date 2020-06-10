@@ -7,6 +7,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlin._08kotlin._08MainActivity
 import com.example.kotlin._09kotlin.NotificationMainActivity
+import com.example.kotlin._11kotlin.HttpUrlConnectionActivity
 import com.example.kotlin._3kotlin.FirstActivity
 import com.example.kotlin._4kotlin.ChatActivity
 import com.example.kotlin._4kotlin.CustomTitleLayoutActivity
@@ -61,5 +62,9 @@ class KotlinMainActivity : AppCompatActivity() {
             intent.putExtra("ActivityName","NotificationMainActivity")
             intent
         }
+    }
+
+    fun startUrlConnection(view: View) {
+        startActivity<HttpUrlConnectionActivity>(this)
     }
 }
