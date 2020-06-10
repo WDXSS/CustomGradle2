@@ -9,7 +9,12 @@
         android:textAllCaps="false"
         android:text="okhttp请求"
         android:onClick="doRequest"/>
-
+    <Button
+        android:id="@+id/OkHttpCallBack"
+        style="@style/btn_flag"
+        android:textAllCaps="false"
+        android:text="okhttp请求带有 CallBack"
+        android:onClick="doRequest"/>
     <TextView
         android:id="@+id/ResponseText"
         style="@style/text_content"
