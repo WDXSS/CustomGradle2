@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--  网络安全配置参考地址 https://developer.android.com/training/articles/security-config  -->
+   <!-- 应用可以使用 base-config（应用范围的自定义）或 domain-config（针对每个网域的自定义）自定义自己的连接。-->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

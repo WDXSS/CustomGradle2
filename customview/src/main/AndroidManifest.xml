@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
-        >
+        android:networkSecurityConfig="@xml/network_config"
+        tools:ignore="UnusedAttribute">
 
         <activity android:name=".CustomViewMain">
           <!-- activity 中的属性 不在最近打开应用列表中显示   android:excludeFromRecents="true"-->
