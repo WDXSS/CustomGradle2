@@ -46,4 +46,15 @@
         android:text="通知类的Activity"
         android:textAllCaps="false"
         android:onClick="startNotificationMainActivity" />
+
+    <Button
+        style="@style/btn_flag"
+        android:text="HttpUrlConnection 使用"
+        android:textAllCaps="false"
+        android:onClick="startUrlConnection"/>
+    <Button
+        style="@style/btn_flag"
+        android:text="okHttp 使用"
+        android:textAllCaps="false"
+        android:onClick="startOkHttp"/>
 </LinearLayout>

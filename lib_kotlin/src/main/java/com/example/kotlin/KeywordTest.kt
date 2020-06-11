@@ -10,4 +10,6 @@ class KeywordTest {
     //3. 标记内联 crossinline   标记内联函数中的 lambda 表达式中 不使用 return  （lambda 表达式代替匿名类 时 中不可以使用 return）
     //4. return@  表示局部返回
     //5. 委托 ： by
+
+    //6. reified 关键子 ，修饰 泛型 T 泛型实化 配合内联函数使用简化 startActivity
 }
