@@ -48,16 +48,16 @@ class OkHttpActivity : AppCompatActivity() {
                     .build()
 
             val response = httpClient.newCall(request2).execute()
-            //No.1
-            response.body?.let {
-                showResponseText(it.string())
-            }
-
-//            //No.2
-//            val responseData2 = response.body?.string()
-//            if(responseData2 != null){
-//                showResponseText(responseData2)
+//            //No.1
+//           var str =  response.body?.let {
+//                showResponseText(it.string())
 //            }
+
+            //No.2
+            val responseData2 = response.body?.string()
+            if(responseData2 != null){
+                showResponseText(responseData2)
+            }
 
         }
     }

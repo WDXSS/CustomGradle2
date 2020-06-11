@@ -230,8 +230,11 @@ dependencies {
     //引入不同目录下的lib
 //    implementation project(':outlibrary')
 
-
-    implementation 'com.ljuns:logcollector:1.2.0'
+    //retrofit 默认会依赖 okhttp 的库所以不用重复依赖 okhttp3
+    implementation ('com.squareup.retrofit2:retrofit:2.6.1'){
+        //排除 retrofit 中的 依赖
+        exclude group: 'com.squareup.okhttp3'
+    }
 
 }
 def para = '123'
