@@ -70,13 +70,13 @@ class RetrofitMainActivity : AppCompatActivity() {
     private fun senRequestWithRetrofit() {
         ResponseText.text = ""
         val retrofit = Retrofit.Builder()
-                .baseUrl("http://127.0.0.1")
+                .baseUrl("http://10.0.2.2")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
         val service = retrofit.create(AppService::class.java)
         service.getAppDate().enqueue(object : Callback<List<AppData>> {
             override fun onFailure(call: Call<List<AppData>>, t: Throwable) {
-                Log.v(TAG, " Retrofit  onFailure")
+                Log.v(TAG, " Retrofit  onFailure ${t.toString()}")
 
             }
 

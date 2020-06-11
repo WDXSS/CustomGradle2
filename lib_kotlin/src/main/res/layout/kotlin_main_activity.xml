@@ -68,5 +68,10 @@
             android:text="okHttp 使用"
             android:textAllCaps="false"
             android:onClick="startOkHttp" />
+        <Button
+            style="@style/btn_flag"
+            android:text="Retrofit 使用"
+            android:textAllCaps="false"
+            android:onClick="startRetrofit" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
