@@ -29,6 +29,21 @@ allprojects {
     }
 }
 
+
+subprojects { Project project ->
+    project.configurations.all {
+        resolutionStrategy {
+            force([
+                    'io.reactivex.rxjava2:rxjava:2.2.0',
+                    'com.google.code.gson:gson:2.8.0',
+                    'com.alibaba:fastjson:1.1.68.android',
+                    'org.aspectj:aspectjrt:1.8.13'
+            ] as List)
+        }
+    }
+}
+
+
 // 运行gradle clean时，执行此处定义的task。
 // 该任务继承自Delete，删除根目录中的build目录。
 // 相当于执行Delete.delete(rootProject.buildDir)。

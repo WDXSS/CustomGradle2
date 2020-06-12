@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 
 import androidx.annotation.Nullable;
@@ -57,5 +58,18 @@ public class BookMainActivity extends AppCompatActivity{
             }
         });
 
+    }
+
+
+    @Override
+    public boolean onMenuOpened(int featureId, Menu menu) {
+
+        return super.onMenuOpened(featureId, menu);
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //添加 menu 菜单
+        getMenuInflater().inflate(R.menu.card_detail_menu, menu);
+        return true;
     }
 }
