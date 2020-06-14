@@ -17,6 +17,7 @@
         <activity android:name="._09kotlin.NotificationMainActivity" />
         <activity android:name="._11kotlin.HttpUrlConnectionActivity" />
         <activity android:name="._11kotlin.retrofit.RetrofitMainActivity" />
+        <activity android:name="._11kotlin.retrofit.Retrofit2Activity" />
     </application>
 
 </manifest>

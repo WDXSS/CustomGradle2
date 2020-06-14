@@ -73,5 +73,10 @@
             android:text="Retrofit 使用"
             android:textAllCaps="false"
             android:onClick="startRetrofit" />
+        <Button
+            style="@style/btn_flag"
+            android:text="Retrofit 最佳实现"
+            android:textAllCaps="false"
+            android:onClick="startRetrofitBest" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

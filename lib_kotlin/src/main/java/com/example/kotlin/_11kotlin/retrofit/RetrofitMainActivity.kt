@@ -49,7 +49,7 @@ class RetrofitMainActivity : AppCompatActivity() {
         //带有callback
         val httpClient = OkHttpClient()
         val request2 = Request.Builder()
-                .url("http://127.0.0.1/get_data.json")
+                .url("http://10.0.2.2/get_data.json")
                 .build()
 
         val response = httpClient.newCall(request2).enqueue(object : okhttp3.Callback {
@@ -77,10 +77,10 @@ class RetrofitMainActivity : AppCompatActivity() {
         service.getAppDate().enqueue(object : Callback<List<AppData>> {
             override fun onFailure(call: Call<List<AppData>>, t: Throwable) {
                 Log.v(TAG, " Retrofit  onFailure ${t.toString()}")
-
             }
 
             override fun onResponse(call: Call<List<AppData>>, response: Response<List<AppData>>) {
+                //已经返回到主线程
                 Log.v(TAG, " Retrofit  onResponse")
                 val list = response.body()
                 if(list != null){
@@ -90,6 +90,7 @@ class RetrofitMainActivity : AppCompatActivity() {
                         Log.v(TAG, " app is version = ${app.version} ")
                     }
                 }
+                showResponseText(list?.toString() ?: "response body is null")
             }
 
         })

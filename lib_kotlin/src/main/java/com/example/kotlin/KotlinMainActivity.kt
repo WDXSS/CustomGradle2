@@ -9,6 +9,7 @@ import com.example.kotlin._08kotlin._08MainActivity
 import com.example.kotlin._09kotlin.NotificationMainActivity
 import com.example.kotlin._11kotlin.HttpUrlConnectionActivity
 import com.example.kotlin._11kotlin.OkHttpActivity
+import com.example.kotlin._11kotlin.retrofit.Retrofit2Activity
 import com.example.kotlin._11kotlin.retrofit.RetrofitMainActivity
 import com.example.kotlin._3kotlin.FirstActivity
 import com.example.kotlin._4kotlin.ChatActivity
@@ -76,5 +77,9 @@ class KotlinMainActivity : AppCompatActivity() {
 
     fun startRetrofit(view: View) {
         startActivity<RetrofitMainActivity>(this)
+    }
+
+    fun startRetrofitBest(view: View) {
+        startActivity<Retrofit2Activity>(this)
     }
 }
