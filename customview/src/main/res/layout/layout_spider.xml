@@ -134,6 +134,7 @@
             android:layout_height="100dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop" />
+
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
