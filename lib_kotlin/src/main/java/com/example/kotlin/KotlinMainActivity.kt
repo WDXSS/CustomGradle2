@@ -23,7 +23,7 @@ class KotlinMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.kotlin_main_activity)
-        supportActionBar?.hide()//隐藏title
+        supportActionBar?.hide()//隐藏 activeBar
         Log.d(TAG, "onCreate  KotlinMainActivity")
     }
 
