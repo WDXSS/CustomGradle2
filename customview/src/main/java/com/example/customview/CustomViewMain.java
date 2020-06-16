@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,9 +25,11 @@ import com.example.customview.notify.NotifyMain;
 import com.example.customview.other.CoordinatorLayoutDemo;
 import com.example.customview.other.CoordinatorLayoutMainActivity;
 import com.example.customview.other.ImmersionActivity;
+import com.example.customview.util.NumberUtil;
 import com.example.customview.view.IncludeMainActivity;
 import com.example.firelibrary.FireMainActivity;
 import com.example.jetpack.JetpackMainActivity;
+import com.google.android.gms.common.util.NumberUtils;
 
 import java.util.Random;
 
@@ -56,6 +59,10 @@ public class CustomViewMain extends AppCompatActivity {
         verifyStoragePermissions(this);
 //        LogCollector.getInstance(getApplication()).start();
         GifImageView gifImageView = findViewById(R.id.main_balance_img);
+        EditText editText = findViewById(R.id.luhn);
+        String cardNo = editText.getText().toString();
+        boolean b  = NumberUtil.LuhnCheck(cardNo);
+        Log.d(TAG, "onCreate: Luhn 算法 的结果 ：b = "+b);
     }
 
     private void notification() {
@@ -75,20 +82,26 @@ public class CustomViewMain extends AppCompatActivity {
     }
 
     public void startBookMain(View view) {
-        startActivity(new Intent(CustomViewMain.this, BookMainActivity.class));
+        EditText editText = findViewById(R.id.luhn);
+        String cardNo = editText.getText().toString();
+        boolean b  = NumberUtil.LuhnCheck(cardNo);
+        Log.d(TAG, "onCreate: Luhn 算法 的结果 ：b = "+b);
 
-        Random random = new Random();
-        //生成5位的随机数
-        int rannum = (int) (random.nextDouble() * (99999 - 10000 + 1)) + 10000;
-        double dou = random.nextDouble() * 90000 + 10000;
-        Log.d(TAG, "startBookMain() random.nextDouble() = [" + dou + "]");
-        Log.d(TAG, "startBookMain() random.nextDouble() = [" + (99999 - 10000 + 1) + "]");
-        Log.d(TAG, "startBookMain() rannum = [" + rannum + "]");
-        Log.d(TAG, "startBookMain() Math.random()*100 = [" + Math.random()*100 + "]");
 
-        for (int i = 0; i < 100; i++) {
-            Log.d(TAG, "startBookMain() random.nextDouble() *100 = [" + random.nextDouble() *100000 + "]");
-        }
+//        startActivity(new Intent(CustomViewMain.this, BookMainActivity.class));
+//
+//        Random random = new Random();
+//        //生成5位的随机数
+//        int rannum = (int) (random.nextDouble() * (99999 - 10000 + 1)) + 10000;
+//        double dou = random.nextDouble() * 90000 + 10000;
+//        Log.d(TAG, "startBookMain() random.nextDouble() = [" + dou + "]");
+//        Log.d(TAG, "startBookMain() random.nextDouble() = [" + (99999 - 10000 + 1) + "]");
+//        Log.d(TAG, "startBookMain() rannum = [" + rannum + "]");
+//        Log.d(TAG, "startBookMain() Math.random()*100 = [" + Math.random()*100 + "]");
+//
+//        for (int i = 0; i < 100; i++) {
+//            Log.d(TAG, "startBookMain() random.nextDouble() *100 = [" + random.nextDouble() *100000 + "]");
+//        }
     }
     public void startUISystem(View view) {
         startActivity(new Intent(CustomViewMain.this, MainActivity.class));

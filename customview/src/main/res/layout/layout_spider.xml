@@ -7,8 +7,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#000000"
         android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/luhn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:digits="1234567890 "
+            />
 
         <!--    <com.example.customview.view.SpiderView
                 android:layout_width="match_parent"
@@ -61,8 +67,8 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="list"
             android:onClick="startListView"
+            android:text="list"
             android:textAllCaps="false" />
 
         <LinearLayout
@@ -73,60 +79,60 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:text="申请权限"
                 android:onClick="reqPermission"
+                android:text="申请权限"
                 android:textAllCaps="false" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:text="验证权限"
                 android:onClick="checkPermission"
+                android:text="验证权限"
                 android:textAllCaps="false" />
         </LinearLayout>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="include"
             android:onClick="startInclude"
+            android:text="include"
             android:textAllCaps="false" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAllCaps="false"
+            android:onClick="lifecycle"
             android:text="jetpack test"
-            android:onClick="lifecycle" />
+            android:textAllCaps="false" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAllCaps="false"
+            android:onClick="startWeb"
             android:text="WebView test"
-            android:onClick="startWeb" />
+            android:textAllCaps="false" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAllCaps="false"
+            android:onClick="coordinator"
             android:text="折叠控件"
-            android:onClick="coordinator" />
+            android:textAllCaps="false" />
 
         <Button
             style="@style/btn_flag"
-            android:text="开启沉浸式"
-            android:onClick="immerisive" />
+            android:onClick="immerisive"
+            android:text="开启沉浸式" />
 
         <Button
             style="@style/btn_flag"
-            android:text="拨号界面"
-            android:onClick="callPhone" />
+            android:onClick="callPhone"
+            android:text="拨号界面" />
 
         <Button
             style="@style/btn_flag"
-            android:text="CoordinatorLayout"
-            android:onClick="startCoordinatorLayout" />
+            android:onClick="startCoordinatorLayout"
+            android:text="CoordinatorLayout" />
 
         <pl.droidsonroids.gif.GifImageView
             android:id="@+id/main_balance_img"
