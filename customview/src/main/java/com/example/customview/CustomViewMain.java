@@ -47,7 +47,8 @@ public class CustomViewMain extends AppCompatActivity {
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static String[] PERMISSIONS_STORAGE = {
             "android.permission.READ_EXTERNAL_STORAGE",
-            "android.permission.WRITE_EXTERNAL_STORAGE" };
+            "android.permission.WRITE_EXTERNAL_STORAGE"};
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,10 +60,28 @@ public class CustomViewMain extends AppCompatActivity {
         verifyStoragePermissions(this);
 //        LogCollector.getInstance(getApplication()).start();
         GifImageView gifImageView = findViewById(R.id.main_balance_img);
+    }
+
+    private void generateNum5() {
+        Random random = new Random();
+        //生成5位的随机数
+        int rannum = (int) (random.nextDouble() * (99999 - 10000 + 1)) + 10000;
+        double dou = random.nextDouble() * 90000 + 10000;
+        Log.d(TAG, "startBookMain() random.nextDouble() = [" + dou + "]");
+        Log.d(TAG, "startBookMain() random.nextDouble() = [" + (99999 - 10000 + 1) + "]");
+        Log.d(TAG, "startBookMain() rannum = [" + rannum + "]");
+        Log.d(TAG, "startBookMain() Math.random()*100 = [" + Math.random() * 100 + "]");
+
+        for (int i = 0; i < 100; i++) {
+            Log.d(TAG, "startBookMain() random.nextDouble() *100 = [" + random.nextDouble() * 100000 + "]");
+        }
+    }
+
+    private void luhnTest() {
         EditText editText = findViewById(R.id.luhn);
         String cardNo = editText.getText().toString();
-        boolean b  = NumberUtil.LuhnCheck(cardNo);
-        Log.d(TAG, "onCreate: Luhn 算法 的结果 ：b = "+b);
+        boolean b = NumberUtil.LuhnCheck(cardNo);
+        Log.d(TAG, "onCreate: Luhn 算法 的结果 ：b = " + b);
     }
 
     private void notification() {
@@ -82,27 +101,11 @@ public class CustomViewMain extends AppCompatActivity {
     }
 
     public void startBookMain(View view) {
-        EditText editText = findViewById(R.id.luhn);
-        String cardNo = editText.getText().toString();
-        boolean b  = NumberUtil.LuhnCheck(cardNo);
-        Log.d(TAG, "onCreate: Luhn 算法 的结果 ：b = "+b);
-
-
-//        startActivity(new Intent(CustomViewMain.this, BookMainActivity.class));
-//
-//        Random random = new Random();
-//        //生成5位的随机数
-//        int rannum = (int) (random.nextDouble() * (99999 - 10000 + 1)) + 10000;
-//        double dou = random.nextDouble() * 90000 + 10000;
-//        Log.d(TAG, "startBookMain() random.nextDouble() = [" + dou + "]");
-//        Log.d(TAG, "startBookMain() random.nextDouble() = [" + (99999 - 10000 + 1) + "]");
-//        Log.d(TAG, "startBookMain() rannum = [" + rannum + "]");
-//        Log.d(TAG, "startBookMain() Math.random()*100 = [" + Math.random()*100 + "]");
-//
-//        for (int i = 0; i < 100; i++) {
-//            Log.d(TAG, "startBookMain() random.nextDouble() *100 = [" + random.nextDouble() *100000 + "]");
-//        }
+        startActivity(new Intent(CustomViewMain.this, BookMainActivity.class));
+//        luhnTest();
+//        generateNum5();
     }
+
     public void startUISystem(View view) {
         startActivity(new Intent(CustomViewMain.this, MainActivity.class));
     }
@@ -136,11 +139,12 @@ public class CustomViewMain extends AppCompatActivity {
     public void startListView(View view) {
         startActivity(new Intent(CustomViewMain.this, ListMainActivity.class));
     }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
-        Log.i(TAG, "onRequestPermissionsResult: requestCode = "+ requestCode);
+        Log.i(TAG, "onRequestPermissionsResult: requestCode = " + requestCode);
         for (String permission : permissions) {
-            Log.i(TAG, "onRequestPermissionsResult: permission = "+ permission);
+            Log.i(TAG, "onRequestPermissionsResult: permission = " + permission);
         }
         for (int grantResult : grantResults) {
             Log.i(TAG, "onRequestPermissionsResult: grantResult = " + grantResult);
@@ -166,7 +170,7 @@ public class CustomViewMain extends AppCompatActivity {
     }
 
     public void startWeb(View view) {
-        startActivity(new Intent(CustomViewMain.this,WebViewActivity.class));
+        startActivity(new Intent(CustomViewMain.this, WebViewActivity.class));
     }
 
     @Override
@@ -176,19 +180,21 @@ public class CustomViewMain extends AppCompatActivity {
     }
 
 
-
     public void coordinator(View view) {
-        startActivity(new Intent(CustomViewMain.this,CoordinatorActivity.class));
+        startActivity(new Intent(CustomViewMain.this, CoordinatorActivity.class));
     }
 
     public void immerisive(View view) {
         //c沉浸式
         startActivity(new Intent(CustomViewMain.this, ImmersionActivity.class));
     }
+
     public void startCoordinatorLayout(View view) {
         startActivity(new Intent(CustomViewMain.this, CoordinatorLayoutMainActivity.class));
     }
+
     private boolean isCall = false;
+
     public void callPhone(View view) {
 
         if (checkReadPermission(Manifest.permission.CALL_PHONE, 10111)) {
@@ -197,7 +203,7 @@ public class CustomViewMain extends AppCompatActivity {
 //            intents[0] = intent;
             //拨打电话
             Intent intent1 = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + 12345566));
-            startActivityForResult(intent1,9999);
+            startActivityForResult(intent1, 9999);
             isCall = true;
 //
 //            intents[1] = intent1;
@@ -217,8 +223,6 @@ public class CustomViewMain extends AppCompatActivity {
     }
 
 
-
-
     public static void verifyStoragePermissions(Activity activity) {
 
         try {
@@ -227,7 +231,7 @@ public class CustomViewMain extends AppCompatActivity {
                     "android.permission.WRITE_EXTERNAL_STORAGE");
             if (permission != PackageManager.PERMISSION_GRANTED) {
                 // 没有写的权限，去申请写的权限，会弹出对话框
-                ActivityCompat.requestPermissions(activity, PERMISSIONS_STORAGE,REQUEST_EXTERNAL_STORAGE);
+                ActivityCompat.requestPermissions(activity, PERMISSIONS_STORAGE, REQUEST_EXTERNAL_STORAGE);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -251,9 +255,9 @@ public class CustomViewMain extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
         Log.d(TAG, "onRestart: ");
-        if(isCall){
+        if (isCall) {
             isCall = false;
-            Intent intent = new Intent(this,ImmersionActivity.class);
+            Intent intent = new Intent(this, ImmersionActivity.class);
             startActivity(intent);
         }
     }
@@ -263,7 +267,6 @@ public class CustomViewMain extends AppCompatActivity {
         super.onResume();
         Log.d(TAG, "onResume: ");
     }
-
 
 
 }

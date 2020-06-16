@@ -3,7 +3,9 @@
     package="com.example.kotlin">
 
     <application>
-        <activity android:name="._11kotlin.OkHttpActivity"></activity>
+        <activity android:name="._12kotlin.ToolbarActivity"></activity>
+        <activity android:name="._12kotlin.MaterialDesignMainActivity" />
+        <activity android:name="._11kotlin.OkHttpActivity" />
         <activity android:name="._08kotlin._08MainActivity" />
         <activity android:name="._5kotlin.NewsContentActivity" />
         <activity android:name="._4kotlin.ChatActivity" />
