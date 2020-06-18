@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -22,23 +21,16 @@ import com.example.customview.book.BookMainActivity;
 import com.example.customview.fragment.FragmentMainActivity;
 import com.example.customview.list.ListMainActivity;
 import com.example.customview.notify.NotifyMain;
-import com.example.customview.other.CoordinatorLayoutDemo;
 import com.example.customview.other.CoordinatorLayoutMainActivity;
 import com.example.customview.other.ImmersionActivity;
+import com.example.customview.regex.RegexMainActivity;
 import com.example.customview.util.NumberUtil;
 import com.example.customview.view.IncludeMainActivity;
 import com.example.firelibrary.FireMainActivity;
 import com.example.jetpack.JetpackMainActivity;
-import com.google.android.gms.common.util.NumberUtils;
 
 import java.util.Random;
 
-import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import cn.ljuns.logcollector.LogCollector;
-import cn.ljuns.logcollector.util.LevelUtils;
 import pl.droidsonroids.gif.GifImageView;
 
 
@@ -269,4 +261,8 @@ public class CustomViewMain extends AppCompatActivity {
     }
 
 
+    public void startRegexActivity(View view) {
+        Intent intent = new Intent(this, RegexMainActivity.class);
+        startActivity(intent);
+    }
 }

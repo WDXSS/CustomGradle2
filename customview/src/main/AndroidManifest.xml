@@ -1,38 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.customview">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
-        android:networkSecurityConfig="@xml/network_config"
         tools:ignore="UnusedAttribute">
-
+        <activity android:name=".regex.RegexMainActivity"></activity>
+        <activity android:name=".regex.RegexMainActivity" />
         <activity android:name=".CustomViewMain">
-          <!-- activity 中的属性 不在最近打开应用列表中显示   android:excludeFromRecents="true"-->
+
+            <!-- activity 中的属性 不在最近打开应用列表中显示   android:excludeFromRecents="true" -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
+
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
         <activity android:name=".anim.view.tween.ScannerDome" />
         <activity android:name=".anim.property.value.LoadingDemo" />
-        <activity android:name=".DrawViewMain"
-            android:noHistory="true"
-            />
+        <activity
+            android:name=".DrawViewMain"
+            android:noHistory="true" />
         <activity android:name=".view.SpiderActivity" />
         <activity android:name=".notify.NotifyMain" />
         <activity android:name=".notify.NotifyTestActivity">
             <intent-filter>
                 <action android:name="com.example.customview.notify.NotifyTestActivity" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -41,7 +56,9 @@
         <activity android:name=".deeplink.DeepLinkActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data
                     android:host="s"
                     android:scheme="s" />
@@ -52,22 +69,24 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-           <!--     <a href="[scheme]://[host]/[path]?[query]">启动应用程序</a>-->
+                <!-- <a href="[scheme]://[host]/[path]?[query]">启动应用程序</a> -->
                 <data
-                    android:scheme="http"
                     android:host="test.deeplink.com"
-                    android:pathPattern="/mys" />
+                    android:pathPattern="/mys"
+                    android:scheme="http" />
             </intent-filter>
-            <!--            <intent-filter>-->
-            <!--                <action android:name="android.intent.action.VIEW" />-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.VIEW" /> -->
 
-            <!--                <category android:name="android.intent.category.DEFAULT" />-->
-            <!--                <category android:name="android.intent.category.BROWSABLE" />-->
 
-            <!--                <data-->
-            <!--                    android:host="link" 必须有-->
-            <!--                    android:scheme="will" />-->
-            <!--            </intent-filter>-->
+            <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+            <!-- <category android:name="android.intent.category.BROWSABLE" /> -->
+
+
+            <!-- <data -->
+            <!-- android:host="link" 必须有 -->
+            <!-- android:scheme="will" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity android:name=".view.IncludeMainActivity" />
         <activity android:name=".WebViewActivity" />
@@ -140,17 +159,11 @@
         <activity android:name=".book.custom._10canvas.bitmap.BitmapDensityActivity" />
         <activity android:name=".book.custom._10canvas.bitmap.TenBitmapMainActivity" />
         <activity android:name=".bitmap.BitmapMainActivity" />
-        <activity android:name=".other.ImmersionActivity"
+        <activity
+            android:name=".other.ImmersionActivity"
             android:theme="@style/TranslucentTheme" />
         <activity android:name=".other.CoordinatorLayoutDemo" />
         <activity android:name=".other.CoordinatorLayoutMainActivity" />
-
     </application>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.READ_LOGS"
-        tools:ignore="ProtectedPermissions" />
+
 </manifest>

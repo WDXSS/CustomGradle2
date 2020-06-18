@@ -100,9 +100,6 @@ public class WebViewActivity extends AppCompatActivity {
 
     public void onLoad(View view) {
 //        mWebView.reload();
-
-        Log.d(TAG, "onLoad: = " + ErrorMsgUtil.errorMap.get("KEY_CCF1100001"));
-
     }
 
 

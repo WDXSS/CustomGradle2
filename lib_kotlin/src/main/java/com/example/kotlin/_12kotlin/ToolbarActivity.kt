@@ -11,4 +11,5 @@ class ToolbarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.kotlin_12_toolbar_activity)
     }
+
 }
