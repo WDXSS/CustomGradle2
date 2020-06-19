@@ -5,10 +5,11 @@ import android.annotation.SuppressLint
 @DevKotlin("函数式API")
 @SuppressLint("DefaultLocale")
 fun main() {
-//    lambdaTest()
-//    upperCase()
+    lambdaTest()
+    upperCase()
     testFilter()
     testAnyAndAll()
+    testLambda()
 }
 
 fun lambdaTest() {
@@ -55,4 +56,11 @@ fun testAnyAndAll() {
     val allResult = list.all { it.length <= 5 }
 
     println("anyResult = " + anyResult + ", allResult = " + allResult)
+}
+
+fun testLambda(){
+    val str = {str:String->
+        str +"sdss"
+    }
+    print(str.invoke("0000000"))
 }

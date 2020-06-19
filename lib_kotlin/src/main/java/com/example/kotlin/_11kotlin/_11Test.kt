@@ -12,9 +12,9 @@ class _11Test {
     // launch
     // coroutineScope
     // 区别和特点：
-    // GlobalScope.launch  runBlocking  可以任意位置调用
+    // GlobalScope.launch  runBlocking  可以任意位置调用   runBlocking阻塞当前线程
     // launch 函数只能在协程的作用域中调用
-    // coroutineScope 协程的作用域 和 挂起函数中调用
+    // coroutineScope 协程的作用域 和 挂起函数中调用        coroutineScope 阻塞当前协程的作用域
 
 
     //delay() 函数只能在协程或者挂起函数中调用
