@@ -80,7 +80,7 @@
             android:onClick="startRetrofitBest" />
         <Button
             style="@style/btn_flag"
-            android:text="Material Design 实战"
+            android:text="第 12 Material Design 实战"
             android:textAllCaps="false"
             android:onClick="startMaterialDesign" />
     </LinearLayout>

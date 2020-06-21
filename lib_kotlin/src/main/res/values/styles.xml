@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <style name="Kotlin_toolbar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/KotlinColorPrimary</item>
+        <item name="colorPrimaryDark">@color/KotlinColorPrimaryDark</item>
+        <item name="colorAccent">@color/KotlinColorAccent</item>
+    </style>
+    <style name="Kotlin_no_toolbar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/KotlinColorPrimary</item>
+        <item name="colorPrimaryDark">@color/KotlinColorPrimaryDark</item>
+        <item name="colorAccent">@color/KotlinColorAccent</item>
+        <item name="android:textColorPrimary">#000000</item>  <!--设置字体颜色-->
+        <item name="actionMenuTextColor">#ffffff</item> <!--  敲定颜色-->
+        <item name="android:textSize">18sp</item> <!--  搞掂字体大小-->
+
+    </style>
     <style name="text_content">
         <item name="android:layout_margin">10dp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
     </style>
     <style name="btn_flag">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">50dp</item>
-        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
     </style>
 </resources>

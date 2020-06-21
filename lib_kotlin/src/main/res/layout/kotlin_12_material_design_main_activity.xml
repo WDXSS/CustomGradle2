@@ -6,10 +6,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="._12kotlin.MaterialDesignMainActivity">
-<Button
-    style="@style/btn_flag"
-    android:text="Toolbar"
-    android:textAllCaps="false"
-    android:onClick="startToolbarActivity"
-    />
+
+    <Button
+        style="@style/btn_flag"
+        android:text="Actionbar 显示默认的"
+        android:textAllCaps="false"
+        android:onClick="startToolbarActivity" />
+
+    <Button
+        android:id="@+id/Toolbar"
+        style="@style/btn_flag"
+        android:text="设置Toolbar "
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/DrawerLayout"
+        style="@style/btn_flag"
+        android:text="DrawerLayout 滑动菜单 "
+        android:textAllCaps="false" />
 </LinearLayout>
