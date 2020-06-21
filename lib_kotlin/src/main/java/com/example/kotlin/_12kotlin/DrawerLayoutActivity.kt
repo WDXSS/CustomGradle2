@@ -9,13 +9,13 @@ import android.view.MenuItem
 import android.widget.Toast
 import com.example.kotlin.R
 import com.example.kotlin._2kotlin.DevKotlin
-import kotlinx.android.synthetic.main.kotilin_12_drawer_layout_activity.*
+import kotlinx.android.synthetic.main.kotlin_12_drawer_layout_activity.*
 
 @DevKotlin("滑动菜单")
 class DrawerLayoutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.kotilin_12_drawer_layout_activity)
+        setContentView(R.layout.kotlin_12_drawer_layout_activity)
         //DrawerLayout 使用：DrawerLayout布局中允许 放入两个直接子控件
         //1. 第一个子控件是主屏幕要显示的内容
         //2. 第二个子控件是滑动菜单显示的内容
