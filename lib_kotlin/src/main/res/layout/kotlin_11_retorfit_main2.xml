@@ -15,6 +15,12 @@
         android:textAllCaps="false"
         android:text="retrofit 简化 service 方法请求"
         />
+    <Button
+        style="@style/btn_flag"
+        android:textAllCaps="false"
+        android:text="通过 suspendCoroutine 函数 簡化回调"
+        android:id="@+id/SuspendCoroutine"
+        />
     <TextView
         android:id="@+id/ResponseText"
         style="@style/text_content"

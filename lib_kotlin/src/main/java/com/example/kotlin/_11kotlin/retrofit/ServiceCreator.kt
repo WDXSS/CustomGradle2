@@ -18,6 +18,6 @@ object ServiceCreator {
 
     fun <T> create(service: Class<T>):T = retrofit.create(service)
 
-    //通过 泛型 优化 上面的方法的调用
-    inline fun<reified T> create():T = create(T::class.java)
+    //通过 泛型实化 对比上面的方法的调用
+    inline fun<reified T> createT():T = create(T::class.java)
 }

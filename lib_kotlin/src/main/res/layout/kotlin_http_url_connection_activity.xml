@@ -9,7 +9,16 @@
         android:textAllCaps="false"
         android:text="httpUrlConnection"
         android:onClick="doRequest"/>
-
+    <Button
+        style="@style/btn_flag"
+        android:textAllCaps="false"
+        android:text="httpUrlConnection提出工具类"
+        android:onClick="doRequest2"/>
+    <Button
+        style="@style/btn_flag"
+        android:textAllCaps="false"
+        android:text="通过 suspendCoroutine 函数"
+        android:onClick="doRequest3"/>
     <TextView
         android:id="@+id/ResponseText"
         style="@style/text_content"

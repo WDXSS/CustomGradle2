@@ -21,6 +21,8 @@ class _11Test {
     //suspend 关键字 声明挂起函数
     // coroutineScope 特点 会继承外部协程的作用域，并创建一个子协程
     // coroutineScope 可以保证在 其作用域的所有代码和子协程在全部执行完成之前阻塞当前协程
+    //async 函數 创建一个子协程
+    // withContext 函数
 }
 
 fun main() {
