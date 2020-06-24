@@ -17,6 +17,13 @@
         <item name="android:textSize">18sp</item> <!--  搞掂字体大小-->
 
     </style>
+
+    <style name="Kotlin_no_toolbar2" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/KotlinColorPrimary</item>
+        <item name="colorPrimaryDark">@color/KotlinColorPrimaryDark</item>
+        <item name="colorAccent">@color/KotlinColorAccent</item>
+    </style>
     <style name="text_content">
         <item name="android:layout_margin">10dp</item>
         <item name="android:layout_width">match_parent</item>

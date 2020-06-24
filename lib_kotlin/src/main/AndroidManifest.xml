@@ -3,9 +3,9 @@
     package="com.example.kotlin">
 
     <application>
-        <activity android:name="._12kotlin.DrawerLayoutActivity"
+        <activity
+            android:name="._12kotlin.DrawerLayoutActivity"
             android:theme="@style/Kotlin_no_toolbar" />
-            />
         <activity
             android:name="._12kotlin.Toolbar2Activity"
             android:label="Fruits"
@@ -30,6 +30,9 @@
         <activity android:name="._11kotlin.HttpUrlConnectionActivity" />
         <activity android:name="._11kotlin.retrofit.RetrofitMainActivity" />
         <activity android:name="._11kotlin.retrofit.Retrofit2Activity" />
+        <activity android:name="._12kotlin.NavigationViewActivity"
+            android:theme="@style/Kotlin_no_toolbar2"
+           />
     </application>
 
 </manifest>

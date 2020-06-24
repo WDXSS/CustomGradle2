@@ -20,6 +20,9 @@ class MaterialDesignMainActivity : AppCompatActivity() {
         DrawerLayout.setOnClickListener {
             startActivity<DrawerLayoutActivity>(this)
         }
+        NavigationView.setOnClickListener {
+            startActivity<NavigationViewActivity>(this)
+        }
     }
 
     fun startToolbarActivity(view: View) {

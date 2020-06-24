@@ -50,6 +50,10 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7'
     //协程 依赖库 中android 使用的库
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.7'
+    //NavigationView 需要的的依赖  第一个 是material 库; 第二个是 CircleImageView 实现图片圆形化
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+    //NavigationView 需要的的依赖 end
 }
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
     kotlinOptions {
