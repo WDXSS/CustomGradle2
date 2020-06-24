@@ -9,15 +9,14 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlin.R
 import com.example.kotlin._2kotlin.DevKotlin
-import kotlinx.android.synthetic.main.kotlin_12_drawer_layout_activity.*
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.kotlin_12_navigation_view_activity.*
-import kotlinx.android.synthetic.main.kotlin_12_navigation_view_activity.DrawerLayout
 
 /**
  * @author zhouchao
  * @date 2020/6/22
  */
-class NavigationViewActivity :AppCompatActivity() {
+class NavigationViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.kotlin_12_navigation_view_activity)
@@ -31,6 +30,9 @@ class NavigationViewActivity :AppCompatActivity() {
 
         //4 重点来了，在 activity 的布局中 添加 NavigationView
         // 并且将 nav_menu.xml 和 kotlin_nav_header.xml 设置到到NavigationView
+
+        //5.添加 FloatingActionBar ,
+        // 没啥可说的，android:layout_gravity="bottom|end" 属性 end 和start 和系统语言有关系 在左或在右
         setSupportActionBar(toolbar)
 
         supportActionBar?.let {
@@ -43,9 +45,16 @@ class NavigationViewActivity :AppCompatActivity() {
         navigationView.setCheckedItem(R.id.navCall)
         navigationView.setNavigationItemSelectedListener {
             DrawerLayout.closeDrawers()//关闭左侧栏，
+            when (it.itemId) {
+                R.id.navCall -> Toast.makeText(this, "you clicked navCall", Toast.LENGTH_LONG).show()
+                R.id.navFriends -> Toast.makeText(this, "you clicked navFriends", Toast.LENGTH_LONG).show()
+                R.id.navLocation -> Toast.makeText(this, "you clicked navLocation", Toast.LENGTH_LONG).show()
+                R.id.navMail -> Toast.makeText(this, "you clicked navMail", Toast.LENGTH_LONG).show()
+                R.id.navTask -> Toast.makeText(this, "you clicked navTask", Toast.LENGTH_LONG).show()
+            }
             true  //事件已经处理
         }
-
+        setBtnOnClick()
         //在 manifest 中自定义的them Kotlin_no_toolbar 会异常退出，Kotlin_no_toolbar2就没有问题^_^
     }
 
@@ -69,5 +78,17 @@ class NavigationViewActivity :AppCompatActivity() {
             android.R.id.home -> DrawerLayout.openDrawer(Gravity.START)
         }
         return true
+    }
+
+    private fun setBtnOnClick() {
+        floatingActionBtn.setOnClickListener { view ->
+            Toast.makeText(this, "you clicked floatingActionBtn", Toast.LENGTH_LONG).show()
+
+            Snackbar.make(view, "Snackbar 提示的内容", Snackbar.LENGTH_LONG)
+                    .setAction("Undo") {
+                        Toast.makeText(this, "data  restored", Toast.LENGTH_LONG).show()
+                    }.show()//记得 调用show函数^_^
+
+        }
     }
 }

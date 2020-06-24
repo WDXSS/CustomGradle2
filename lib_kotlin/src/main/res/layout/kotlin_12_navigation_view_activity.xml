@@ -18,6 +18,18 @@
             android:background="@color/colorPrimary"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <!--在主界面上添加 FloatingActionButton-->
+        <!--app:elevation="8dp" 设置投影高度，不设置会有默认值-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_done"
+            app:elevation="8dp"
+            />
     </FrameLayout>
 
     <com.google.android.material.navigation.NavigationView
