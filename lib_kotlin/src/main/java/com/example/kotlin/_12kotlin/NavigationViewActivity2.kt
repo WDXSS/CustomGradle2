@@ -89,7 +89,12 @@ class NavigationViewActivity2 : AppCompatActivity() {
 //Snackbar.make() 函数 的第一个参数 是指定 Snackbar 是基于那个View 出发的，
 // 我们传入的是 FloatingActionButton 本身，而 FloatingActionButton 是 CoordinatorLayout 的子控件所以能触发
 // FloatingActionButton 上下移动
-// 2. 如果 传入 DrawerLayout ,就会再次遮挡悬浮按钮
+
+//            // 2. 如果 传入 DrawerLayout ,就会再次遮挡悬浮按钮
+//            Snackbar.make(DrawerLayout, "Snackbar 提示的内容", Snackbar.LENGTH_LONG)
+//                    .setAction("Undo") {
+//                        Toast.makeText(this, "data  restored", Toast.LENGTH_LONG).show()
+//                    }.show()//记得 调用show函数^_^
 
         }
     }
