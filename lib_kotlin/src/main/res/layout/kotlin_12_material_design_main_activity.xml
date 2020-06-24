@@ -28,4 +28,9 @@
         style="@style/btn_flag"
         android:text="NavigationView 的用法 "
         android:textAllCaps="false" />
+    <Button
+        android:id="@+id/NavigationView2"
+        style="@style/btn_flag"
+        android:text="NavigationView 的用法 使用 CoordinatorLayout  "
+        android:textAllCaps="false" />
 </LinearLayout>
