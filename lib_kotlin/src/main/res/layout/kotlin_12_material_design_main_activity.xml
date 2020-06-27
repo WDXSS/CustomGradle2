@@ -33,4 +33,14 @@
         style="@style/btn_flag"
         android:text="NavigationView 的用法 使用 CoordinatorLayout  "
         android:textAllCaps="false" />
+    <Button
+        android:id="@+id/materialCardView"
+        style="@style/btn_flag"
+        android:text="MaterialCardView的用法配合RecycleView"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/toolbar3"
+        style="@style/btn_flag"
+        android:text="Toolbar 配合 AppBarLayout "
+        android:textAllCaps="false" />
 </LinearLayout>

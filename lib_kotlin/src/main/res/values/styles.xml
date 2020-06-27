@@ -24,6 +24,28 @@
         <item name="colorPrimaryDark">@color/KotlinColorPrimaryDark</item>
         <item name="colorAccent">@color/KotlinColorAccent</item>
     </style>
+
+    <style name="Kotlin_no_toolbar3" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+ <!--       <item name="colorPrimary">@color/KotlinColorPrimary</item>
+        <item name="colorPrimaryDark">@color/KotlinColorPrimaryDark</item>
+        <item name="colorAccent">@color/KotlinColorAccent</item>-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!-- ToolBar菜单样式.-->
+    <style name="popup_theme" parent="@style/ThemeOverlay.AppCompat.Light">
+        <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
+    </style>
+    <style name="OverflowMenuStyle" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
+        <!--设置不覆盖锚点-->
+        <item name="overlapAnchor">false</item>
+    </style>
+
+
+
+
     <style name="text_content">
         <item name="android:layout_margin">10dp</item>
         <item name="android:layout_width">match_parent</item>
