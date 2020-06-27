@@ -19,6 +19,11 @@
         android:text="设置Toolbar "
         android:textAllCaps="false" />
     <Button
+        android:id="@+id/toolbar3"
+        style="@style/btn_flag"
+        android:text="Toolbar 配合 AppBarLayout "
+        android:textAllCaps="false" />
+    <Button
         android:id="@+id/DrawerLayout"
         style="@style/btn_flag"
         android:text="DrawerLayout 滑动菜单 "
@@ -45,8 +50,8 @@
         android:text="RecycleView 配合 AppBarLayout"
         android:textAllCaps="false" />
     <Button
-        android:id="@+id/toolbar3"
+        android:id="@+id/swipeRefresh"
         style="@style/btn_flag"
-        android:text="Toolbar 配合 AppBarLayout "
+        android:text="RecycleView 下拉刷新"
         android:textAllCaps="false" />
 </LinearLayout>

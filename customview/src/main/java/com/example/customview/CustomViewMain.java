@@ -5,12 +5,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -69,6 +71,7 @@ public class CustomViewMain extends AppCompatActivity {
         }
     }
 
+
     private void luhnTest() {
         EditText editText = findViewById(R.id.luhn);
         String cardNo = editText.getText().toString();
@@ -92,10 +95,26 @@ public class CustomViewMain extends AppCompatActivity {
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public void startBookMain(View view) {
-        startActivity(new Intent(CustomViewMain.this, BookMainActivity.class));
+//        startActivity(new Intent(CustomViewMain.this, BookMainActivity.class));
 //        luhnTest();
 //        generateNum5();
+        int size = 1000000;
+        long[] num = new long[size + 1];
+        Random random = new Random();
+        for (int i = 1; i < size + 1; i++) {
+            num[i] = (long) random.nextInt() + (long) (1L << 31);
+//            num[i] = (long) random.nextInt();
+//            System.out.println(num[i]);
+            if(num[i] >= ((1L << 32) -2)){
+                System.out.println("最大值" +((1L<< 32) - 1));
+                System.out.println(num[i]);
+            }
+        }
+//        将1解释为int,将其移位31位使其成为最大的负int,然后将其转换为long(仍为负数).你要1L << 31
+        System.out.println("end " +(1L << 32));
+
     }
 
     public void startUISystem(View view) {
