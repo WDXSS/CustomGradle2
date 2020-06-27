@@ -34,6 +34,9 @@ class MaterialDesignMainActivity : AppCompatActivity() {
         toolbar3.setOnClickListener {
             startActivity<ToolbarActivity3>(this)
         }
+        materialCardView2.setOnClickListener {
+            startActivity<MaterialCardViewActivity2>(this)
+        }
     }
 
     fun startToolbarActivity(view: View) {
