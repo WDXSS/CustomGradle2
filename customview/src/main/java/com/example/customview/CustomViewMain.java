@@ -70,6 +70,26 @@ public class CustomViewMain extends AppCompatActivity {
             Log.d(TAG, "startBookMain() random.nextDouble() *100 = [" + random.nextDouble() * 100000 + "]");
         }
     }
+    private long generateUnpredictableNumber(){
+        // 整形取值范围 ： -2^31 —— 2^31 -1, 即-2147483648——2147483647
+        // 返回 允许的 最大值 2^32 - 1 = 4294967296 - 1
+        int size = 100;
+        long[] num = new long[size + 1];
+        Random random = new Random();
+        for (int i = 1; i < size + 1; i++) {
+            num[i] = (long) random.nextInt() + (long) (1L << 31);
+//            num[i] = (long) random.nextInt();
+//            System.out.println(num[i]);
+            if(num[i] >= ((1L << 32) -2)){
+                System.out.println("最大值" +((1L<< 32) - 1));
+                System.out.println(num[i]);
+            }
+        }
+//        将1解释为int,将其移位31位使其成为最大的负int,然后将其转换为long(仍为负数).你要1L << 31
+        System.out.println("end " +(1L << 32));
+        return (long) random.nextInt() + (long) (1L << 31);
+    }
+
 
 
     private void luhnTest() {
@@ -97,24 +117,10 @@ public class CustomViewMain extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void startBookMain(View view) {
-//        startActivity(new Intent(CustomViewMain.this, BookMainActivity.class));
+        startActivity(new Intent(CustomViewMain.this, BookMainActivity.class));
 //        luhnTest();
 //        generateNum5();
-        int size = 1000000;
-        long[] num = new long[size + 1];
-        Random random = new Random();
-        for (int i = 1; i < size + 1; i++) {
-            num[i] = (long) random.nextInt() + (long) (1L << 31);
-//            num[i] = (long) random.nextInt();
-//            System.out.println(num[i]);
-            if(num[i] >= ((1L << 32) -2)){
-                System.out.println("最大值" +((1L<< 32) - 1));
-                System.out.println(num[i]);
-            }
-        }
-//        将1解释为int,将其移位31位使其成为最大的负int,然后将其转换为long(仍为负数).你要1L << 31
-        System.out.println("end " +(1L << 32));
-
+//        generateUnpredictableNumber();
     }
 
     public void startUISystem(View view) {
