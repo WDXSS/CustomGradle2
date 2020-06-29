@@ -37,6 +37,9 @@ class MaterialDesignMainActivity : AppCompatActivity() {
         materialCardView2.setOnClickListener {
             startActivity<MaterialCardViewActivity2>(this)
         }
+        swipeRefresh.setOnClickListener {
+            startActivity<SwipeRefreshActivity>(this)
+        }
     }
 
     fun startToolbarActivity(view: View) {

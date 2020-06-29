@@ -31,6 +31,7 @@ import com.example.customview.view.IncludeMainActivity;
 import com.example.firelibrary.FireMainActivity;
 import com.example.jetpack.JetpackMainActivity;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 import pl.droidsonroids.gif.GifImageView;
@@ -121,6 +122,12 @@ public class CustomViewMain extends AppCompatActivity {
 //        luhnTest();
 //        generateNum5();
 //        generateUnpredictableNumber();
+//        SecureRandom random = new SecureRandom();
+//        for (int i = 0; i < 20; i++) {
+//            Log.d(TAG, "startBookMain:Math  "+ (int)(Math.random() * 10));
+//            Log.d(TAG, "startBookMain: random "+ (random.nextInt(10)));
+//        }
+
     }
 
     public void startUISystem(View view) {
