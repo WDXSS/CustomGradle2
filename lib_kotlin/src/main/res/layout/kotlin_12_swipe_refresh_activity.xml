@@ -21,12 +21,23 @@
                 app:layout_scrollFlags="scroll|enterAlways|snap"
                 app:popupTheme="@style/popup_theme" />
         </com.google.android.material.appbar.AppBarLayout>
+ <!--    添加下啦刷新
+        1. 将 RecyclerView 添加到 SwipeRefreshLayout 中
+        2. 将layout_behavior 移动到 SwipeRefreshLayout中
+        3. 在kotlin 中添加代码 -->
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <com.google.android.material.navigation.NavigationView

@@ -4,7 +4,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.kotlin.R
 import com.example.kotlin._12kotlin.enity.Fruit
 
@@ -13,7 +16,7 @@ class SwipeRefreshAdapter() : RecyclerView.Adapter<SwipeRefreshAdapter.ViewHolde
     lateinit var context: Context
     lateinit var fruitList: ArrayList<Fruit>
 
-    constructor(context: Context, fruitList: ArrayList<Fruit>):this() {
+    constructor(context: Context, fruitList: ArrayList<Fruit>) : this() {
         this.context = context
         this.fruitList = fruitList
 
@@ -29,10 +32,14 @@ class SwipeRefreshAdapter() : RecyclerView.Adapter<SwipeRefreshAdapter.ViewHolde
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val fruit = fruitList[position]
+        holder.text.text = fruit.name
+        Glide.with(context).load(fruit.imageId).into(holder.image)
     }
 
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
+        val text: TextView = view.findViewById(R.id.fruitName)
+        val image: ImageView = view.findViewById(R.id.fruitImage);
     }
 }

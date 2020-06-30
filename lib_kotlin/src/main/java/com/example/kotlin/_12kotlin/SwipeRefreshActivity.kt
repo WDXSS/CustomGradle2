@@ -7,15 +7,32 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.kotlin.R
+import com.example.kotlin._12kotlin.adapter.SwipeRefreshAdapter
+import com.example.kotlin._12kotlin.enity.Fruit
 import com.example.kotlin._2kotlin.DevKotlin
-import kotlinx.android.synthetic.main.kotlin_12_material_cardview_activity2.*
 import kotlinx.android.synthetic.main.kotlin_12_swipe_refresh_activity.*
-import kotlinx.android.synthetic.main.kotlin_12_swipe_refresh_activity.drawerLayout
-import kotlinx.android.synthetic.main.kotlin_12_swipe_refresh_activity.navigationView
-import kotlinx.android.synthetic.main.kotlin_12_swipe_refresh_activity.toolbar
+import kotlin.concurrent.thread
 
+@DevKotlin("下啦刷新 swipe")
 class SwipeRefreshActivity : AppCompatActivity() {
+
+    private lateinit var adapter: SwipeRefreshAdapter
+    private var fruitList: ArrayList<Fruit> = ArrayList()
+
+    private val fruits = mutableListOf(Fruit("Apple", R.drawable.apple),
+            Fruit("Banana", R.drawable.banana),
+            Fruit("Orange", R.drawable.orange),
+            Fruit("Watermelon", R.drawable.watermelon),
+            Fruit("Pear", R.drawable.pear),
+            Fruit("Grape", R.drawable.grape),
+            Fruit("Pineapple", R.drawable.pineapple),
+            Fruit("Strawberry", R.drawable.strawberry),
+            Fruit("Cherry", R.drawable.cherry),
+            Fruit("Mango", R.drawable.mango))
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.kotlin_12_swipe_refresh_activity)
@@ -25,11 +42,57 @@ class SwipeRefreshActivity : AppCompatActivity() {
             it.setDisplayHomeAsUpEnabled(true)
             it.setHomeAsUpIndicator(R.drawable.ic_menu)
         }
-
         setupNavigationView()
+        setupData()
+        setupRecyclerView()
+        setupSwipeRefresh()
     }
 
     private fun setupRecyclerView() {
+        val gridLayoutManager = GridLayoutManager(this, 2)
+        recyclerView.layoutManager = gridLayoutManager
+
+        if (!::adapter.isInitialized) {
+            //判断 adapter 是否初始化，没有没有初始化时，初始化adapter
+            adapter = SwipeRefreshAdapter(this, fruitList)
+        }
+        recyclerView.adapter = this.adapter
+    }
+
+    private fun setupData() {
+        repeat(20) {
+            val index = (0 until fruits.size).random()
+            fruitList.add(fruits[index])
+        }
+    }
+
+    private fun setupSwipeRefresh() {
+        //设置 进度条的颜色
+        swipeRefresh.setColorSchemeColors(ContextCompat.getColor(this, R.color.colorPrimary),
+                ContextCompat.getColor(this, R.color.KotlinColorPrimary))
+
+        //添加下拉刷新的监听
+        swipeRefresh.setOnRefreshListener {
+            refreshData()
+        }
+
+    }
+
+    private fun refreshData() {
+        thread {
+            Thread.sleep(2000)
+            runOnUiThread {
+                this.fruitList.clear()
+                repeat(20) {
+                    val index = (0 until fruits.size).random()
+                    fruitList.add(fruits[index])
+                }
+                adapter.notifyDataSetChanged()
+
+                //调用 setRefreshing() 方法 传入 false 停止刷新效果
+                swipeRefresh.isRefreshing = false
+            }
+        }
 
     }
 
