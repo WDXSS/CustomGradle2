@@ -54,4 +54,10 @@
         style="@style/btn_flag"
         android:text="RecycleView 下拉刷新"
         android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/swipeRefresh2"
+        style="@style/btn_flag"
+        android:text="练习RecycleView 下拉刷新"
+        android:textAllCaps="false" />
 </LinearLayout>

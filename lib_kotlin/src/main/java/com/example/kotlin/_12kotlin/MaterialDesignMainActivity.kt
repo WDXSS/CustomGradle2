@@ -40,6 +40,9 @@ class MaterialDesignMainActivity : AppCompatActivity() {
         swipeRefresh.setOnClickListener {
             startActivity<SwipeRefreshActivity>(this)
         }
+        swipeRefresh2.setOnClickListener {
+            startActivity<SwipeRefreshActivity2>(this)
+        }
     }
 
     fun startToolbarActivity(view: View) {
