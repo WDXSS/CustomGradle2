@@ -2,12 +2,14 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="250dp">
+        android:layout_height="250dp"
+        android:fitsSystemWindows="true">
         <!--   app:contentScrim="@color/colorPrimary" 设置趋于折叠和折叠之后 的颜色-->
         <!--   app:layout_scrollFlags="scroll|exitUntilCollapsed"
         scroll 表示随着内容滚动一起滚动，
@@ -17,6 +19,7 @@
             android:id="@+id/CollapsingToolbarLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:contentScrim="@color/colorAccent"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
@@ -28,9 +31,13 @@
                 android:id="@+id/fruitImage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
                 android:scaleType="centerCrop"
                 app:layout_collapseMode="parallax" />
 
+            <!--android:fitsSystemWindows="true" 表示 该控件将出现在 系统的状态栏里 ，
+            注意：1.必须给父类也设置上
+             2. activity 的主题 设置成透明-->
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
@@ -55,18 +62,18 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="35dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="35dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="15dp"
-                app:cardCornerRadius="4dp"
                 android:theme="@style/Theme.MaterialComponents.Light"
-                >
+                app:cardCornerRadius="4dp">
+
                 <TextView
                     android:id="@+id/FruitContextText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"/>
+                    android:layout_margin="10dp" />
 
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
@@ -83,6 +90,5 @@
         android:layout_margin="16dp"
         android:src="@drawable/ic_comment"
         app:layout_anchor="@id/appBarLayout"
-        app:layout_anchorGravity="bottom|end"
-        />
+        app:layout_anchorGravity="bottom|end" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

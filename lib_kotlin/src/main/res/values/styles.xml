@@ -43,6 +43,10 @@
         <item name="overlapAnchor">false</item>
     </style>
 
+    <style name="fruitActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--设置成 透明-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
 
 
 

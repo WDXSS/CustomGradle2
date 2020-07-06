@@ -10,7 +10,7 @@ class CustomTitleLayoutActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.kotlin_custom_title_layout_activity)
+        setContentView(R.layout.kotlin_04_custom_title_layout_activity)
         supportActionBar?.hide()//隐藏title
     }
 }
