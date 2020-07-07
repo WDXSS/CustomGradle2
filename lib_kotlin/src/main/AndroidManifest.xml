@@ -3,6 +3,8 @@
     package="com.example.kotlin">
 
     <application>
+        <activity android:name="._13kotlin.ViewModelActivity"></activity>
+        <activity android:name="._13kotlin.JetpackMainActivity" />
         <activity
             android:name="._12kotlin.DrawerLayoutActivity"
             android:theme="@style/Kotlin_no_toolbar" />
@@ -30,26 +32,31 @@
         <activity android:name="._11kotlin.HttpUrlConnectionActivity" />
         <activity android:name="._11kotlin.retrofit.RetrofitMainActivity" />
         <activity android:name="._11kotlin.retrofit.Retrofit2Activity" />
-        <activity android:name="._12kotlin.NavigationViewActivity"
-            android:theme="@style/Kotlin_no_toolbar2"
-           />
-        <activity android:name="._12kotlin.NavigationViewActivity2"
-        android:theme="@style/Kotlin_no_toolbar2"
-        />
-        <activity android:name="._12kotlin.MaterialCardViewActivity"
-            android:theme="@style/Kotlin_no_toolbar3"
-            />
-        <activity android:name="._12kotlin.ToolbarActivity3"
-            android:theme="@style/Kotlin_no_toolbar3"/>
-        <activity android:name="._12kotlin.MaterialCardViewActivity2"
-            android:theme="@style/Kotlin_no_toolbar3"/>
-        <activity android:name="._12kotlin.SwipeRefreshActivity"
-            android:theme="@style/Kotlin_no_toolbar3"/>
-        <activity android:name="._12kotlin.FruitActivity"
-            android:theme="@style/fruitActivityTheme"/>
-        <activity android:name="._12kotlin.SwipeRefreshActivity2"
+        <activity
+            android:name="._12kotlin.NavigationViewActivity"
+            android:theme="@style/Kotlin_no_toolbar2" />
+        <activity
+            android:name="._12kotlin.NavigationViewActivity2"
+            android:theme="@style/Kotlin_no_toolbar2" />
+        <activity
+            android:name="._12kotlin.MaterialCardViewActivity"
+            android:theme="@style/Kotlin_no_toolbar3" />
+        <activity
+            android:name="._12kotlin.ToolbarActivity3"
+            android:theme="@style/Kotlin_no_toolbar3" />
+        <activity
+            android:name="._12kotlin.MaterialCardViewActivity2"
+            android:theme="@style/Kotlin_no_toolbar3" />
+        <activity
+            android:name="._12kotlin.SwipeRefreshActivity"
+            android:theme="@style/Kotlin_no_toolbar3" />
+        <activity
+            android:name="._12kotlin.FruitActivity"
+            android:theme="@style/fruitActivityTheme" />
+        <activity
+            android:name="._12kotlin.SwipeRefreshActivity2"
             android:label="练习下拉刷新"
-            android:theme="@style/Kotlin_no_toolbar3"/>
+            android:theme="@style/Kotlin_no_toolbar3" />
     </application>
 
 </manifest>

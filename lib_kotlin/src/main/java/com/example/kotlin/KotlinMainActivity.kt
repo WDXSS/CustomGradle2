@@ -12,6 +12,7 @@ import com.example.kotlin._11kotlin.OkHttpActivity
 import com.example.kotlin._11kotlin.retrofit.Retrofit2Activity
 import com.example.kotlin._11kotlin.retrofit.RetrofitMainActivity
 import com.example.kotlin._12kotlin.MaterialDesignMainActivity
+import com.example.kotlin._13kotlin.JetpackMainActivity
 import com.example.kotlin._3kotlin.FirstActivity
 import com.example.kotlin._4kotlin.ChatActivity
 import com.example.kotlin._4kotlin.CustomTitleLayoutActivity
@@ -86,5 +87,9 @@ class KotlinMainActivity : AppCompatActivity() {
 
     fun startMaterialDesign(view: View) {
         startActivity<MaterialDesignMainActivity>(this)
+    }
+
+    fun startJetpackMain(view: View) {
+        startActivity<JetpackMainActivity>(this)
     }
 }

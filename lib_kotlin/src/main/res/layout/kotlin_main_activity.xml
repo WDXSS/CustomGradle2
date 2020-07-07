@@ -1,87 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <Button
             style="@style/btn_flag"
+            android:onClick="startFirstActivity"
             android:text="kotlin 第一个Activity"
-            android:textAllCaps="false"
-            android:onClick="startFirstActivity" />
+            android:textAllCaps="false" />
 
         <Button
             style="@style/btn_flag"
+            android:onClick="startCustomTitleActivity"
             android:text="kotlin 自定义TitleLayout"
-            android:textAllCaps="false"
-            android:onClick="startCustomTitleActivity" />
+            android:textAllCaps="false" />
 
         <Button
             style="@style/btn_flag"
+            android:onClick="startListViewActivity"
             android:text="kotlin ListView 使用"
-            android:textAllCaps="false"
-            android:onClick="startListViewActivity" />
+            android:textAllCaps="false" />
 
         <Button
             style="@style/btn_flag"
+            android:onClick="startRecyclerActivity"
             android:text="kotlin RecyclerView 使用"
-            android:textAllCaps="false"
-            android:onClick="startRecyclerActivity" />
+            android:textAllCaps="false" />
 
         <Button
             style="@style/btn_flag"
+            android:onClick="startChatActivity"
             android:text="kotlin 聊天界面"
-            android:textAllCaps="false"
-            android:onClick="startChatActivity" />
+            android:textAllCaps="false" />
 
         <Button
             style="@style/btn_flag"
+            android:onClick="startNewsMainActivity"
             android:text="使用限定符，Fragment单双页展示"
-            android:textAllCaps="false"
-            android:onClick="startNewsMainActivity" />
+            android:textAllCaps="false" />
 
         <Button
             style="@style/btn_flag"
+            android:onClick="start08MainActivity"
             android:text="kotlin 委托"
-            android:textAllCaps="false"
-            android:onClick="start08MainActivity" />
+            android:textAllCaps="false" />
 
         <Button
             style="@style/btn_flag"
+            android:onClick="startNotificationMainActivity"
             android:text="通知类的Activity"
-            android:textAllCaps="false"
-            android:onClick="startNotificationMainActivity" />
+            android:textAllCaps="false" />
 
         <Button
             style="@style/btn_flag"
+            android:onClick="startUrlConnection"
             android:text="HttpUrlConnection 使用"
-            android:textAllCaps="false"
-            android:onClick="startUrlConnection" />
+            android:textAllCaps="false" />
 
         <Button
             style="@style/btn_flag"
+            android:onClick="startOkHttp"
             android:text="okHttp 使用"
-            android:textAllCaps="false"
-            android:onClick="startOkHttp" />
+            android:textAllCaps="false" />
+
         <Button
             style="@style/btn_flag"
+            android:onClick="startRetrofit"
             android:text="Retrofit 使用"
-            android:textAllCaps="false"
-            android:onClick="startRetrofit" />
+            android:textAllCaps="false" />
+
         <Button
             style="@style/btn_flag"
+            android:onClick="startRetrofitBest"
             android:text="Retrofit 最佳实现"
-            android:textAllCaps="false"
-            android:onClick="startRetrofitBest" />
+            android:textAllCaps="false" />
+
         <Button
             style="@style/btn_flag"
+            android:onClick="startMaterialDesign"
             android:text="第 12 Material Design 实战"
-            android:textAllCaps="false"
-            android:onClick="startMaterialDesign" />
+            android:textAllCaps="false" />
+
+        <Button
+            style="@style/btn_flag"
+            android:onClick="startJetpackMain"
+            android:text="第 13 Jetpack 之旅"
+            android:textAllCaps="false" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
