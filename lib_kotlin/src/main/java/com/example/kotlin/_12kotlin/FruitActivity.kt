@@ -5,7 +5,9 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.kotlin.R
+import com.example.kotlin._12kotlin.kotlin.*
 import com.example.kotlin._2kotlin.DevKotlin
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.kotlin_12_fruit_activity.*
 
 @DevKotlin("可折叠标题栏")
@@ -38,8 +40,33 @@ class FruitActivity : AppCompatActivity() {
         Glide.with(this).load(imgId).into(fruitImage)
 
         FruitContextText.text = generateFruitContent(name)
-
+        floatingActionBtn.setOnClickListener {
+//            showSnackBar1()//默认写法
+//            showSnackBar2()// 没有setAction 的写法
+            showSnackBar3()// 实现 setAction 的写法
+        }
     }
+
+    private fun showSnackBar1() {
+        Snackbar.make(appBarLayout, "floatingActionBar", Snackbar.LENGTH_SHORT)
+                .setAction("点我看看") {
+                    "Snackbar 的 setAction 点击事件".showToast(this@FruitActivity)
+                }.show()
+    }
+
+    private fun showSnackBar2() {
+        appBarLayout.showSnackBar("view 扩展方法 显示 Snackbar")
+    }
+
+    private fun showSnackBar3() {
+        appBarLayout.showSnackBar2("view 扩展方法 显示 Snackbar2", "点我看看") {
+            "我是通过高价函数实现的点击".showToast(this@FruitActivity)
+        }
+    }
+    private fun showSnackBar4() {
+        appBarLayout.showSnackBar3("view 扩展方法 显示 Snackbar2")
+    }
+
 
     private fun generateFruitContent(fruitName: String) = fruitName.repeat(500)
 

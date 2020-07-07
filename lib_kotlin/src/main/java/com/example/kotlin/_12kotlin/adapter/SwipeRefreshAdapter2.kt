@@ -14,6 +14,7 @@ import com.bumptech.glide.Glide
 import com.example.kotlin.R
 import com.example.kotlin._12kotlin.FruitActivity
 import com.example.kotlin._12kotlin.enity.Fruit
+import com.example.kotlin._12kotlin.kotlin.showToast
 import com.example.kotlin._2kotlin.DevKotlin
 import com.example.kotlin.startActivity
 import com.example.kotlin.startActivity2
@@ -46,6 +47,8 @@ open class SwipeRefreshAdapter2(val context: Context, val fruitList: MutableList
             val position = viewHolder.adapterPosition
             val fruit = fruitList[position]
             val activity = this.context as Activity
+            //使用自定义 Toast 提示
+            fruit.name.showToast(context)
             startActivity<FruitActivity>(activity) {
                 val intent = Intent()
                 intent.putExtra(FruitActivity.FRUIT_NAME, fruit.name)
@@ -67,7 +70,9 @@ open class SwipeRefreshAdapter2(val context: Context, val fruitList: MutableList
 
         // 点击 事件 2
         holder.textView.setOnClickListener {
-            Toast.makeText(context,"点击的 是text", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(context,"点击的 是text", Toast.LENGTH_SHORT).show()
+            "点击的 是text".showToast(context,Toast.LENGTH_LONG)
+
             startActivity2<FruitActivity>(context) {
                 putExtra(FruitActivity.FRUIT_NAME, fruit.name)
                 putExtra(FruitActivity.FRUIT_IMG_ID, fruit.imageId)

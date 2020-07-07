@@ -85,7 +85,8 @@
             我们将 锚点设置到 AppBarLayout 这样悬浮btn 将显示在标题栏的区域内 -->
     <!-- app:layout_anchorGravity 属性将btn 显示在 右下角 -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
+      android:id="@+id/floatingActionBtn"
+       android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:src="@drawable/ic_comment"
