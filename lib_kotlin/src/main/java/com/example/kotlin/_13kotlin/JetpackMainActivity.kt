@@ -16,5 +16,9 @@ class JetpackMainActivity : AppCompatActivity() {
         viewModelBtn.setOnClickListener {
            startActivity<ViewModelActivity>(this)
         }
+
+        lifecycleBtn.setOnClickListener {
+            startActivity<LifecycleMainActivity>(this)
+        }
     }
 }

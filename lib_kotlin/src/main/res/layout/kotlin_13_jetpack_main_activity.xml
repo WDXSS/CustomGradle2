@@ -11,4 +11,8 @@
         android:id="@+id/viewModelBtn"
         style="@style/btn_flag"
         android:text="ViewModel 的基本用法" />
+    <Button
+        android:id="@+id/lifecycleBtn"
+        style="@style/btn_flag"
+        android:text="lifecycle 的基本用法" />
 </LinearLayout>
