@@ -14,4 +14,6 @@ class KeywordTest {
     //6. reified 关键子 ，修饰 泛型 T 泛型实化 配合内联函数使用简化 startActivity
     //7. const 定义为 常量的关键字 ，const 关键字 只能用在 单利类 顶层方法，companion object 伴生类
     //8. infix 关键字 修饰的函数构建更可读的语法
+
+    //9. data 关键字 当一个类用 data 关键字 修饰时，表明是数据类，默认实现 equals(), hashCode(), toString() 方法
 }

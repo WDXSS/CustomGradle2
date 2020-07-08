@@ -21,5 +21,9 @@
         android:id="@+id/liveDataBtn"
         style="@style/btn_flag"
         android:text=" liveData 的基本用法" />
+    <Button
+        android:id="@+id/liveDataBtn2"
+        style="@style/btn_flag"
+        android:text=" 对外提供 liveData 只能 读取数据不能修改数据" />
 
 </LinearLayout>

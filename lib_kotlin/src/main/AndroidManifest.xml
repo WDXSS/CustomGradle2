@@ -59,6 +59,7 @@
             android:name="._12kotlin.SwipeRefreshActivity2"
             android:label="练习下拉刷新"
             android:theme="@style/Kotlin_no_toolbar3" />
+        <activity android:name="._13kotlin.LiveDataMainActivity2" />
     </application>
 
 </manifest>

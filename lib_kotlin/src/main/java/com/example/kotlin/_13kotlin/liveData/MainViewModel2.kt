@@ -1,27 +1,30 @@
 package com.example.kotlin._13kotlin.liveData
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.kotlin._2kotlin.DevKotlin
 
-@DevKotlin(" ViewModel 中使用LiveData ")
+@DevKotlin("优化：对非 ViewModel类 只提供不可修改的 LiveData ，而不是 可修改的 MutableLiveData ")
 class MainViewModel2(countReserved: Int) : ViewModel() {
-    var counterLiveData = MutableLiveData<Int>()
+    //get 的用法
+    public val counter: LiveData<Int>
+        get() {
+            return _counter
+        }
+
+    private val _counter = MutableLiveData<Int>()
 
     init {
-        //LiveData 读写数据有三种 方式
-        // 读： getValue()
-        // 写： setValue() 只能用在 主线程中， postValue() 非主线程中
-        counterLiveData.value = countReserved
+        _counter.value = countReserved
     }
-
 
     fun plusOne() {
-        val count = counterLiveData.value ?: 0
-        counterLiveData.value = count + 1
+        val count = _counter.value ?: 0
+        _counter.value = count + 1
     }
 
-    fun clear(){
-        counterLiveData.value = 0
+    fun clear() {
+        _counter.value = 0
     }
 }
