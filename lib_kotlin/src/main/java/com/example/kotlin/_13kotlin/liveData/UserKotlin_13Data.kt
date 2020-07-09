@@ -1,7 +1,7 @@
 package com.example.kotlin._13kotlin.liveData
 
 
-data class UserKotlin_13Data(val firstName: String, val age: Int) {
+data class UserKotlin_13Data(var firstName: String, val age: Int) {
     var lastName: String
         get() {
             return lastName

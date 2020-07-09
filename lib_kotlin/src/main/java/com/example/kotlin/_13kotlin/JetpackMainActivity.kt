@@ -26,5 +26,8 @@ class JetpackMainActivity : AppCompatActivity() {
         liveDataBtn2.setOnClickListener {
             startActivity<LiveDataMainActivity2>(this)
         }
+        liveDataBtn3.setOnClickListener {
+            startActivity<LiveDataTransformationActivity>(this)
+        }
     }
 }
