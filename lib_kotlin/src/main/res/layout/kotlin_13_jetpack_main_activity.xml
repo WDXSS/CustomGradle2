@@ -29,5 +29,8 @@
         android:id="@+id/liveDataBtn3"
         style="@style/btn_flag"
         android:text=" liveData 学习 map 的使用" />
-
+    <Button
+        android:id="@+id/liveDataBtn4"
+        style="@style/btn_flag"
+        android:text=" liveData 学习 switchMap 的使用" />
 </LinearLayout>

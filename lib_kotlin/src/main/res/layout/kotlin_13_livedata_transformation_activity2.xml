@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/userText"
+        style="@style/text_content"
+        android:layout_height="60dp" />
+
+    <Button
+        android:id="@+id/updateUserBtn"
+        style="@style/btn_flag"
+        android:text="更新 user" />
+
+    <Button
+        android:id="@+id/updateNameBtn"
+        style="@style/btn_flag"
+        android:layout_marginTop="10dp"
+        android:text="更新 userName" />
+
+    <TextView
+        style="@style/text_content"
+        android:text="结论 ：liveData 中的数据变化了，但是没有调用 setValue() 或者 postValue() 所以不能触发 observe 的监听" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textStr"
+        style="@style/text_content" />
+</LinearLayout>

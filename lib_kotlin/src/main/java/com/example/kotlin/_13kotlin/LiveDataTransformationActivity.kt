@@ -7,7 +7,7 @@ import com.example.kotlin.R
 import com.example.kotlin._13kotlin.liveData.TransformationViewModel
 import com.example.kotlin._2kotlin.DevKotlin
 import com.example.kotlin.util.KotlinStringUtil
-import kotlinx.android.synthetic.main.kontlin_13_livedata_transformation_activity.*
+import kotlinx.android.synthetic.main.kotlin_13_livedata_transformation_activity.*
 
 @DevKotlin("liveData 中 map 和 switchMap 的用法")
 class LiveDataTransformationActivity : AppCompatActivity() {
@@ -15,7 +15,7 @@ class LiveDataTransformationActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.kontlin_13_livedata_transformation_activity)
+        setContentView(R.layout.kotlin_13_livedata_transformation_activity)
 
         //map 的用法 当对象 有多条属性，但是只需要监听其中一条属性的变化
 

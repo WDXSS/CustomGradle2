@@ -14,6 +14,7 @@ import com.example.kotlin._2kotlin.DevKotlin
 object Repository {
 
     fun getUserDao(userName:String) :LiveData<UserKotlin_13Data>{
+        //每次 返回都是一个新LiveData 对象
         val liveData = MutableLiveData<UserKotlin_13Data>()
         val user = UserKotlin_13Data(userName,1)
         liveData.value = user

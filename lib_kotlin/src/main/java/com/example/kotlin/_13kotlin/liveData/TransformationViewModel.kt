@@ -16,6 +16,7 @@ class TransformationViewModel : ViewModel() {
 
     //同过map 转成需要的 liveData
     val userName: LiveData<String> = Transformations.map(userLiveData) { liveData ->
+        KotlinStringUtil.printlnAndTime("调用 Transformations.map")
         "${liveData.firstName}"
     }
 
