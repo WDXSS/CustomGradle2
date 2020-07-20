@@ -16,4 +16,5 @@ class KeywordTest {
     //8. infix 关键字 修饰的函数构建更可读的语法
 
     //9. data 关键字 当一个类用 data 关键字 修饰时，表明是数据类，默认实现 equals(), hashCode(), toString() 方法
+    //10. internal 关键字 internal 限制了跨 module 的方法的使用  https://www.jianshu.com/p/ef3cab8c9226
 }
