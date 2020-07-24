@@ -14,8 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:digits="1234567890 "
-            android:singleLine="true"
-            />
+            android:singleLine="true" />
 
         <!--    <com.example.customview.view.SpiderView
                 android:layout_width="match_parent"
@@ -134,10 +133,12 @@
             style="@style/btn_flag"
             android:onClick="startCoordinatorLayout"
             android:text="CoordinatorLayout" />
+
         <Button
             style="@style/btn_flag"
             android:onClick="startRegexActivity"
             android:text="EditText 验证正则" />
+
         <pl.droidsonroids.gif.GifImageView
             android:id="@+id/main_balance_img"
             android:layout_width="match_parent"
@@ -145,6 +146,9 @@
             android:adjustViewBounds="true"
             android:scaleType="centerCrop" />
 
+        <TextView
+            android:id="@+id/text"
+            style="@style/text_content" />
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
@@ -55,6 +56,8 @@ public class CustomViewMain extends AppCompatActivity {
         verifyStoragePermissions(this);
 //        LogCollector.getInstance(getApplication()).start();
         GifImageView gifImageView = findViewById(R.id.main_balance_img);
+        TextView textView = findViewById(R.id.text);
+        textView.setText(null);
     }
 
     private void generateNum5() {
