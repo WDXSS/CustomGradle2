@@ -20,6 +20,7 @@ import androidx.core.content.ContextCompat;
 
 import com.codingending.uisystemdemo.MainActivity;
 import com.example.android_hs_library.HuangShuMainActivity;
+import com.example.customview.bitmap.BitmapMainActivity;
 import com.example.customview.book.BookMainActivity;
 import com.example.customview.fragment.FragmentMainActivity;
 import com.example.customview.list.ListMainActivity;
@@ -298,6 +299,11 @@ public class CustomViewMain extends AppCompatActivity {
 
     public void startRegexActivity(View view) {
         Intent intent = new Intent(this, RegexMainActivity.class);
+        startActivity(intent);
+    }
+
+    public void startBitmapMainActivity(View view) {
+        Intent intent = new Intent(this, BitmapMainActivity.class);
         startActivity(intent);
     }
 }

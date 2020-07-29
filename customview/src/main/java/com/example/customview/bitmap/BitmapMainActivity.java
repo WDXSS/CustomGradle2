@@ -1,6 +1,6 @@
 package com.example.customview.bitmap;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -19,6 +19,19 @@ public class BitmapMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.bitmap_main_activity);
+
+        findViewById(R.id.btn_filter).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        findViewById(R.id.btn_filter).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(BitmapMainActivity.this, ImgFilterActivity.class));
+            }
+        });
     }
 
     public void changeBitmap(View view) {

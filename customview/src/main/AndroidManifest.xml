@@ -164,6 +164,7 @@
             android:theme="@style/TranslucentTheme" />
         <activity android:name=".other.CoordinatorLayoutDemo" />
         <activity android:name=".other.CoordinatorLayoutMainActivity" />
+        <activity android:name=".bitmap.ImgFilterActivity" />
     </application>
 
 </manifest>
