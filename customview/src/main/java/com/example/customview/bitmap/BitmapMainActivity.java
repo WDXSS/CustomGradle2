@@ -32,6 +32,12 @@ public class BitmapMainActivity extends AppCompatActivity {
                 startActivity(new Intent(BitmapMainActivity.this, ImgFilterActivity.class));
             }
         });
+        findViewById(R.id.btn_composite).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(BitmapMainActivity.this, CompositeImgActivity.class));
+            }
+        });
     }
 
     public void changeBitmap(View view) {

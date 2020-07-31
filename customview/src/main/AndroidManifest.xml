@@ -165,6 +165,7 @@
         <activity android:name=".other.CoordinatorLayoutDemo" />
         <activity android:name=".other.CoordinatorLayoutMainActivity" />
         <activity android:name=".bitmap.ImgFilterActivity" />
+        <activity android:name=".bitmap.CompositeImgActivity" />
     </application>
 
 </manifest>

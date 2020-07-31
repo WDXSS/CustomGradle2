@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.customview.R;
 
 /**
+ * 设置图片的饱和度
  * @author zhouchao
  * @date 2020/6/8
  */

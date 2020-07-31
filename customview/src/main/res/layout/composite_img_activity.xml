@@ -5,21 +5,19 @@
     android:orientation="vertical">
 
     <Button
-        style="@style/btn_flag"
-        android:onClick="changeBitmap"
-        android:text="点切换 图片" />
-
-    <Button
-        android:id="@+id/btn_filter"
-        style="@style/btn_flag"
-        android:text="修改图片的饱和度" />
-    <Button
-        android:id="@+id/btn_composite"
+        android:id="@+id/btn"
         style="@style/btn_flag"
         android:text="合成图片" />
-
+    <Button
+        android:id="@+id/btn2"
+        style="@style/btn_flag"
+        android:text="合成圆角图图片" />
+    <Button
+        android:id="@+id/btn3"
+        style="@style/btn_flag"
+        android:text="ShapeDrawable合成圆角图图片" />
     <ImageView
-        android:id="@+id/bitmap_img"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:id="@+id/img"
+        android:layout_width="200dp"
+        android:layout_height="200dp" />
 </LinearLayout>
