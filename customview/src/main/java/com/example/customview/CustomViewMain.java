@@ -30,6 +30,7 @@ import com.example.customview.other.ImmersionActivity;
 import com.example.customview.regex.RegexMainActivity;
 import com.example.customview.util.NumberUtil;
 import com.example.customview.view.IncludeMainActivity;
+import com.example.customview.view.constraint.ConstraintLayoutActivity;
 import com.example.firelibrary.FireMainActivity;
 import com.example.jetpack.JetpackMainActivity;
 
@@ -304,6 +305,11 @@ public class CustomViewMain extends AppCompatActivity {
 
     public void startBitmapMainActivity(View view) {
         Intent intent = new Intent(this, BitmapMainActivity.class);
+        startActivity(intent);
+    }
+
+    public void startConstrainLayoutActivity(View view) {
+        Intent intent = new Intent(this, ConstraintLayoutActivity.class);
         startActivity(intent);
     }
 }

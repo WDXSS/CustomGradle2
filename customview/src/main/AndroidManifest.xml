@@ -166,6 +166,9 @@
         <activity android:name=".other.CoordinatorLayoutMainActivity" />
         <activity android:name=".bitmap.ImgFilterActivity" />
         <activity android:name=".bitmap.CompositeImgActivity" />
+        <activity android:name=".view.constraint.ConstrainBiasActivity" />
+        <activity android:name=".view.constraint.ConstraintLayoutActivity" />
+        <activity android:name=".view.constraint.ConstrainCircleActivity" />
     </application>
 
 </manifest>
