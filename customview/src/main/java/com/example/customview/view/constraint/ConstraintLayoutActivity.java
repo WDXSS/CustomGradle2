@@ -25,8 +25,20 @@ public class ConstraintLayoutActivity extends AppCompatActivity {
         startActivity(new Intent(this,ConstrainBiasActivity.class));
     }
 
-
+    //2. 圆形定位
     public void circleActivity(View view) {
         startActivity(new Intent(this,ConstrainCircleActivity.class));
+    }
+    //3. 链式布局
+    public void chainActivity(View view) {
+        startActivity(new Intent(this,ConstrainChainActivity.class));
+    }
+    //4. 引导线
+    public void guidelineActivity(View view) {
+        startActivity(new Intent(this,ConstrainGuidelineActivity.class));
+    }
+    //5 .Barrier(屏障)
+    public void barrierActivity(View view) {
+        startActivity(new Intent(this,ConstrainBarrierActivity.class));
     }
 }
