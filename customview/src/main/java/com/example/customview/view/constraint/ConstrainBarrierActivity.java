@@ -35,6 +35,15 @@ public class ConstrainBarrierActivity extends AppCompatActivity {
 //        app:constraint_referenced_ids（设置屏障与哪些控件建立约束，填写控件id，多个 id 使用逗号 "," 分割）
 //        app:barrierDirection (设置 Barrier 显示在约束控件的方向：top，left，bottom，right 以及 start【同left】，end【同right】)
 
+        //     <!--   app:layout_constraintWidth_default="wrap"-->
+        //    https://www.jianshu.com/p/f86f800964d2
+        //layout_constraintWidth_default  只有在View的宽度定义为0dp(又叫match_constraint)的时候才生效，
+        // 其余情况下设置这个属性是不起任何作用的
+        //有三个值
+        //wrap：等价于android:layout_width="wrap_content"
+        //spread：等价于android:layout_width="match_parent"
+        //percent：设置View的宽度为parent的比例值，比例值默认是100%，即宽度是match_parent。这个比例值通过属性app:layout_constraintWidth_percent设置
+
         mEditTextA = findViewById(R.id.edit1);
         mEditTextB = findViewById(R.id.edit2);
         mTextViewA = findViewById(R.id.textView1);

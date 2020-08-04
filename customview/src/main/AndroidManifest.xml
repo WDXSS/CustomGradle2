@@ -171,6 +171,12 @@
         <activity android:name=".view.constraint.ConstrainCircleActivity" />
         <activity android:name=".view.constraint.ConstrainGuidelineActivity" />
         <activity android:name=".view.constraint.ConstrainBarrierActivity" />
+        <activity android:name=".view.constraint.ConstrainGroupActivity" />
+        <activity android:name=".view.constraint.ConstrainPlaceholderActivity" />
+        <activity android:name=".view.constraint.ConstrainAnimateActivity"
+            android:theme="@style/Theme.Design.NoActionBar"/>
+        <activity android:name=".view.constraint.ConstrainSetActivity"
+            android:theme="@style/Theme.Design.NoActionBar"/>
     </application>
 
 </manifest>

@@ -34,32 +34,37 @@
         app:layout_constraintTop_toBottomOf="@+id/edit2"
         tools:ignore="MissingConstraints">
 
+     <!--   app:layout_constraintWidth_default="wrap"-->
+       <!-- 注意控件A和控件B的区别
+       A 中设置了 android:layout_width="0dp"
+        app:layout_constraintWidth_default="wrap"
+       -->
         <TextView
             android:id="@+id/textView1"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="控件A控件"
+            app:layout_constraintWidth_default="wrap"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/guideline"
+            app:layout_constraintHorizontal_bias="0.04"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/guideline2"
-            app:layout_constraintVertical_bias="0.1"
-            app:layout_constraintHorizontal_bias="0.04"
-            android:visibility="gone"/>
+            app:layout_constraintVertical_bias="0.1" />
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:text="控件B：自动增长,自动增长,自动增长,自动增长,自动增长,"
+            android:text="控件B：自动增长"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintRight_toLeftOf="@+id/guideline2"
+            app:layout_constraintRight_toLeftOf="@+id/guideline"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.521"
+            app:layout_constraintVertical_bias="0.31"
             app:layout_constraintWidth_percent="0.2" />
 
         <androidx.constraintlayout.widget.Barrier
@@ -67,7 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:barrierDirection="right"
-            app:constraint_referenced_ids="textView1,textView2"/>
+            app:constraint_referenced_ids="textView1,textView2" />
 
         <TextView
             android:id="@+id/textView3"
@@ -76,30 +81,17 @@
             android:text="控件C"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.2"
             app:layout_constraintStart_toEndOf="@+id/barrier"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.2"
             app:layout_constraintVertical_bias="0.149" />
 
-
-        <View
-            android:id="@+id/guideline2"
-            android:layout_width="10dp"
-            android:layout_height="match_parent"
-            android:background="#ff00ff"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:orientation="vertical"
-            android:layout_marginRight="50dp"
-            />
-
-        <androidx.constraintlayout.widget.Barrier
-            android:id="@+id/barrier3"
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:barrierDirection="right"
-            app:constraint_referenced_ids="textView3,guideline2" />
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="40dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
