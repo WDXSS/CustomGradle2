@@ -1,4 +1,4 @@
-include ':app', ':javalibrary', ':androidlibrary', ':androidorigin', ':android_hs_library', ':dynamic_feature', ':firelibrary', ':jetpack',
+include ':app', ':androidlibrary', ':androidorigin', ':android_hs_library', ':dynamic_feature', ':firelibrary', ':jetpack',
         ':designPatternsLib', ':customview', ":ui_system", ':library-recycler', ':logcollector'
 //引入库的方式2
 //include ':outlibrary'

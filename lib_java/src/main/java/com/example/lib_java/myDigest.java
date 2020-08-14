@@ -1,4 +1,4 @@
-package gradle.custom.com.javalibrary;
+package com.example.lib_java;
 
 import java.security.MessageDigest;
 
