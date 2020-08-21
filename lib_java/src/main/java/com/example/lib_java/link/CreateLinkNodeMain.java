@@ -1,12 +1,11 @@
 package com.example.lib_java.link;
 
 /**
- * @author zhouchao
- * @date 2020/8/14
+ * 创建一个单链表
  */
-class LinkNodeMain {
+class CreateLinkNodeMain {
     private void test1() {
-        LinkNodeMain linkNodeMain = new LinkNodeMain();
+        CreateLinkNodeMain linkNodeMain = new CreateLinkNodeMain();
         SingleNode<Integer> singleNode = new SingleNode<>();
         singleNode.setNext(null);
         singleNode.setData(0);
@@ -15,7 +14,7 @@ class LinkNodeMain {
     }
 
     private void test2() {
-        LinkNodeMain linkNodeMain = new LinkNodeMain();
+        CreateLinkNodeMain linkNodeMain = new CreateLinkNodeMain();
         SingleNode<Integer> singleNode = new SingleNode<>();
         singleNode.setNext(null);
         singleNode.setData(0);
@@ -24,7 +23,7 @@ class LinkNodeMain {
     }
 
     private void test3() {
-        LinkNodeMain linkNodeMain = new LinkNodeMain();
+        CreateLinkNodeMain linkNodeMain = new CreateLinkNodeMain();
         SingleNode<Integer> singleNode = new SingleNode<>();
         singleNode.setNext(null);
         singleNode.setData(0);
@@ -33,7 +32,7 @@ class LinkNodeMain {
     }
 
     public static void main(String[] args) {
-        LinkNodeMain linkNodeMain = new LinkNodeMain();
+        CreateLinkNodeMain linkNodeMain = new CreateLinkNodeMain();
 //        linkNodeMain.test1();
 //        linkNodeMain.test2();
         linkNodeMain.test3();
