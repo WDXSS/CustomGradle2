@@ -43,7 +43,7 @@
             android:id="@+id/textView1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="控件A控件"
+            android:text="控件A控件33333333333333333333"
             app:layout_constraintWidth_default="wrap"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
