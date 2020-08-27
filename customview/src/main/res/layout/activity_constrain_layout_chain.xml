@@ -50,6 +50,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/layout1" />
 
+
     <include
         android:id="@+id/layout3"
         layout="@layout/activity_constrain_layout_chain3"
@@ -63,10 +64,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/layout3" />
+
     <include
+        android:id="@+id/layout5"
         layout="@layout/activity_constrain_layout_chain5"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/layout4" />
+
+    <include
+        layout="@layout/activity_constrain_layout_chain_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/layout5"
+        android:layout_marginTop="10dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
