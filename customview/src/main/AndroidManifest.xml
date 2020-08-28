@@ -177,6 +177,7 @@
             android:theme="@style/Theme.Design.NoActionBar"/>
         <activity android:name=".view.constraint.ConstrainSetActivity"
             android:theme="@style/Theme.Design.NoActionBar"/>
+        <activity android:name=".view.constraint.ConstrainChainActivity" />
     </application>
 
 </manifest>
