@@ -5,45 +5,81 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
-
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:fitsSystemWindows="true"
-        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
-        android:transitionName="picture"
         app:layout_behavior="com.example.customview.other.behavior.AppBarLayoutOverScrollViewBehavior"
-        tools:targetApi="lollipop">
+        android:fitsSystemWindows="true">
+        <!--   app:contentScrim="@color/colorPrimary" 设置趋于折叠和折叠之后 的颜色-->
+        <!--   app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        scroll 表示随着内容滚动一起滚动，
+        exitUntilCollapsed 表示滚动完成之后会固定在界面上，不在移出屏幕-->
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/collapsingToolbarLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:contentScrim="@color/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
-            app:statusBarScrim="@color/colorPrimaryDark">
-
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentScrim="@color/white"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <!--定义标题栏内容  1. 图片 ， 2 Toolbar-->
+            <!-- app:layout_collapseMode 指定 当前控件在 CollapsingToolbarLayout 折叠时折叠-->
+            <!-- parallax 表示 在折叠的过程中产生一定的位移，这种视觉效果非常好-->
+            <!-- pin 表示在折叠过程中位置始终保持不变-->
+            <!--view 设置 tag  是为在 behavior 中获取到 view 调整view 的大小-->
             <ImageView
-                android:id="@+id/siv_picture"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"
                 android:foreground="@mipmap/test"
                 android:scaleType="centerCrop"
                 android:tag="overScroll"
-                app:layout_collapseMode="parallax"
-                tools:src="@android:drawable/sym_def_app_icon" />
+                app:layout_collapseMode="parallax" />
 
+            <!--android:fitsSystemWindows="true" 表示 该控件将出现在 系统的状态栏里 ，
+            注意：1.必须给父类也设置上
+             2. activity 的主题 设置成透明-->
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:contentInsetEnd="64dp"
-                app:layout_collapseMode="pin"
-                app:popupTheme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+                android:layout_height="?actionBarSize"
+                app:layout_collapseMode="pin" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
+
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="250dp"-->
+<!--        android:fitsSystemWindows="true"-->
+<!--        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"-->
+<!--        android:transitionName="picture"-->
+<!--        app:layout_behavior="com.example.customview.other.behavior.AppBarLayoutOverScrollViewBehavior"-->
+<!--        tools:targetApi="lollipop">-->
+
+<!--        <com.google.android.material.appbar.CollapsingToolbarLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            app:contentScrim="@color/colorPrimary"-->
+<!--            app:layout_scrollFlags="scroll|exitUntilCollapsed"-->
+<!--            app:statusBarScrim="@color/colorPrimaryDark">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:fitsSystemWindows="true"-->
+<!--                android:foreground="@mipmap/test"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:tag="overScroll"-->
+<!--                app:layout_collapseMode="parallax"-->
+<!--                tools:src="@android:drawable/sym_def_app_icon" />-->
+
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="?attr/actionBarSize"-->
+<!--                app:contentInsetEnd="64dp"-->
+<!--                app:layout_collapseMode="pin"-->
+<!--                app:popupTheme="@style/Theme.AppCompat.DayNight.DarkActionBar" />-->
+<!--        </com.google.android.material.appbar.CollapsingToolbarLayout>-->
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"

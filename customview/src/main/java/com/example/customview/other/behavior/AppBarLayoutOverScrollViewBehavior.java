@@ -104,7 +104,7 @@ public class AppBarLayoutOverScrollViewBehavior extends AppBarLayout.Behavior {
 		if (onProgressChangeListener != null) {
 			float progress = Math.min((mLastScale - 1) / MAX_REFRESH_LIMIT, 1);//计算0~1的进度
 			onProgressChangeListener.onProgressChange(progress, false);
-			Log.e("ssss", "onProgressChange");
+			Log.e("overScroll", "onProgressChange");
 		}
 
 	}
