@@ -132,7 +132,8 @@
         <Button
             style="@style/btn_flag"
             android:onClick="startCoordinatorLayout"
-            android:text="CoordinatorLayout" />
+            android:text="CoordinatorLayout"
+            android:textAllCaps="false" />
 
         <Button
             style="@style/btn_flag"

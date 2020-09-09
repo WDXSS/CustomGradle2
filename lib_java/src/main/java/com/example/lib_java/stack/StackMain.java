@@ -8,4 +8,9 @@ package com.example.lib_java.stack;
  */
 public class StackMain {
 	//ArrayStack
+
+	public static void main(String[] args) {
+		ArrayStack arrayStack = new ArrayStack(10);
+		
+	}
 }

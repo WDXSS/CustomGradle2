@@ -19,4 +19,8 @@ public class CoordinatorLayoutMainActivity extends AppCompatActivity {
     public void startDemo1(View view) {
         startActivity(new Intent(CoordinatorLayoutMainActivity.this, CoordinatorLayoutDemo.class));
     }
+
+    public void startCustomBehavior(View view) {
+        startActivity(new Intent(CoordinatorLayoutMainActivity.this, CoordinatorLayoutBehaviorActivity.class));
+    }
 }

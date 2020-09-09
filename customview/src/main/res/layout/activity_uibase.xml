@@ -9,6 +9,7 @@
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_behavior="com.example.customview.other.behavior.AppBarLayoutOverScrollViewBehavior"
         android:background="#0000ff">
 
         <!--        app:layout_scrollFlags="scroll|exitUntilCollapsed"-->

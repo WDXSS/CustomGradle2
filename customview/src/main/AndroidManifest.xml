@@ -178,6 +178,7 @@
         <activity android:name=".view.constraint.ConstrainSetActivity"
             android:theme="@style/Theme.Design.NoActionBar"/>
         <activity android:name=".view.constraint.ConstrainChainActivity" />
+        <activity android:name=".other.CoordinatorLayoutBehaviorActivity" />
     </application>
 
 </manifest>
