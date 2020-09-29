@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.customview.anim.property.value.LoadingDemo;
 import com.example.customview.anim.view.tween.ScannerDome;
+import com.example.customview.view.NineViewActivity;
 import com.example.customview.view.SpiderActivity;
 
 
@@ -51,5 +52,9 @@ public class DrawViewMain extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.d(TAG, "onDestroy() called");
+    }
+
+    public void startNine(View view) {
+        startActivity(new Intent(DrawViewMain.this, NineViewActivity.class));
     }
 }

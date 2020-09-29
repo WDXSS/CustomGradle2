@@ -30,4 +30,11 @@
         android:textAllCaps="false"
         android:onClick="threadBlock"
         android:text="Thread block"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:onClick="startNine"
+        android:text="九宫格"/>
 </LinearLayout>
