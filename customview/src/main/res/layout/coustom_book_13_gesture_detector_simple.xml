@@ -10,7 +10,7 @@
     \n要实现的功能：当用户向左滑动的距离超过100像素，且滑动的速度超过 100 像素/秒，即判断向左滑动，同理向右滑动" />
 
     <TextView
-        android:id="@+id/_13_gesture_detector_tv"
+        android:id="@+id/gesture_detector_tv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="20dp"

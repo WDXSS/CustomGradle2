@@ -181,6 +181,7 @@
         <activity android:name=".other.CoordinatorLayoutBehaviorActivity"
             android:theme="@style/Theme.Design.NoActionBar"/>
         <activity android:name=".view.NineViewActivity" />
+        <activity android:name=".viewPage.ViewPageMainActivity" />
     </application>
 
 </manifest>

@@ -34,7 +34,7 @@ public class SimpleOnGestureDetectorActivity extends AppCompatActivity {
         //核心代码：在 onFling() 函数中判定当前滑动的方向和滑动速度是否到达 指定的值
         mGestureDetector = new GestureDetector(this, new SimpleOnGestureDetectorImpl(this));
 
-        mTextView = findViewById(R.id._13_gesture_detector_tv);
+        mTextView = findViewById(R.id.gesture_detector_tv);
         //在OnTouch 事件中进行拦截
         mTextView.setOnTouchListener(new View.OnTouchListener() {
             @Override

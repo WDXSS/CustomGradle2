@@ -44,7 +44,7 @@ public class GestureDetectorActivity extends AppCompatActivity {
         mOnGestureListenerImpl = new OnGestureListenerImpl();
         mGestureDetector = new GestureDetector(this, mOnGestureListenerImpl);
 
-        mTextView = findViewById(R.id._13_gesture_detector_tv);
+        mTextView = findViewById(R.id.gesture_detector_tv);
         //在OnTouch 事件中进行拦截
         mTextView.setOnTouchListener(new View.OnTouchListener() {
             @Override

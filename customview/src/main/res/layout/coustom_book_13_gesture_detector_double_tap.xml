@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:id="@+id/_13_gesture_detector_tv"
+        android:id="@+id/gesture_detector_tv"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:background="#FFEB3B"

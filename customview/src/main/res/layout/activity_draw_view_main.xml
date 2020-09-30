@@ -37,4 +37,10 @@
         android:textAllCaps="false"
         android:onClick="startNine"
         android:text="九宫格"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:onClick="startViewPage"
+        android:text="ViewPage"/>
 </LinearLayout>
