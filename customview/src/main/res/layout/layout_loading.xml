@@ -19,6 +19,23 @@
         android:layout_toEndOf="@+id/btn_start"
         android:text="cancel"
         android:textAllCaps="false" />
+    <TextView
+        android:id="@+id/progressTest"
+        style="@style/text_content"
+        android:layout_below="@+id/btn_cancel"
+        android:text="从左边开始的进度条，从上从下开始的类似"
+      />
+    <ProgressBar
+        android:id="@+id/vote_single_progress_right"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@+id/progressTest"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:max="100"
+        android:progress="44"
+        android:progressDrawable="@drawable/progressbar_style_right" />
 
     <com.example.customview.anim.property.value.widget.LoadingImageView
         android:id="@+id/img_loading"
