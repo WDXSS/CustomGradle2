@@ -182,6 +182,7 @@
             android:theme="@style/Theme.Design.NoActionBar"/>
         <activity android:name=".view.NineViewActivity" />
         <activity android:name=".viewPage.ViewPageMainActivity" />
+        <activity android:name=".view.constraint.MotionLayoutActivity" />
     </application>
 
 </manifest>

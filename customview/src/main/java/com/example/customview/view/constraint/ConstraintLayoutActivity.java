@@ -60,6 +60,11 @@ public class ConstraintLayoutActivity extends AppCompatActivity {
     public void animateActivity(View view) {
         startActivity(new Intent(this, ConstrainAnimateActivity.class));
     }
+    //9.Convert to MotionLayout
+    public void motionLayout(View view) {
+        startActivity(new Intent(this, MotionLayoutActivity.class));
+    }
+
 
 
 }
