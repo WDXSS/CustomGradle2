@@ -26,10 +26,12 @@
             <option value="$PROJECT_DIR$/lib_kotlin" />
             <option value="$PROJECT_DIR$/library-recycler" />
             <option value="$PROJECT_DIR$/logcollector" />
+            <option value="$PROJECT_DIR$/motionlayoutStart" />
             <option value="$PROJECT_DIR$/ui_system" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
+        <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
     </option>
   </component>
