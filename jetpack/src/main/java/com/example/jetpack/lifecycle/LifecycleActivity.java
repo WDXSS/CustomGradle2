@@ -1,12 +1,15 @@
 package com.example.jetpack.lifecycle;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.LifecycleRegistry;
 import androidx.lifecycle.OnLifecycleEvent;
 
@@ -18,7 +21,7 @@ import com.example.jetpack.lifecycle.mvp.MyPresenter;
  * http://liuwangshu.cn/application/jetpack/2-lifecycle-use.html
  */
 @DevDescribe(value = "lifecycle 的实例")
-public class LifecycleActivity extends AppCompatActivity {
+public class LifecycleActivity extends AppCompatActivity{
     private static final String TAG = "LifecycleActivity";
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,7 +57,6 @@ public class LifecycleActivity extends AppCompatActivity {
         super.onPause();
         Log.d(TAG, "onPause");
     }
-
 
     public class MyObserver implements LifecycleObserver {
         @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)

@@ -1,6 +1,25 @@
-apply plugin: 'com.android.application'
-//引入文件'version.gradle',通过配置ext{}统一版本信息(lib 也要引入所以文件移动Project文件夹下)
+apply plugin: 'com.android.application'  //3.第三方插件
+//插件：1.脚本插件， 2.对象插件   2.1 内部插件 ；2.2.第三方插件
+//引入文件'version.gradle',通过配置ext{}统一版本信息(lib 也要引入所以文件移动Project文件夹下) 1.脚本插件
 //apply from: 'version.gradle'
+//apply plugin: 'cpp' //Gradle 的发行包中有大量的插件 ; 添加 c++ 源代码编译功能 2.1内部插件 实现了org.gradle.api.plugins接口的插件会有pulginid，
+                                                     // 使用pulginid是最简洁、最常用的方式：apply plugin: 'cpp'
+
+//2.2 第三方插件：第三方的对象插件通常是jar文件，要想让构建脚本知道第三方插件的存在，需要使用buildscrip来设置。
+/**
+ *  android gradle 插件也是第三方插件 ，如果我们引入 android Gradle 插件 需要这么写：
+    buildscript {
+        repositories {
+            jcenter()
+        }
+        dependencies {
+            classpath 'com.android.tools.build:gradle:2.3.2'
+        }
+    }
+    apply plugin: 'com.android.application'
+ */
+
+
 
 android {
     description "learn gradle"//添加任务描述
@@ -243,6 +262,7 @@ println para
 
 task config {
     println "build 就会执行  config--333-----------------"
+
 //    buildConfigField("String","url",'"https://www.google.com.hk/"')//先级高的flavor
 }
 // http://wiki.jikexueyuan.com/project/GradleUserGuide-Wiki/  文件操作

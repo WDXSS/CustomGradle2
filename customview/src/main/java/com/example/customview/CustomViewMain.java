@@ -37,6 +37,7 @@ import com.example.customview.view.constraint.ConstraintLayoutActivity;
 import com.example.firelibrary.FireMainActivity;
 import com.example.jetpack.JetpackMainActivity;
 
+import java.math.BigDecimal;
 import java.security.SecureRandom;
 import java.util.Random;
 
@@ -68,41 +69,7 @@ public class CustomViewMain extends AppCompatActivity {
 
         AnnotationCar.instance().inject(this);
         Log.e("WANG", "Car is " + mCat.toString());
-    }
-
-    private void generateNum5() {
-        Random random = new Random();
-        //生成5位的随机数
-        int rannum = (int) (random.nextDouble() * (99999 - 10000 + 1)) + 10000;
-        double dou = random.nextDouble() * 90000 + 10000;
-        Log.d(TAG, "startBookMain() random.nextDouble() = [" + dou + "]");
-        Log.d(TAG, "startBookMain() random.nextDouble() = [" + (99999 - 10000 + 1) + "]");
-        Log.d(TAG, "startBookMain() rannum = [" + rannum + "]");
-        Log.d(TAG, "startBookMain() Math.random()*100 = [" + Math.random() * 100 + "]");
-
-        for (int i = 0; i < 100; i++) {
-            Log.d(TAG, "startBookMain() random.nextDouble() *100 = [" + random.nextDouble() * 100000 + "]");
-        }
-    }
-
-    private long generateUnpredictableNumber() {
-        // 整形取值范围 ： -2^31 —— 2^31 -1, 即-2147483648——2147483647
-        // 返回 允许的 最大值 2^32 - 1 = 4294967296 - 1
-        int size = 100;
-        long[] num = new long[size + 1];
-        Random random = new Random();
-        for (int i = 1; i < size + 1; i++) {
-            num[i] = (long) random.nextInt() + (long) (1L << 31);
-//            num[i] = (long) random.nextInt();
-//            System.out.println(num[i]);
-            if (num[i] >= ((1L << 32) - 2)) {
-                System.out.println("最大值" + ((1L << 32) - 1));
-                System.out.println(num[i]);
-            }
-        }
-//        将1解释为int,将其移位31位使其成为最大的负int,然后将其转换为long(仍为负数).你要1L << 31
-        System.out.println("end " + (1L << 32));
-        return (long) random.nextInt() + (long) (1L << 31);
+        NumberUtil.decimalScale();
     }
 
 
@@ -320,4 +287,6 @@ public class CustomViewMain extends AppCompatActivity {
         Intent intent = new Intent(this, ConstraintLayoutActivity.class);
         startActivity(intent);
     }
+
+
 }
