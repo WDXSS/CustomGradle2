@@ -36,7 +36,7 @@ public class LifecycleActivity extends AppCompatActivity{
 //        LifecycleOwner可以理解为被观察者，
 //        MainActivity默认实现了LifecycleOwner接口，
 //        也就是说MainActivity是被观察者
-        getLifecycle().addObserver(new MyObserver());//1
+        getLifecycle().addObserver(new MyObserver(this));//1
 
         //2 TODO MVP 的例子
         MyPresenter presenter = new MyPresenter();
@@ -59,9 +59,25 @@ public class LifecycleActivity extends AppCompatActivity{
     }
 
     public class MyObserver implements LifecycleObserver {
+        LifecycleOwner mLifecycleOwner;
+
+        public MyObserver(LifecycleOwner lifecycleOwner) {
+            mLifecycleOwner = lifecycleOwner;
+        }
+        @OnLifecycleEvent(Lifecycle.Event.ON_START)
+        public void onStart(LifecycleOwner owner){
+            //添加一个参数，LifecycleOwner
+            Log.e(TAG, "onStart "+owner.getClass().getSimpleName());
+        }
         @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
         void onResume(){
-            Log.d(TAG, "Lifecycle call onResume");
+            Log.d(TAG, "Lifecycle call onResume ");
+            Log.d(TAG, "Lifecycle call onResume event = ");
+        }
+        @OnLifecycleEvent(Lifecycle.Event.ON_ANY)
+        void  any(LifecycleOwner owner, Lifecycle.Event event){
+            //添加两个参数，两个参数是只能用 Lifecycle.Event.ON_ANY
+            Log.e(TAG, "any() called with: owner = [" + owner.getClass().getSimpleName() + "], event = [" + event.name() + "]");
         }
         @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
         void onPause(){
