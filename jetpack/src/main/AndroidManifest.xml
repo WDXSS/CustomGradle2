@@ -3,10 +3,11 @@
 
     <application>
         <activity android:name=".lifecycle.LifecycleActivity" />
-        <activity android:name=".livedata.LiveDataMainActivity" />
+        <activity android:name=".livedata.ui.LiveDataMainActivity" />
         <activity android:name=".viewModel.ViewModelMainActivity" />
         <activity android:name=".viewModel.step5.Activity_step5" />
         <activity android:name=".JetpackMainActivity" />
         <activity android:name=".navigation.NavigationMainActivity" />
+        <activity android:name=".livedata.ui.LiveDataMapActivity" />
     </application>
 </manifest>

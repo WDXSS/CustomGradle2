@@ -1,4 +1,4 @@
-package com.example.jetpack.livedata;
+package com.example.jetpack.livedata.ui;
 
 import android.os.Bundle;
 import android.util.Log;

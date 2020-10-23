@@ -8,8 +8,10 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.jetpack.lifecycle.LifecycleActivity;
-import com.example.jetpack.livedata.LiveDataMainActivity;
+import com.example.jetpack.livedata.ui.LiveDataMainActivity;
+import com.example.jetpack.livedata.ui.LiveDataMapActivity;
 import com.example.jetpack.navigation.NavigationMainActivity;
+import com.example.jetpack.viewModel.ViewModelMainActivity;
 
 public class JetpackMainActivity extends AppCompatActivity {
 
@@ -29,5 +31,14 @@ public class JetpackMainActivity extends AppCompatActivity {
 
     public void onStartNavigation(View view) {
         startActivity(new Intent(JetpackMainActivity.this, NavigationMainActivity.class));
+    }
+
+    public void onStartLiveData2(View view) {
+        startActivity(new Intent(JetpackMainActivity.this, LiveDataMapActivity.class));
+
+    }
+
+    public void onStartViewModel(View view) {
+        startActivity(new Intent(JetpackMainActivity.this, ViewModelMainActivity.class));
     }
 }
