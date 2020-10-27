@@ -1,7 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.jetpack" >
 
     <application>
+        <activity android:name=".paging.BasicUsageActivity" />
+        <activity android:name=".paging.PagingMainActivity" />
         <activity android:name=".lifecycle.LifecycleActivity" />
         <activity android:name=".livedata.ui.LiveDataMainActivity" />
         <activity android:name=".viewModel.ViewModelMainActivity" />
@@ -10,4 +13,5 @@
         <activity android:name=".navigation.NavigationMainActivity" />
         <activity android:name=".livedata.ui.LiveDataMapActivity" />
     </application>
+
 </manifest>
