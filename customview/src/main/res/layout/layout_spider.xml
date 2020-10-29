@@ -159,7 +159,14 @@
 
         <TextView
             android:id="@+id/text"
-            style="@style/text_content" />
+            style="@style/text_content"
+            android:text="底部"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/appCompatBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="AppCompatButton"/>
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
