@@ -12,6 +12,7 @@
         <activity android:name=".JetpackMainActivity" />
         <activity android:name=".navigation.NavigationMainActivity" />
         <activity android:name=".livedata.ui.LiveDataMapActivity" />
+        <activity android:name=".lifecycle.service.LifecycleServiceActivity" />
     </application>
 
 </manifest>
