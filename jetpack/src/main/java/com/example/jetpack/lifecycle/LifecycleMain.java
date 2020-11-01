@@ -11,5 +11,8 @@ public class LifecycleMain {
     //Lifecycle.java 两个生命周期相关的枚举：Event 和 State
 //    Lifecycle
 //    MutableLiveData  继承自LiveData
+    //1.Lifecycle.Event.ON_ANY 方法最多两个参数，参考LifecycleActivity.MyObserver 中的实现
 
+    //2. processLifeOwner ： LifeCycle 提供了一个 ProcessLifecycleOwner的类，监听应用的生命周期
+    //3. LifecycleService  继承自Service 并且实现了 LifecycleOwner 接口
 }
