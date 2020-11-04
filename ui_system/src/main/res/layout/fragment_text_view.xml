@@ -78,5 +78,15 @@
             android:layout_margin="8dp"
             android:textAllCaps="false" />
 
+        <TextView
+            android:id="@+id/text_view_ellipsize"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#00ff00"
+            android:maxLines="3"
+            android:textAllCaps="false"
+            android:ellipsize="end"
+            />
     </LinearLayout>
 </ScrollView>
