@@ -16,4 +16,7 @@
         land and facilities for domesticated animals. Where more secure dwellings are not available, people may live in the informal and sometimes illegal shacks found in slums and shanty towns. More generally,
         "home" may be considered to be a geographic area, such as a town, village, suburb, city, or country.</string>
     <string name="button">Button</string>
+
+    <string name="to_expand_hint">Expand</string>
+    <string name="to_shrink_hint">Shrink</string>
 </resources>

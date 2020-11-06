@@ -43,4 +43,10 @@
         android:textAllCaps="false"
         android:onClick="startViewPage"
         android:text="ViewPage"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:onClick="startExpandableTextView"
+        android:text="自定义ExpandableTextVie"/>
 </LinearLayout>

@@ -183,6 +183,8 @@
         <activity android:name=".view.NineViewActivity" />
         <activity android:name=".viewPage.ViewPageMainActivity" />
         <activity android:name=".view.constraint.MotionLayoutActivity" />
+        <activity android:name=".widget.TextViewMainActivity" />
+        <activity android:name=".widget.ActivityListView" />
     </application>
 
 </manifest>

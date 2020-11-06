@@ -13,6 +13,7 @@ import com.example.customview.anim.view.tween.ScannerDome;
 import com.example.customview.view.NineViewActivity;
 import com.example.customview.view.SpiderActivity;
 import com.example.customview.viewPage.ViewPageMainActivity;
+import com.example.customview.widget.TextViewMainActivity;
 
 
 public class DrawViewMain extends AppCompatActivity {
@@ -60,5 +61,9 @@ public class DrawViewMain extends AppCompatActivity {
     }
     public void startViewPage(View view) {
         startActivity(new Intent(DrawViewMain.this, ViewPageMainActivity.class));
+    }
+
+    public void startExpandableTextView(View view) {
+        startActivity(new Intent(DrawViewMain.this, TextViewMainActivity.class));
     }
 }
