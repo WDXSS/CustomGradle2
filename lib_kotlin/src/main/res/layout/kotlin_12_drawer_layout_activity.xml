@@ -22,10 +22,11 @@
 
     <!--第二个子布局-->
     <TextView
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:text=" This  is a menu"
+        android:background="#00ff00"
         android:textSize="30dp" />
     <!--    android:layout_gravity="start" 是必须设置 的属性 ，表示 left ,right
        start 表示 会根据系统语言进行 判断-->

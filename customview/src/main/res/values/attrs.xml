@@ -26,4 +26,13 @@
         9.enum 枚举
         10.flag 位或运算-->
     </declare-styleable>
+
+    <declare-styleable name="BookDetailTabView">
+        <attr name="book_detail_tab_text" format="string"/>
+        <attr name="book_detail_tab_text_size" format="integer"/>
+        <attr name="book_detail_tab_text_color_normal" format="color|reference"/>
+        <attr name="book_detail_tab_text_color_selected" format="color|reference"/>
+        <attr name="book_detail_tab_line_color" format="color|reference"/>
+        <attr name="book_detail_tab_line_height" format="dimension"/>
+    </declare-styleable>
 </resources>

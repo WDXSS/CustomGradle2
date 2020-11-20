@@ -1,15 +1,20 @@
 package com.example.kotlin._12kotlin
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
+import android.app.Activity
 import android.os.Bundle
+import android.util.DisplayMetrics
 import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.customview.widget.ViewDragHelper
+import androidx.drawerlayout.widget.DrawerLayout
 import com.example.kotlin.R
 import com.example.kotlin._2kotlin.DevKotlin
 import kotlinx.android.synthetic.main.kotlin_12_drawer_layout_activity.*
+import java.lang.reflect.Field
 
 @DevKotlin("滑动菜单")
 class DrawerLayoutActivity : AppCompatActivity() {
@@ -28,6 +33,7 @@ class DrawerLayoutActivity : AppCompatActivity() {
             it.setDisplayHomeAsUpEnabled(true)
             it.setHomeAsUpIndicator(R.drawable.ic_menu)
         }
+
     }
 
 
@@ -52,4 +58,7 @@ class DrawerLayoutActivity : AppCompatActivity() {
         }
         return true
     }
+   
 }
+
+
