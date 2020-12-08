@@ -7,6 +7,7 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentFactory;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -67,21 +68,29 @@ import com.example.customview.R;
 public class FragmentMainActivity extends AppCompatActivity {
     private static final String TAG = "FragmentMainActivity";
     private FragmentManager mFragmentManager;
+    private FragmentFactory mFragmentFactory;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment_main);
         Log.d(TAG, "onCreate: ");
-
+        mFragmentFactory = new FragmentFactory();
         mFragmentManager = getSupportFragmentManager();
+        //
+        mFragmentManager.setFragmentFactory(mFragmentFactory);
+
         FragmentTransaction transaction = mFragmentManager.beginTransaction();
-        Fragment fragment1 = Fragment01.newFragment();
+        Fragment fragment1 = Fragment01.newFragment("sssssssss");
+        Bundle bundle = new Bundle();
+        bundle.putString("key"," 咋！");
+        fragment1.setArguments(bundle);
         Fragment fragment2 = Fragment02.newFragment();
         transaction.add(R.id.layout_contain1, fragment1, "fragment01");
         transaction.add(R.id.layout_contain1, fragment2, "fragment02");
         transaction.show(fragment1);
         transaction.hide(fragment2);
+        Log.d(TAG, "onCreate: mFragmentManager.getFragments().size() = "+ mFragmentManager.getFragments().size());
 
         transaction.commitAllowingStateLoss();
 

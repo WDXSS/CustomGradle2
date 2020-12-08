@@ -10,16 +10,25 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentFactory;
 
 import com.example.customview.R;
 
 public class Fragment01 extends Fragment {
     private static final String TAG = "Fragment01";
 
-    public static Fragment newFragment() {
-        Fragment fragment = new Fragment01();
+    private String FragmentFlag;
+    public static Fragment newFragment(String fragmentFlag) {
+        Fragment fragment = new Fragment01(fragmentFlag);
 
         return fragment;
+    }
+
+    public Fragment01() {
+    }
+
+    public Fragment01(String fragmentFlag) {
+        FragmentFlag = fragmentFlag;
     }
 
     @Override
@@ -30,7 +39,8 @@ public class Fragment01 extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.i(TAG, "onCreate: ");
+        Log.i(TAG, "onCreate: " + FragmentFlag);
+        Log.d(TAG, "onCreate: "+ getArguments().getString("key"));
     }
 
     @Nullable

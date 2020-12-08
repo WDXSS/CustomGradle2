@@ -51,7 +51,9 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".fragment.FragmentMainActivity" />
+        <activity android:name=".fragment.FragmentMainActivity"
+            android:screenOrientation="sensor"/>
+
         <activity android:name=".list.ListMainActivity" />
         <activity android:name=".deeplink.DeepLinkActivity">
             <intent-filter>
