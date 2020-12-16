@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.MessageQueue;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -74,7 +75,16 @@ public class CustomViewMain extends AppCompatActivity {
 
 		Log.e(TAG, "onCreate: text = " + textView.getContext().getClass().getSimpleName());
 		AppCompatButton appCompatButton = findViewById(R.id.appCompatBtn);
-		Log.e(TAG, "onCreate: appCompatButton = " +appCompatButton.getContext().getClass().getSimpleName());
+		Log.e(TAG, "onCreate: appCompatButton = " + appCompatButton.getContext().getClass().getSimpleName());
+
+		//添加 一个IdleHandler
+		getMainLooper().getQueue().addIdleHandler(new MessageQueue.IdleHandler() {
+			@Override
+			public boolean queueIdle() {
+				Log.e(TAG, "queueIdle: 空闲是的一些操作");
+				return false;
+			}
+		});
 	}
 
 
