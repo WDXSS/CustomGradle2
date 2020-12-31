@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.customview.R;
 import com.example.jetpack.DevDescribe;
 
+import java.util.ArrayList;
+
 /**
  * https://blog.csdn.net/u010629285/article/details/102993431
  */
@@ -86,7 +88,13 @@ public class ImmersionActivity extends AppCompatActivity {
 
     private  void setTest(){
         View decorView = getWindow().getDecorView();
-
+        decorView.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                int systemUiVisibility = decorView.getSystemUiVisibility();
+                Log.d(TAG, "run: systemUiVisibility = "+ systemUiVisibility);
+            }
+        },500);
         decorView.setOnSystemUiVisibilityChangeListener
                 (new View.OnSystemUiVisibilityChangeListener() {
                     @Override
@@ -104,7 +112,6 @@ public class ImmersionActivity extends AppCompatActivity {
                         }
                     }
                 });
-
     }
 
     private void hideSystemUI() {
