@@ -163,7 +163,8 @@
         <activity android:name=".bitmap.BitmapMainActivity" />
         <activity
             android:name=".other.ImmersionActivity"
-            android:theme="@style/TranslucentTheme" />
+            android:theme="@style/TranslucentTheme"/>
+       <!--     android:theme="@style/TranslucentTheme" />-->
         <activity android:name=".other.CoordinatorLayoutDemo" />
         <activity android:name=".other.CoordinatorLayoutMainActivity" />
         <activity android:name=".bitmap.ImgFilterActivity" />

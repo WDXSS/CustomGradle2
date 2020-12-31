@@ -6,11 +6,15 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/topBtn"
         style="@style/btn_flag"
+        android:layout_marginTop="40dp"
         android:text="顶部的btn" />
 
     <Button
+        android:id="@+id/bottomBtn"
         style="@style/btn_flag"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
         android:text="底部的btn" />
 </RelativeLayout>

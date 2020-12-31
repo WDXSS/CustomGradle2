@@ -303,5 +303,4 @@ public class CustomViewMain extends AppCompatActivity {
 		startActivity(intent);
 	}
 
-
 }
