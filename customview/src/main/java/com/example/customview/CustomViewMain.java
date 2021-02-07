@@ -85,6 +85,7 @@ public class CustomViewMain extends AppCompatActivity {
 				return false;
 			}
 		});
+		luhnTest();
 	}
 
 
@@ -93,6 +94,8 @@ public class CustomViewMain extends AppCompatActivity {
 		String cardNo = editText.getText().toString();
 		boolean b = NumberUtil.LuhnCheck(cardNo);
 		Log.d(TAG, "onCreate: Luhn 算法 的结果 ：b = " + b);
+		//format 中显示 % 号
+		editText.setText(String.format(getString(R.string.comparison)+ "%d%% ",345));
 	}
 
 	private void notification() {
@@ -303,4 +306,8 @@ public class CustomViewMain extends AppCompatActivity {
 		startActivity(intent);
 	}
 
+	public void startHandlerActivity(View view) {
+		Intent intent = new Intent(this, HandlerActivity.class);
+		startActivity(intent);
+	}
 }

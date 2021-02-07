@@ -188,6 +188,7 @@
         <activity android:name=".view.constraint.MotionLayoutActivity" />
         <activity android:name=".widget.TextViewMainActivity" />
         <activity android:name=".widget.ActivityListView" />
+        <activity android:name=".HandlerActivity" />
     </application>
 
 </manifest>
