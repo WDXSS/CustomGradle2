@@ -1,6 +1,7 @@
 package com.example.customview.other.behavior;
 
 import android.content.Context;
+import android.os.Build;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -38,8 +39,11 @@ public class FollowBehavior extends CoordinatorLayout.Behavior<TextView> {
 
     @Override
     public boolean onDependentViewChanged(@NotNull CoordinatorLayout parent, TextView child, View dependency) {
-        child.setX(dependency.getX());
-        child.setY(dependency.getY() + 100);
+        Log.d(TAG, "onDependentViewChanged()  = [" + parent.getTag() + "], child = [" + child.getTag() + "], dependency = [" + dependency.getTag() + "]");
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            child.setX(dependency.getX());
+            child.setY(dependency.getY() + 100);
+        }
         return true;
     }
 }
