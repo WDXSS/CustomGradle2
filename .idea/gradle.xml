@@ -21,6 +21,7 @@
             <option value="$PROJECT_DIR$/dynamic_feature" />
             <option value="$PROJECT_DIR$/firelibrary" />
             <option value="$PROJECT_DIR$/jetpack" />
+            <option value="$PROJECT_DIR$/lib_custom_view2" />
             <option value="$PROJECT_DIR$/lib_java" />
             <option value="$PROJECT_DIR$/lib_kotlin" />
             <option value="$PROJECT_DIR$/library-recycler" />
@@ -33,6 +34,5 @@
         <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
     </option>
-    <option name="offlineMode" value="true" />
   </component>
 </project>
