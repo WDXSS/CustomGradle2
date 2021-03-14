@@ -1,5 +1,6 @@
 package com.example.customview.util;
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
@@ -22,7 +23,10 @@ public class RegexUtil {
         if (name == null)
             return false;
         Pattern pattern = Pattern.compile("[-_,'.A-Za-z& ]{3,260}");
+        Matcher matcher = pattern.matcher(name);
+        matcher.group();
         return pattern.matcher(name).matches();
+
     }
 
 }

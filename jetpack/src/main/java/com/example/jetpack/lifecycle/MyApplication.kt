@@ -8,6 +8,7 @@ class MyApplication : Application(){
     override fun onCreate() {
         super.onCreate()
 
+
 //        ApplicationObserver 继承自 LifecycleObserver
         ProcessLifecycleOwner.get().lifecycle.addObserver(ApplicationObserver())
     }
