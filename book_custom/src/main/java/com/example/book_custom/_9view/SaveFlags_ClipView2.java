@@ -38,7 +38,8 @@ public class SaveFlags_ClipView2 extends View {
         //首先在固定位置绘制灰色的矩形，
         canvas.drawRect(100,0,200,100,mPaint);
         //保存画布并设置flag 为 clip_save_flag
-        canvas.save(Canvas.CLIP_SAVE_FLAG);
+//        canvas.save(Canvas.CLIP_SAVE_FLAG);
+        canvas.save();
         //将画布旋转 40
         canvas.rotate(40);
         //恢复画布，

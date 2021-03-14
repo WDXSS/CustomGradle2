@@ -34,7 +34,8 @@ public class SaveFlags_ClipView extends View {
 
         canvas.drawColor(Color.RED);
         //保存画布并设置flag 为 clip_save_flag
-        canvas.save(Canvas.CLIP_SAVE_FLAG);
+//        canvas.save(Canvas.CLIP_SAVE_FLAG);
+        canvas.save();
         //裁剪画布
         canvas.clipRect(100,0,200,100);
         //恢复画布，
