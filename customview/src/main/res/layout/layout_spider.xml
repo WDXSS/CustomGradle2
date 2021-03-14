@@ -16,9 +16,24 @@
             android:digits="1234567890 "
             android:singleLine="true" />
 
-        <!--    <com.example.customview.view.SpiderView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />-->
+        <com.example.customview.view.SpiderView
+            android:id="@+id/spider_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="#212121" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="inputAnimation"
+            android:text="进入动画"
+            android:textAllCaps="false" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="outAnimation"
+            android:text="退出"
+            android:textAllCaps="false" />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -157,16 +172,22 @@
             android:adjustViewBounds="true"
             android:scaleType="centerCrop" />
 
+        <Button
+            style="@style/btn_flag"
+            android:onClick="startHandlerActivity"
+            android:text="handler 实现方式" />
+
         <TextView
             android:id="@+id/text"
             style="@style/text_content"
-            android:text="底部"/>
+            android:text="底部" />
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/appCompatBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAllCaps="false"
-            android:text="AppCompatButton"/>
+            android:text="AppCompatButton"
+            android:textAllCaps="false" />
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

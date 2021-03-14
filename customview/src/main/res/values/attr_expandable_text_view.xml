@@ -15,9 +15,12 @@
         <attr name="etv_ToShrinkHintColor" format="reference|color" /><!--text color of "toShrinkHint"-->
         <attr name="etv_ToExpandHintColorBgPressed" format="reference|color" /><!--background color if "toExpandHint" pressed-->
         <attr name="etv_ToShrinkHintColorBgPressed" format="reference|color" /><!--background color if "toShrinkHint" pressed-->
+
+        <attr name="etv_ToExpandHintUnderLineShow" format="reference|boolean" /><!-- 下划线 "toExpandHint" -->
+        <attr name="etv_ToShrinkHintUnderLineShow" format="reference|boolean" /><!-- 下划线 "toShrinkHint" -->
         <attr name="etv_InitState" format="enum"><!--init state, default is shrink-->
-            <enum name="shrink" value="0"/>
-            <enum name="expand" value="1"/>
+            <enum name="shrink" value="0" />
+            <enum name="expand" value="1" />
         </attr>
     </declare-styleable>
 

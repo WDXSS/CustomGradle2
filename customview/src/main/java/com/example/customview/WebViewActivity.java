@@ -49,10 +49,12 @@ public class WebViewActivity extends AppCompatActivity {
         mProgressBar = findViewById(R.id.progressBar1);
         mWebView.loadUrl("https://my.oschina.net/xsjayz/blog/138447");
 
+        mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
-                super.onPageFinished(view, url);
+                view.loadUrl("javascript:document.body.style.padding=\"30px\"; void 0");
+//                super.onPageFinished(view, url);
                 Log.d(TAG, "onPageFinished() , url = [" + url + "]");
                 loadingFinish = true;
                 mHandler.sendEmptyMessage(1);
@@ -61,6 +63,7 @@ public class WebViewActivity extends AppCompatActivity {
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
+
                 loadingFailed = false;
                 loadingFinish = false;
                 Log.d(TAG, "onPageStarted()  url = [" + url + "], favicon = [" + favicon + "]");
@@ -78,6 +81,7 @@ public class WebViewActivity extends AppCompatActivity {
 
         });
 
+
         mWebView.setWebChromeClient(new WebChromeClient() {
             public void onProgressChanged(WebView view, int progress) {
                 //当进度走到100的时候做自己的操作，我这边是弹出dialog
@@ -91,6 +95,7 @@ public class WebViewActivity extends AppCompatActivity {
             }
 
         });
+
     }
 
     @Override

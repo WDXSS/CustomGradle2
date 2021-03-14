@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.os.MessageQueue;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.Transformation;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -35,6 +37,7 @@ import com.example.customview.other.ImmersionActivity;
 import com.example.customview.regex.RegexMainActivity;
 import com.example.customview.util.NumberUtil;
 import com.example.customview.view.IncludeMainActivity;
+import com.example.customview.view.SpiderView;
 import com.example.customview.view.constraint.ConstraintLayoutActivity;
 import com.example.firelibrary.FireMainActivity;
 import com.example.jetpack.JetpackMainActivity;
@@ -54,6 +57,7 @@ public class CustomViewMain extends AppCompatActivity {
 			"android.permission.WRITE_EXTERNAL_STORAGE"};
 	@MyTag(name = "BMW", size = 100)
 	Cat mCat;
+	private SpiderView mSpiderView;
 
 	@Override
 	protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -61,6 +65,8 @@ public class CustomViewMain extends AppCompatActivity {
 		//蜘蛛网
 		setContentView(R.layout.layout_spider);
 //        setContentView(R.layout.contraint09);
+
+		mSpiderView = findViewById(R.id.spider_view);
 		notification();
 		getSupperClass();
 		verifyStoragePermissions(this);
@@ -85,14 +91,87 @@ public class CustomViewMain extends AppCompatActivity {
 				return false;
 			}
 		});
+		luhnTest();
 	}
 
+	int spiderViewHeight;
 
+	public void showAnim() {
+		Animation animation = new Animation() {
+			@Override
+			protected void applyTransformation(float interpolatedTime, Transformation t) {
+				super.applyTransformation(interpolatedTime, t);
+				if (mSpiderView == null) {
+					return;
+				}
+				if (spiderViewHeight == 0) {
+					spiderViewHeight = mSpiderView.getHeight();
+				}
+				Log.d("zhou", "applyTransformation: interpolatedTime " + interpolatedTime);
+				int h = (int) (spiderViewHeight * (1 - interpolatedTime)) * -1;
+
+				mSpiderView.setTranslationY(h);
+			}
+		};
+		animation.setAnimationListener(new Animation.AnimationListener() {
+			@Override
+			public void onAnimationStart(Animation animation) {
+			}
+
+			@Override
+			public void onAnimationEnd(Animation animation) {
+			}
+
+			@Override
+			public void onAnimationRepeat(Animation animation) {
+			}
+		});
+		animation.setDuration(3000);
+		mSpiderView.setAnimation(animation);
+		mSpiderView.startAnimation(animation);
+
+	}
+	public void dismissAnim() {
+		Animation animation = new Animation() {
+			@Override
+			protected void applyTransformation(float interpolatedTime, Transformation t) {
+				super.applyTransformation(interpolatedTime, t);
+				int h = (int) (spiderViewHeight * interpolatedTime);
+				mSpiderView.setTranslationY(-h);
+			}
+		};
+		animation.setAnimationListener(new Animation.AnimationListener() {
+			@Override
+			public void onAnimationStart(Animation animation) {
+			}
+
+			@Override
+			public void onAnimationEnd(Animation animation) {
+			}
+
+			@Override
+			public void onAnimationRepeat(Animation animation) {
+			}
+		});
+		animation.setDuration(300);
+		mSpiderView.setAnimation(animation);
+		mSpiderView.startAnimation(animation);
+	}
+	public void inputAnimation(View view) {
+		showAnim();
+	}
+
+	public void outAnimation(View view) {
+//		mSpiderView.setTranslationY(spiderViewHeight);
+		dismissAnim();
+	}
 	private void luhnTest() {
 		EditText editText = findViewById(R.id.luhn);
 		String cardNo = editText.getText().toString();
 		boolean b = NumberUtil.LuhnCheck(cardNo);
 		Log.d(TAG, "onCreate: Luhn 算法 的结果 ：b = " + b);
+		//format 中显示 % 号
+		editText.setText(String.format(getString(R.string.comparison) + "%d%% ", 345));
 	}
 
 	private void notification() {
@@ -122,7 +201,6 @@ public class CustomViewMain extends AppCompatActivity {
 //            Log.d(TAG, "startBookMain:Math  "+ (int)(Math.random() * 10));
 //            Log.d(TAG, "startBookMain: random "+ (random.nextInt(10)));
 //        }
-
 	}
 
 	public void startUISystem(View view) {
@@ -302,5 +380,11 @@ public class CustomViewMain extends AppCompatActivity {
 		Intent intent = new Intent(this, ConstraintLayoutActivity.class);
 		startActivity(intent);
 	}
+
+	public void startHandlerActivity(View view) {
+		Intent intent = new Intent(this, HandlerActivity.class);
+		startActivity(intent);
+	}
+
 
 }
