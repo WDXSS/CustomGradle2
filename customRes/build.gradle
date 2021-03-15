@@ -3,29 +3,19 @@ plugins {
 }
 
 android {
-    compileSdkVersion compileSdkVersionCode
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
-        minSdkVersion minSdkVersionCode
-        targetSdkVersion targetSdkVersionCode
+        minSdkVersion 16
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
 
-
-//    dataBinding {
-//        enabled true
-//        // for view binding :
-//    }
-    buildFeatures {
-        dataBinding = true
-        // for view binding :
-        viewBinding = true
-    }
     buildTypes {
         release {
             minifyEnabled false
@@ -42,7 +32,6 @@ dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
-    implementation project(path: ':customRes')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
