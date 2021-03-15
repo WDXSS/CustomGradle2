@@ -9,8 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="start"
-        android:textAllCaps="false"
-        />
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/btn_cancel"
@@ -19,12 +18,13 @@
         android:layout_toEndOf="@+id/btn_start"
         android:text="cancel"
         android:textAllCaps="false" />
+
     <TextView
         android:id="@+id/progressTest"
         style="@style/text_content"
         android:layout_below="@+id/btn_cancel"
-        android:text="从左边开始的进度条，从上从下开始的类似"
-      />
+        android:text="从右边开始的进度条，从上从下开始的类似" />
+
     <ProgressBar
         android:id="@+id/vote_single_progress_right"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
@@ -34,8 +34,28 @@
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:max="100"
-        android:progress="44"
+        android:progress="20"
         android:progressDrawable="@drawable/progressbar_style_right" />
+
+    <TextView
+        android:id="@+id/progressTest2"
+        style="@style/text_content"
+        android:layout_below="@+id/vote_single_progress_right"
+        android:text="设置圆角的进度条 \n 参考：https://blog.csdn.net/qq_22604823/article/details/78400614"
+        android:autoLink="all"
+        />
+
+    <ProgressBar
+        android:id="@+id/pb_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/progressTest2"
+        android:max="100"
+        android:progress="80"
+        android:progressDrawable="@drawable/progress_style_round" />
 
     <com.example.customview.anim.property.value.widget.LoadingImageView
         android:id="@+id/img_loading"

@@ -12,6 +12,7 @@ import com.example.customview.anim.property.value.widget.LoadingImageView;
 
 /**
  * 弹跳加载效果
+ * https://blog.csdn.net/qq_22604823/article/details/78400614
  */
 public class LoadingDemo extends AppCompatActivity {
 
