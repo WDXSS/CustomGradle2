@@ -49,7 +49,7 @@ public class CanvasFlag_MatrixView extends View {
         //最后在同一位置画一个黑色矩形
         // 证明：canvas.save(Canvas.MATRIX_SAVE_FLAG) 只会保存位置矩阵，恢复是只恢复矩阵位置，其他任何信息都不恢复
 
-        canvas.save(Canvas.MATRIX_SAVE_FLAG);
+        canvas.save();
         canvas.rotate(40);
         canvas.drawRect(100,0,200,100,mPaint);
         canvas.restore();

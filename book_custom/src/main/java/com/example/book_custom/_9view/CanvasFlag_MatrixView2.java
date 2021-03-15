@@ -64,7 +64,7 @@ public class CanvasFlag_MatrixView2 extends View {
         //恢复画布，
         //将画布绘制成黑色
         //结果:只有裁剪的部分被染成了黑色，再次证明 canvas.save(Canvas.MATRIX_SAVE_FLAG) 只会保存位置矩阵，恢复是只恢复矩阵位置，其他任何信息都不恢复(包括画布大小)
-        canvas.save(Canvas.MATRIX_SAVE_FLAG);
+        canvas.save();
         canvas.clipRect(100, 0, 200, 100);
         canvas.drawColor(Color.GRAY);
         canvas.restore();
