@@ -1,3 +1,4 @@
+include ':customRes'
 include ':lib_custom_view2'
 include ':motionlayoutStart'
 include ':app', ':androidlibrary', ':androidorigin', ':android_hs_library', ':dynamic_feature', ':firelibrary', ':jetpack',

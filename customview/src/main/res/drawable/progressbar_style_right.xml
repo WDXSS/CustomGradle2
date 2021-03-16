@@ -7,6 +7,9 @@
     <item android:id="@android:id/background">
         <shape>
             <solid android:color="#000000" />
+            <corners
+                android:radius="90dp"
+                />
         </shape>
     </item>
     <item android:id="@android:id/progress">
@@ -15,10 +18,18 @@
             android:gravity="right">
             <shape>
                 <corners
-                    android:bottomRightRadius="4dp"
-                    android:topRightRadius="4dp" />
+                    android:bottomRightRadius="10dp"
+                    android:topRightRadius="10dp"
+                    android:bottomLeftRadius="10dp"
+                    android:topLeftRadius="10dp"
+                    />
+<!--                <corners-->
+<!--                    android:radius="90dp"-->
+<!--                    />-->
                 <solid android:color="#FFF17821" />
+
             </shape>
+
         </clip>
     </item>
 </layer-list>

@@ -75,8 +75,11 @@ public class BookMainActivity extends AppCompatActivity{
     }
 
     public void startHeightCustomBook(View view) {
+        //打开自定义控件入门和实战
         Intent intent = new Intent();
         intent.setClass(this, BookCustomMainActivity.class);
         startActivity(intent);
     }
+
+
 }

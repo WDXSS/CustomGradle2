@@ -17,6 +17,7 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.text.style.UnderlineSpan;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
@@ -45,7 +46,7 @@ import java.lang.reflect.Field;
 
 @SuppressLint("AppCompatCustomView")
 public class ExpandableTextView extends TextView {
-
+	private static final String TAG = "zhou " + ExpandableTextView.class.getSimpleName();
 	public static final int STATE_SHRINK = 0;
 	public static final int STATE_EXPAND = 1;
 
@@ -263,10 +264,17 @@ public class ExpandableTextView extends TextView {
 			case STATE_SHRINK: {
 				mLayout = new DynamicLayout(mOrigText, mTextPaint, mLayoutWidth, Layout.Alignment.ALIGN_NORMAL, 1.0f, 0.0f, false);
 				mTextLineCount = mLayout.getLineCount();
+				Log.d(TAG, "getNewTextByConfig: mTextLineCount = " + mTextLineCount);
+				Log.d(TAG, "getNewTextByConfig: mOrigText = " + mOrigText.length());
+				int count = mLayout.getLineStart(mTextLineCount);
+				int count1 = mLayout.getLineStart(mTextLineCount - 1);
+				Log.d(TAG, "getNewTextByConfig: count = " + count + "，count 1 = " + count1);
+
 
 				if (mTextLineCount <= mMaxLinesOnShrink) {
 					return mOrigText;
 				}
+				//获取最后一行的 偏移量（从第一行到最后一行的总字数）
 				int indexEnd = getValidLayout().getLineEnd(mMaxLinesOnShrink - 1);
 				int indexStart = getValidLayout().getLineStart(mMaxLinesOnShrink - 1);
 				int indexEndTrimmed = indexEnd
@@ -419,8 +427,7 @@ public class ExpandableTextView extends TextView {
 	}
 
 
-
-	public  class ExpandableClickListener implements OnClickListener {
+	public class ExpandableClickListener implements OnClickListener {
 		@Override
 		public void onClick(View view) {
 			toggle();
@@ -490,7 +497,7 @@ public class ExpandableTextView extends TextView {
 		@Override
 		public void onClick(View widget) {
 //			if (hasOnClickListeners() && (getOnClickListener(ExpandableTextView.this) instanceof ExpandableClickListener)) {
-			if (hasOnClickListeners() ) {
+			if (hasOnClickListeners()) {
 			} else {
 				toggle();
 			}

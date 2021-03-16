@@ -14,7 +14,11 @@
             android:layout_height="50dp"
             android:text="自定义控件入门到实战"
             android:onClick="startCustomBook" />
-
+        <Button
+            style="@style/btn_flag"
+            android:text="自定义控件高级和精彩实例"
+            android:onClick="startHeightCustomBook"
+            />
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
