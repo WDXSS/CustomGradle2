@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.book.BookCustomMainActivity;
 import com.example.customview.R;
 import com.example.customview.book.custom.CustomBookMain;
 import com.example.customview.book.light.AdvancedLightBookMain;
@@ -71,5 +72,11 @@ public class BookMainActivity extends AppCompatActivity{
         //添加 menu 菜单
         getMenuInflater().inflate(R.menu.card_detail_menu, menu);
         return true;
+    }
+
+    public void startHeightCustomBook(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, BookCustomMainActivity.class);
+        startActivity(intent);
     }
 }

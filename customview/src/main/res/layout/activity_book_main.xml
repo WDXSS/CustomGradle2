@@ -26,5 +26,10 @@
             android:text="第一行代码"
             android:onClick="startKotlinMainActivity"
             />
+        <Button
+            style="@style/btn_flag"
+            android:text="高阶自定义控件"
+            android:onClick="startHeightCustomBook"
+            />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
