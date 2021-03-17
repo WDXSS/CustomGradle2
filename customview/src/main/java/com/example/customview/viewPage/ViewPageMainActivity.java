@@ -7,7 +7,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.customview.databinding.ActivityViewPageMainBinding;
-import com.example.customview.util.ScreenUtils;
+import com.example.customview.viewPage.adapter.ImageAdapter;
+import com.example.customview.viewPage.adapter.ImageAdapter2;
 
 import java.util.ArrayList;
 import java.util.List;

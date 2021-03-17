@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.LinearSnapHelper;
 
 import com.example.customview.R;
 import com.example.customview.databinding.ActivityViewPageRecycleBinding;
+import com.example.customview.viewPage.adapter.ImageAdapter2;
+import com.example.customview.viewPage.adapter.RecyclerViewAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

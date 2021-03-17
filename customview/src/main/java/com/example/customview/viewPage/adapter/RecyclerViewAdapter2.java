@@ -1,4 +1,4 @@
-package com.example.customview.viewPage;
+package com.example.customview.viewPage.adapter;
 
 
 import android.content.Context;

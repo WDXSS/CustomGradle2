@@ -1,6 +1,7 @@
-package com.example.customview.viewPage;
+package com.example.customview.viewPage.adapter;
 
 import android.content.Context;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import com.bumptech.glide.Glide;
 import com.example.customview.R;
+import com.example.customview.util.ScreenUtils;
 
 import java.util.List;
 
@@ -21,12 +23,12 @@ import java.util.List;
  * @author ext.zhouchao3
  * @date 2020-09-30 15:38
  */
-public class ImageAdapter2 extends PagerAdapter {
+public class ImageAdapter extends PagerAdapter {
 	private static final String TAG = "ImageAdapter";
 	private List<String> urls;
 	private Context mContext;
 
-	public ImageAdapter2(Context context, List<String> urls) {
+	public ImageAdapter(Context context,List<String> urls) {
 		this.urls = urls;
 		this.mContext = context;
 	}
@@ -45,7 +47,7 @@ public class ImageAdapter2 extends PagerAdapter {
 	@Override
 	public Object instantiateItem(@NonNull ViewGroup container, int position) {
 		Log.d(TAG, "instantiateItem() called with: container = [" + container + "], position = [" + position + "]");
-		View view = LayoutInflater.from(container.getContext()).inflate(R.layout.view_page_imgage_item2, container, false);
+		View view = LayoutInflater.from(container.getContext()).inflate(R.layout.view_page_imgage_item, container, false);
 		ImageView img = view.findViewById(R.id.img);
 		Glide.with(container.getContext()).load(urls.get(position)).into(img);
 		container.addView(view);
@@ -58,11 +60,10 @@ public class ImageAdapter2 extends PagerAdapter {
 		view.removeView((View) object);
 	}
 
-
-//	@Override
-//	public float getPageWidth(int position) {
-//		return  0.8560F;
-//	}
+	@Override
+	public float getPageWidth(int position) {
+		return  0.8560F;
+	}
 
 
 }

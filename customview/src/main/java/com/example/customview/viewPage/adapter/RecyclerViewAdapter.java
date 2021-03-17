@@ -1,4 +1,4 @@
-package com.example.customview.viewPage;
+package com.example.customview.viewPage.adapter;
 
 
 import android.content.Context;
@@ -38,16 +38,20 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 		if (inflater == null) {//避免多次初始化
 			inflater = LayoutInflater.from(parent.getContext());
 		}
-		View itemView = inflater.inflate(R.layout.recycler_view_item, parent, false);
-		mCardAdapterHelper.onCreateViewHolder(parent, itemView);
-		return new ViewHolder(itemView);
+		View itemView = inflater.inflate(R.layout.detail_base_hot_line_view_page_layout, parent, false);
+		ViewHolder viewHolder = new ViewHolder(itemView);
+		mCardAdapterHelper.onCreateViewHolder(parent, viewHolder.itemView);
+
+
+		return viewHolder;
 	}
 
 	@Override
 	public void onBindViewHolder(ViewHolder holder, int position) {
 		mCardAdapterHelper.onBindViewHolder(holder.itemView, position, getItemCount());
+
 		final String itemContent = dataList.get(position);
-		Glide.with(mContext).load(dataList.get(position)).into(holder.mImageView);
+//		Glide.with(mContext).load(dataList.get(position)).into(holder.mImageView);
 
 		//为列表项设置点击监听
 		if (itemClickListener != null) {
