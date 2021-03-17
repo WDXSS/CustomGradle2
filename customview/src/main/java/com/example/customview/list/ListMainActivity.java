@@ -1,5 +1,6 @@
 package com.example.customview.list;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -9,9 +10,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import com.example.customview.CustomViewMain;
 import com.example.customview.R;
 import com.example.customview.list.manager.FlowLayoutManager;
 import com.example.customview.list.manager.SpaceItemDecoration;
+import com.example.customview.list.viewpage.RecycleViewGalleryActivity;
 import com.library.recycler.widget.RefreshRecyclerView;
 
 import java.util.ArrayList;
@@ -95,4 +98,7 @@ public class ListMainActivity extends AppCompatActivity {
 
     }
 
+    public void starRecycleGalley(View view) {
+        startActivity(new Intent(this, RecycleViewGalleryActivity.class));
+    }
 }

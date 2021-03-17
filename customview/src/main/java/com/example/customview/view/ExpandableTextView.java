@@ -167,8 +167,9 @@ public class ExpandableTextView extends TextView {
 	}
 
 	private void init() {
-		mTouchableSpan = new TouchableSpan();
-		setMovementMethod(new LinkTouchMovementMethod());
+//		mTouchableSpan = new TouchableSpan();
+//		setMovementMethod(new LinkTouchMovementMethod());
+
 		if (TextUtils.isEmpty(mEllipsisHint)) {
 			mEllipsisHint = ELLIPSIS_HINT;
 		}
@@ -269,8 +270,6 @@ public class ExpandableTextView extends TextView {
 				int count = mLayout.getLineStart(mTextLineCount);
 				int count1 = mLayout.getLineStart(mTextLineCount - 1);
 				Log.d(TAG, "getNewTextByConfig: count = " + count + "，count 1 = " + count1);
-
-
 				if (mTextLineCount <= mMaxLinesOnShrink) {
 					return mOrigText;
 				}
@@ -284,7 +283,6 @@ public class ExpandableTextView extends TextView {
 				if (indexEndTrimmed <= indexStart) {
 					indexEndTrimmed = indexEnd;
 				}
-
 				int remainWidth = getValidLayout().getWidth() -
 						(int) (mTextPaint.measureText(mOrigText.subSequence(indexStart, indexEndTrimmed).toString()) + 0.5);
 				float widthTailReplaced = mTextPaint.measureText(getContentOfString(mEllipsisHint)
@@ -327,10 +325,6 @@ public class ExpandableTextView extends TextView {
 					if (mShowToExpandUnderLine) {
 						int shrinkHintLength = mToExpandHint.length();
 						UnderlineSpan span = new UnderlineSpan();
-						//设置颜色不起作用
-//						TextPaint tp = new TextPaint();
-//						tp.setColor(ContextCompat.getColor(getContext(), R.color.colorPrimary));
-//						span.updateDrawState(tp);
 						ssbShrink.setSpan(span, ssbShrink.length() - shrinkHintLength, ssbShrink.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 					}
 				}
@@ -532,6 +526,7 @@ public class ExpandableTextView extends TextView {
 
 		@Override
 		public boolean onTouchEvent(TextView textView, Spannable spannable, MotionEvent event) {
+			Log.d(TAG, "onTouchEvent: spa " + spannable.toString());
 			if (event.getAction() == MotionEvent.ACTION_DOWN) {
 				mPressedSpan = getPressedSpan(textView, spannable, event);
 				if (mPressedSpan != null) {

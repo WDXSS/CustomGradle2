@@ -5,6 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="starRecycleGalley"
+        android:text="RecycleView 实现 Galley 效果"
+        android:textAllCaps="false" />
 
     <com.library.recycler.widget.RefreshRecyclerView
         android:id="@+id/recycler_view"
