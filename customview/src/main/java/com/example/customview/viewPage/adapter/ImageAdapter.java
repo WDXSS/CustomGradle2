@@ -1,5 +1,7 @@
-package com.example.customview.viewPage;
+package com.example.customview.viewPage.adapter;
 
+import android.content.Context;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +13,7 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import com.bumptech.glide.Glide;
 import com.example.customview.R;
+import com.example.customview.util.ScreenUtils;
 
 import java.util.List;
 
@@ -23,9 +26,11 @@ import java.util.List;
 public class ImageAdapter extends PagerAdapter {
 	private static final String TAG = "ImageAdapter";
 	private List<String> urls;
+	private Context mContext;
 
-	public ImageAdapter(List<String> urls) {
+	public ImageAdapter(Context context,List<String> urls) {
 		this.urls = urls;
+		this.mContext = context;
 	}
 
 	@Override
@@ -54,9 +59,10 @@ public class ImageAdapter extends PagerAdapter {
 	public void destroyItem(ViewGroup view, int position, Object object) {
 		view.removeView((View) object);
 	}
+
 	@Override
 	public float getPageWidth(int position) {
-		return 0.8350F;
+		return  0.8560F;
 	}
 
 

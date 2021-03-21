@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/progress_style_round"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="方法才能使点击处理生效。但与此同时还会有一个问题：如果我们给父布局添加一个点击事件，需要在点击非链接的时候触发(例如RectclerView自定义的onItemClickListener有一部分就是给itemView添加onClick事件)，但是设置了setMovementMethod方法后整个TextView就无法触发父布局的点击事件了，无论点击的地方是否有链接。
+版权声明：本文为CSDN博主「虚渊」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:text="小宇宙等399人划线" />
+</LinearLayout>
