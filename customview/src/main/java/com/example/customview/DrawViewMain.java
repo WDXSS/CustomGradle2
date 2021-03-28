@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.customview.anim.property.value.LoadingDemo;
 import com.example.customview.anim.view.tween.ScannerDome;
+import com.example.customview.list.viewpage.v2.ui.GalleryRecyclerViewActivity;
 import com.example.customview.view.NineViewActivity;
 import com.example.customview.view.SpiderActivity;
 import com.example.customview.viewPage.ViewPageMainActivity;
@@ -65,6 +66,9 @@ public class DrawViewMain extends AppCompatActivity {
     }
     public void startViewPageRecycle(View view) {
         startActivity(new Intent(DrawViewMain.this, ViewPageRecycleActivity.class));
+    }
+    public void startViewPageRecycle2(View view) {
+        startActivity(new Intent(DrawViewMain.this, GalleryRecyclerViewActivity.class));
     }
     public void startExpandableTextView(View view) {
         startActivity(new Intent(DrawViewMain.this, TextViewMainActivity.class));

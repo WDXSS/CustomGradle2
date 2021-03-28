@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout android:orientation="vertical"
+    android:gravity="center"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/rl_container"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.example.customview.list.viewpage.v2.lib.GalleryRecyclerView
+        android:layout_height="540dp"
+        android:layout_width="match_parent"
+        android:id="@+id/rv_list"
+        app:helper="LinearSnapHelper" />
+
+    <SeekBar
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/seekBar"
+        android:progress="1"
+        android:max="12"
+        android:layout_marginBottom="@dimen/dp30"
+        android:layout_alignParentBottom="true"
+        style="@style/Base.Widget.AppCompat.SeekBar.Discrete" />
+
+</RelativeLayout>
