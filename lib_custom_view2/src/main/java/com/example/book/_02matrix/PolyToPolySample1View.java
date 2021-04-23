@@ -13,6 +13,13 @@ import androidx.annotation.Nullable;
 
 import com.example.lib_custom_view2.R;
 
+
+/**
+ * PolyToPolySample1View简介
+ * 倾斜整张图
+ * @author ext.zhouchao3
+ * @date 2021-04-19 11:30
+ */
 public class PolyToPolySample1View extends View {
 	private static final String TAG = "PolyToPolySample1View";
 	private Bitmap mBitmap;
