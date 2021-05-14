@@ -388,4 +388,8 @@ public class CustomViewMain extends AppCompatActivity {
 	}
 
 
+	public void startInflaterActivity(View view) {
+		Intent intent = new Intent(this, InflaterActivity.class);
+		startActivity(intent);
+	}
 }
