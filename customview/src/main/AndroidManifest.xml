@@ -195,6 +195,7 @@
         <activity android:name=".viewPage.ViewPageRecycleActivity" />
         <activity android:name=".list.viewpage.RecycleViewGalleryActivity" />
         <activity android:name=".list.viewpage.v2.ui.GalleryRecyclerViewActivity" />
+        <activity android:name=".InflaterActivity" />
     </application>
 
 </manifest>

@@ -4,5 +4,6 @@
 
     <application>
         <activity android:name="com.example.book.BookCustomMainActivity" />
+        <activity android:name="com.example.book._02matrix.PolyToPolySampleActivity" />
     </application>
 </manifest>

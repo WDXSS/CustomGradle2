@@ -31,8 +31,13 @@ android {
 
     dynamicFeatures = [":dynamic_feature"]
 
-    viewBinding {
-        enabled = true
+//    viewBinding {
+//        enabled = true
+//    }
+    buildFeatures {
+        dataBinding = true
+        // for view binding :
+        viewBinding = true
     }
 }
 

@@ -6,9 +6,25 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <Button
+            android:id="@+id/Matrix"
             style="@style/btn_flag"
             android:text="自定义控件高级和精彩实例"
             android:onClick="startHeightCustomBook"
             />
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            android:max="360"
+            android:min="0"
+            />
+<!--        <com.example.book._01cammera.TranslateYView-->
+<!--            android:id="@+id/translate"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@mipmap/cat"/>-->
+        <com.example.book._02matrix.PolyToPolySample3View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 </layout>
