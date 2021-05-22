@@ -1,4 +1,4 @@
-package com.example.book._01cammera;
+package com.example.book._1view;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -26,21 +26,27 @@ public class TranslateYView extends ImageView {
 	private int process;
 	public TranslateYView(Context context) {
 		super(context);
+		init();
 	}
 
 	public TranslateYView(Context context, @Nullable AttributeSet attrs) {
 		super(context, attrs);
+		init();
 	}
 
 	public TranslateYView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
 		super(context, attrs, defStyleAttr);
+		init();
 	}
 
 	public TranslateYView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
 		super(context, attrs, defStyleAttr, defStyleRes);
+		init();
 	}
+
 	private void init(){
 		mCamera = new Camera();
+		mMatrix = new Matrix();
 		mBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.cat);
 		mPaint = new Paint();
 		mPaint.setAntiAlias(true);
@@ -52,7 +58,7 @@ public class TranslateYView extends ImageView {
 		mCamera.save();
 
 		mPaint.setAlpha(100);
-		canvas.drawBitmap(mBitmap,0,0,mPaint);
+		canvas.drawBitmap(mBitmap,0,0,mPaint);//绘制对比图
 
 		mCamera.rotateY(process);//旋转
 		mCamera.getMatrix(mMatrix);
