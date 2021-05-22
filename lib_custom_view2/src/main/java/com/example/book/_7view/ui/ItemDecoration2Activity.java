@@ -1,24 +1,19 @@
 package com.example.book._7view.ui;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.book._7view.LinearItemDecoration;
+import com.example.book._7view.LinearItemDecoration2;
 import com.example.book._7view.RecyclerAdapter;
 import com.example.lib_custom_view2.R;
 
 import java.util.ArrayList;
 
-public class ItemDecorationActivity extends AppCompatActivity {
+public class ItemDecoration2Activity extends AppCompatActivity {
     private ArrayList<String> mDatas = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +28,7 @@ public class ItemDecorationActivity extends AppCompatActivity {
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(linearLayoutManager);
 
-        mRecyclerView.addItemDecoration(new LinearItemDecoration());
+        mRecyclerView.addItemDecoration(new LinearItemDecoration2(this));
 
         RecyclerAdapter adapter = new RecyclerAdapter(this, mDatas);
         mRecyclerView.setAdapter(adapter);

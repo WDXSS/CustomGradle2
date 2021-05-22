@@ -4,11 +4,16 @@
 
 package com.example.book;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.book._01cammera._01MainActivityJava;
+import com.example.book._7view.ui.ItemDecorationActivity;
+import com.example.book._7view.ui.RecycleMainActivity;
 import com.example.lib_custom_view2.databinding.BookCustomMainBinding;
 
 /**
@@ -25,5 +30,13 @@ public class BookCustomMainActivity extends AppCompatActivity {
 		mBookCustomMainBinding = BookCustomMainBinding.inflate(getLayoutInflater());
 		setContentView(mBookCustomMainBinding.getRoot());
 
+	}
+
+	public void start01(View view) {
+		startActivity(new Intent(BookCustomMainActivity.this, _01MainActivityJava.class));
+	}
+
+	public void start07(View view) {
+		startActivity(new Intent(BookCustomMainActivity.this, RecycleMainActivity.class));
 	}
 }

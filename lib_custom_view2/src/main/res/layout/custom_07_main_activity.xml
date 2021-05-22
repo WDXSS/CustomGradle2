@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        style="@style/btn_flag"
+        android:text="分割线1"
+        android:onClick="itemDecoration1" />
+
+    <Button
+        style="@style/btn_flag"
+        android:text="分割线2"
+        android:onClick="itemDecoration2" />
+    <Button
+        style="@style/btn_flag"
+        android:text="自定义layoutManager"
+        android:textAllCaps="false"
+        android:onClick="customLayoutManager" />
 </LinearLayout>

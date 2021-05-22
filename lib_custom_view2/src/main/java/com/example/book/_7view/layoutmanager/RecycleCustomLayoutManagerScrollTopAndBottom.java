@@ -1,4 +1,4 @@
-package com.jd.app.reader.bookstore.coupon;
+package com.example.book._7view.layoutmanager;
 
 import android.graphics.Rect;
 import android.util.SparseArray;

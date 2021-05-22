@@ -43,5 +43,5 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_centerInParent="true"
-        android:src="@mipmap/ic_launcher_round" />
+        android:src="@mipmap/ic_custom_2_launcher_round" />
 </RelativeLayout>

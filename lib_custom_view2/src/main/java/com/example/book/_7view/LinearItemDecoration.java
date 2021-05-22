@@ -10,7 +10,7 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-class LinearItemDecoration extends RecyclerView.ItemDecoration {
+public class LinearItemDecoration extends RecyclerView.ItemDecoration {
     private static final String TAG = "zhouc "+ LinearItemDecoration.class.getCanonicalName();
 
     private Paint mPaint;

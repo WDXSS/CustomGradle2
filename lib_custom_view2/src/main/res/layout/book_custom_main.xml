@@ -8,8 +8,13 @@
         <Button
             android:id="@+id/Matrix"
             style="@style/btn_flag"
-            android:text="自定义控件高级和精彩实例"
-            android:onClick="startHeightCustomBook"
+            android:text="第一章"
+            android:onClick="start01"
+            />
+        <Button
+            style="@style/btn_flag"
+            android:text="第7章"
+            android:onClick="start07"
             />
         <androidx.appcompat.widget.AppCompatSeekBar
             android:layout_width="match_parent"

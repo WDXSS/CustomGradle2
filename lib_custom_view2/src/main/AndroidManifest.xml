@@ -5,5 +5,12 @@
     <application>
         <activity android:name="com.example.book.BookCustomMainActivity" />
         <activity android:name="com.example.book._02matrix.PolyToPolySampleActivity" />
+        <activity android:name="com.example.book._01cammera._01MainActivity" />
+        <activity android:name="com.example.book._01cammera._01MainActivityJava" />
+        <activity android:name="com.example.book._5view._5MainActivity" />
+        <activity android:name="com.example.book._7view.ui.ItemDecorationActivity"/>
+        <activity android:name="com.example.book._7view.ui.ItemDecoration2Activity" />
+        <activity android:name="com.example.book._7view.ui.RecycleMainActivity" />
+        <activity android:name="com.example.book._7view.ui.LayoutManagerActivity1" />
     </application>
 </manifest>

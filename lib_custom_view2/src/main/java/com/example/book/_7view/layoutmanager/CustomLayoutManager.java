@@ -1,5 +1,6 @@
-package com.jd.app.reader.bookstore.coupon;
+package com.example.book._7view.layoutmanager;
 
+import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -7,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * CustomLayoutManager简介
- *
+ *  不考虑 ViewHolder 回收
  * @author ext.zhouchao3
  * @date 2021-05-17 11:13
  * <p>
@@ -19,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
  * 2.1
  */
 public class CustomLayoutManager extends RecyclerView.LayoutManager {
+	private static final String TAG = "zhouc"+CustomLayoutManager.class.getSimpleName();
 	public CustomLayoutManager() {
 		//需要区分的几个方法
 //		getChildAt() 获取某个可见位置的View， 可见的第一个item
@@ -77,6 +79,9 @@ public class CustomLayoutManager extends RecyclerView.LayoutManager {
 
 	@Override
 	public int scrollVerticallyBy(int dy, RecyclerView.Recycler recycler, RecyclerView.State state) {
+//		Log.d(TAG, "scrollVerticallyBy: dy = "+dy);
+		//手指从下往上滑动（列表向下滚动），dy 是正值，手指从上往下滑动（列表向上滚动） dy 是负值
+		//列表滚动到顶部或者底部，继续滑动屏幕，也会有dy 值，dy 是当次手指在屏幕上滑动的距离
 		//dy 每次滑动的距离
 //		offsetChildrenVertical(-dy);
 		//1.判断 混动到顶部 和 底部

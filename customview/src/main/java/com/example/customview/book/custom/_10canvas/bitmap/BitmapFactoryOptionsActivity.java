@@ -75,7 +75,7 @@ public class BitmapFactoryOptionsActivity extends Activity {
     private void testInJustDecodeBounds() {
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher, options);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_custom_2_launcher_round, options);
         Log.d("qijian", "bitmap:" + bitmap);
         Log.d("qijian", "realwidth:" + options.outWidth + "   realheight:" + options.outHeight + "    mimeType:" + options.outMimeType);
         Toast.makeText(BitmapFactoryOptionsActivity.this, "realwidth:" + options.outWidth + "   realheight:" + options.outHeight + " mimeType:" + options.outMimeType

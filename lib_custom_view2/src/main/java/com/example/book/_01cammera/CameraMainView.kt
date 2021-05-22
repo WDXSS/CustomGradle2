@@ -8,6 +8,9 @@ import android.graphics.Matrix
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatImageView
 
+/**
+ * 第一章 Camera 的基本用法
+ */
 class CameraMainView : AppCompatImageView {
     lateinit var camera:Camera
 
@@ -41,7 +44,7 @@ class CameraMainView : AppCompatImageView {
 
         canvas?.let {
             canvas.save()
-            canvas.matrix = matrix
+            canvas.setMatrix(matrix)
             //canvas 的绘制操作
             canvas.restore()
         }

@@ -1,13 +1,12 @@
-package com.jd.app.reader.bookstore.coupon;
+package com.example.book._7view.layoutmanager;
 
 import android.graphics.Rect;
 import android.util.SparseArray;
 import android.view.View;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.jd.app.reader.bookstore.sort.BSThirdSortContract;
+
 
 /**
  * RecycleCustomLayoutManagerScrollTop ViewHolder 回收
