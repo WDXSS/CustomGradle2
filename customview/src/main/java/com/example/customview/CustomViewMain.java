@@ -24,6 +24,7 @@ import androidx.core.content.ContextCompat;
 
 import com.codingending.uisystemdemo.MainActivity;
 import com.example.android_hs_library.HuangShuMainActivity;
+import com.example.customview.anim.activity.DialogActivity;
 import com.example.customview.annotation.AnnotationCar;
 import com.example.customview.annotation.Cat;
 import com.example.customview.annotation.MyTag;
@@ -385,11 +386,18 @@ public class CustomViewMain extends AppCompatActivity {
 	public void startHandlerActivity(View view) {
 		Intent intent = new Intent(this, HandlerActivity.class);
 		startActivity(intent);
+		overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 	}
 
 
 	public void startInflaterActivity(View view) {
 		Intent intent = new Intent(this, InflaterActivity.class);
 		startActivity(intent);
+	}
+
+	public void startDialogActivity(View view) {
+		Intent intent = new Intent(this, DialogActivity.class);
+		startActivity(intent);
+		overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 	}
 }

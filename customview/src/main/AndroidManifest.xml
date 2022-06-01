@@ -196,6 +196,9 @@
         <activity android:name=".list.viewpage.RecycleViewGalleryActivity" />
         <activity android:name=".list.viewpage.v2.ui.GalleryRecyclerViewActivity" />
         <activity android:name=".InflaterActivity" />
+        <activity android:name=".anim.activity.DialogActivity"
+            android:theme="@style/MyDialogStyle" />
+
     </application>
 
 </manifest>

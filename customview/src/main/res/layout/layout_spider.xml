@@ -164,7 +164,10 @@
             style="@style/btn_flag"
             android:onClick="startConstrainLayoutActivity"
             android:text="约束布局的几种使用方式" />
-
+        <Button
+            style="@style/btn_flag"
+            android:onClick="startDialogActivity"
+            android:text="打开dialog" />
         <pl.droidsonroids.gif.GifImageView
             android:id="@+id/main_balance_img"
             android:layout_width="match_parent"
